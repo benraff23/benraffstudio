@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Import existing design tokens & base styles ─── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ─── Design tokens (kept as CSS custom properties) ─── */
+:root {
+  --color-black:   #080808;
+  --color-white:   #f5f5f0;
+  --color-lime:    #c8e84e;
+  --color-lime-dim:    rgba(200, 232, 78, 0.12);
+  --color-lime-subtle: rgba(200, 232, 78, 0.06);
+  --color-grey-100: #1a1a1a;
+  --color-grey-200: #242424;
+  --color-grey-300: #3a3a3a;
+  --color-grey-400: #5a5a5a;
+  --color-grey-500: #7a7a7a;
+  --color-grey-600: #9a9a9a;
+  --color-grey-700: #b8b8b8;
+  --color-grey-800: #d4d4d0;
+
+  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --gutter: clamp(1.5rem, 5vw, 4rem);
+  --max-width: 1400px;
+
+  --border-subtle: 1px solid rgba(255,255,255,0.06);
+  --border-dim:    1px solid rgba(255,255,255,0.1);
+  --border-lime:   1px solid rgba(200,232,78,0.3);
+}
+
+/* ─── Reset & base ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Cursor */
+.cursor {
+  position: fixed; top: 0; left: 0;
+  width: 8px; height: 8px;
+  background: var(--color-lime);
+  border-radius: 50%;
+  pointer-events: none; z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 200ms var(--ease-out), height 200ms var(--ease-out);
+  mix-blend-mode: difference;
+}
+.cursor-follower {
+  position: fixed; top: 0; left: 0;
+  width: 36px; height: 36px;
+  border: 1px solid rgba(200,232,78,0.4);
+  border-radius: 50%;
+  pointer-events: none; z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 400ms var(--ease-out), height 400ms var(--ease-out);
+}
+.cursor.hover       { width: 16px; height: 16px; }
+.cursor-follower.hover { width: 64px; height: 64px; border-color: rgba(200,232,78,0.6); }
+
+a, button { cursor: none; }
+
+::selection { background: var(--color-lime); color: var(--color-black); }
+
+::-webkit-scrollbar       { width: 3px; }
+::-webkit-scrollbar-track { background: var(--color-black); }
+::-webkit-scrollbar-thumb { background: var(--color-grey-300); border-radius: 99px; }
+
+/* ─── Reveal animations ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+.reveal-left {
+  opacity: 0; transform: translateX(-40px);
+  transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+}
+.reveal-left.is-visible { opacity: 1; transform: none; }
+
+.reveal-right {
+  opacity: 0; transform: translateX(40px);
+  transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+}
+.reveal-right.is-visible { opacity: 1; transform: none; }
+
+.delay-1 { transition-delay: 100ms; }
+.delay-2 { transition-delay: 200ms; }
+.delay-3 { transition-delay: 300ms; }
+.delay-4 { transition-delay: 400ms; }
+.delay-5 { transition-delay: 500ms; }
+.delay-6 { transition-delay: 600ms; }
+
+/* ─── Noise overlay ─── */
+.noise {
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 9990;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 128px;
+}
+
+/* ─── Label component ─── */
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-lime);
+}
+.label::before {
+  content: '';
+  display: block;
+  width: 16px; height: 1px;
+  background: var(--color-lime);
+}
+
+/* ─── Animations ─── */
+@keyframes scrollLine {
+  0%   { transform: scaleY(1); transform-origin: top; opacity: 1; }
+  50%  { transform: scaleY(0); transform-origin: top; opacity: 0; }
+  51%  { transform: scaleY(0); transform-origin: bottom; }
+  100% { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 10px var(--color-lime); }
+  50%       { box-shadow: 0 0 20px var(--color-lime), 0 0 40px rgba(200,232,78,0.2); }
+}
+
+@keyframes annotationPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200,232,78,0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(200,232,78,0); }
+}

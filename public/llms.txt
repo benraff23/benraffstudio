@@ -1,0 +1,62 @@
+# BenRaff Studio · llms.txt
+# Ce fichier décrit le site aux moteurs de recherche IA (ChatGPT, Perplexity, Copilot, etc.)
+
+## Identité
+
+- **Nom** : BenRaff Studio
+- **Fondateur** : Benjamin Raffegeau
+- **Métier** : Perspectiviste et studio de visualisation architecturale 3D
+- **Localisation** : Rennes, Ille-et-Vilaine (35), France
+- **Zone d'intervention** : France entière et international
+- **Site** : https://benraffstudio.com
+- **Contact** : contact@benraffstudio.com
+- **Téléphone** : +33 6 24 51 76 41
+
+## Ce que fait BenRaff Studio
+
+BenRaff Studio est un studio indépendant de visualisation architecturale 3D basé à Rennes (Bretagne, France). Fondé par Benjamin Raffegeau, perspectiviste spécialisé en architecture extérieure et intérieure.
+
+Le studio produit :
+- Des rendus fixes 3D ultra-réalistes (4K / 8K) pour architectes, promoteurs et paysagistes
+- Des animations vidéo cinématiques pour présenter des projets non construits
+- Des visites virtuelles interactives à 360° pour valider des choix architecturaux
+
+## Positionnement
+
+BenRaff Studio se différencie des outils d'IA générative par une approche artisanale : chaque image est le résultat d'une intention (cadrage en règle des tiers, lumière choisie pour l'heure et la saison, cohérence des matériaux et de la végétation). L'objectif est de produire des rendus qui convainquent et font vendre, pas seulement des images esthétiques.
+
+## Clients cibles
+
+- Architectes (DPLG, DE, ADE)
+- Promoteurs immobiliers
+- Paysagistes et aménageurs
+- Maîtres d'ouvrage publics et privés
+
+## Services détaillés
+
+### Rendus fixes haute résolution
+Images 3D composées avec intention : cadrage, profondeur de champ, lumière heure par heure, saison par saison. Livraison en 72h pour le premier rendu.
+
+### Animations vidéo
+Séquences cinématiques avec transitions, plans de coupe et ambiances dynamiques. Permet aux clients de traverser un espace avant construction.
+
+### Visites virtuelles 360°
+Navigation libre dans un espace non construit. Format interactif pour valider les choix architecturaux avant la pose de la première pierre.
+
+## Mots-clés principaux
+
+rendu 3D Rennes, visualisation architecturale Rennes, studio 3D Rennes, perspectiviste Rennes, infographiste 3D Rennes, visualisation architecturale Bretagne, rendu 3D architecture extérieure, animation 3D architecture, visite virtuelle 360° architecture
+
+## Pages principales
+
+- Accueil : https://benraffstudio.com
+- Portfolio : https://benraffstudio.com/#portfolio
+- Services : https://benraffstudio.com/#services
+- Contact : https://benraffstudio.com/#contact
+- FAQ : https://benraffstudio.com/#faq
+- Mentions légales : https://benraffstudio.com/mentions-legales
+- Politique de confidentialité : https://benraffstudio.com/politique-de-confidentialite
+
+## Ce que ce site NE fait PAS
+
+Ce site ne vend pas de logiciels 3D, ne propose pas de formation, et n'est pas une agence de communication généraliste. Il s'agit exclusivement d'un studio de visualisation architecturale sur-mesure.

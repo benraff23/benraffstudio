@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://benraffstudio.com/sitemap.xml
+
+# Generative AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# llms.txt · description du site pour les IA
+# https://benraffstudio.com/llms.txt
