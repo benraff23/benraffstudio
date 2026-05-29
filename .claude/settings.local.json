@@ -29,7 +29,9 @@
       "WebFetch(domain:www.kaizenstudio35.com)",
       "WebFetch(domain:droitdevantstudio.com)",
       "WebFetch(domain:images.martingasc.com)",
-      "PowerShell(Copy-Item \"D:\\\\BenRaff Studio\\\\BUSINESS\\\\SITE WEB\\\\app\\\\icon.png\" \"D:\\\\BenRaff Studio\\\\BUSINESS\\\\SITE WEB\\\\app\\\\apple-icon.png\" -Force)"
+      "PowerShell(Copy-Item \"D:\\\\BenRaff Studio\\\\BUSINESS\\\\SITE WEB\\\\app\\\\icon.png\" \"D:\\\\BenRaff Studio\\\\BUSINESS\\\\SITE WEB\\\\app\\\\apple-icon.png\" -Force)",
+      "Bash(git commit -m ' *)",
+      "Bash(git add *)"
     ]
   }
 }
