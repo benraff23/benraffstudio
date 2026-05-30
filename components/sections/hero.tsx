@@ -137,7 +137,7 @@ export default function Hero() {
       </div>
 
       <div className="hero__scroll absolute bottom-8 right-[var(--gutter)] flex flex-col items-center gap-3 z-10 hidden lg:flex">
-        <span className="text-xs font-medium tracking-[0.15em] uppercase text-[#5a5a5a]" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
+        <span className="text-xs font-medium tracking-[0.15em] uppercase text-[#7a7a7a]" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
         <div className="w-px h-16 bg-gradient-to-b from-[#c8e84e] to-transparent" style={{ animation: 'scrollLine 2s cubic-bezier(0.65,0,0.35,1) infinite 1.6s' }} />
       </div>
     </section>

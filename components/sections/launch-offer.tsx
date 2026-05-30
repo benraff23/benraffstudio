@@ -23,7 +23,7 @@ export default function LaunchOffer() {
   return (
     <section
       id="offre-lancement"
-      className="py-24 sm:py-32 bg-[#f5f4f0] relative overflow-hidden"
+      className="py-24 sm:py-32 bg-[#1e1e1e] relative overflow-hidden"
       aria-label="Offre de lancement"
     >
       {/* Fond décoratif */}
@@ -37,15 +37,15 @@ export default function LaunchOffer() {
           <div className="inline-flex items-center gap-2 mb-5">
             <div className="w-1.5 h-1.5 rounded-full bg-[#c8e84e]"
                  style={{ animation: 'pulse 2s ease-in-out infinite' }} />
-            <span className="text-xs font-medium tracking-[0.15em] uppercase text-[#6b8a00]">
+            <span className="text-xs font-medium tracking-[0.15em] uppercase text-[#c8e84e]">
               Studio en lancement · 3 créneaux disponibles
             </span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#0f0f0f] mb-6 max-w-[22ch] mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-white mb-6 max-w-[22ch] mx-auto">
             Avant que l&apos;agenda soit plein.
           </h2>
-          <p className="text-lg font-light text-[#6a6a6a] leading-relaxed max-w-[54ch] mx-auto">
+          <p className="text-lg font-light text-[#9a9a9a] leading-relaxed max-w-[54ch] mx-auto">
             Je vis de mes images — pas d&apos;équipe, pas d&apos;ambition de croissance.
             Juste moi, mes outils, et l&apos;obsession de livrer un rendu qui fait son travail.
             C&apos;est aussi pour ça que chaque projet compte.
@@ -58,31 +58,31 @@ export default function LaunchOffer() {
             <div key={n} className="flex flex-col items-center gap-2">
               <div className={`w-10 h-10 rounded-full border flex items-center justify-center text-xs font-semibold
                 ${n <= 2
-                  ? 'border-black/[0.12] bg-black/[0.04] text-[#5a5a5a] line-through'
-                  : 'border-[#c8e84e] bg-[rgba(200,232,78,0.1)] text-[#6b8a00]'
+                  ? 'border-white/[0.12] bg-black/[0.04] text-[#7a7a7a] line-through'
+                  : 'border-[#c8e84e] bg-[rgba(200,232,78,0.1)] text-[#c8e84e]'
                 }`}>
                 {n}
               </div>
-              <span className="text-[10px] tracking-widest uppercase text-[#5a5a5a]">
+              <span className="text-[10px] tracking-widest uppercase text-[#7a7a7a]">
                 {n <= 2 ? 'Réservé' : 'Libre'}
               </span>
             </div>
           ))}
           <div className="h-px w-20 bg-black/[0.08] hidden sm:block" />
-          <span className="text-xs text-[#6a6a6a] hidden sm:block">Livraison en juin</span>
+          <span className="text-xs text-[#9a9a9a] hidden sm:block">Livraison en juin</span>
         </div>
 
         {/* Avantages */}
         <div className="grid sm:grid-cols-3 gap-4 mb-14">
           {avantages.map(({ num, title, text }) => (
             <div key={num}
-                 className="bg-[#e8e5df] border border-black/[0.08] rounded-2xl p-7
-                            hover:border-black/[0.15] hover:bg-[#dedad4] transition-all duration-300">
-              <span className="text-xs font-medium tracking-[0.15em] uppercase text-[#6b8a00] mb-4 block">
+                 className="bg-[#111111] border border-white/[0.06] rounded-2xl p-7
+                            hover:border-white/[0.14] hover:bg-[#1a1a1a] transition-all duration-300">
+              <span className="text-xs font-medium tracking-[0.15em] uppercase text-[#c8e84e] mb-4 block">
                 {num}
               </span>
-              <h3 className="text-base font-semibold text-[#0f0f0f] mb-2 leading-snug">{title}</h3>
-              <p className="text-sm text-[#5a5a5a] leading-relaxed">{text}</p>
+              <h3 className="text-base font-semibold text-white mb-2 leading-snug">{title}</h3>
+              <p className="text-sm text-[#7a7a7a] leading-relaxed">{text}</p>
             </div>
           ))}
         </div>
@@ -121,7 +121,7 @@ export default function LaunchOffer() {
         </div>
 
         {/* Note de transparence */}
-        <p className="text-center text-xs text-[#6a6a6a] mt-8 max-w-[44ch] mx-auto leading-relaxed">
+        <p className="text-center text-xs text-[#9a9a9a] mt-8 max-w-[44ch] mx-auto leading-relaxed">
           Perspectiviste indépendant basé à Rennes. Je travaille seul, avec intention.
           Une fois ces créneaux occupés, les délais s&apos;allongent naturellement.
         </p>

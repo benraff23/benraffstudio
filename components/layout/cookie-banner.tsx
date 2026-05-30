@@ -37,7 +37,7 @@ export default function CookieBanner() {
         <div className="flex items-start gap-4">
           {/* Icône */}
           <div className="w-9 h-9 rounded-xl bg-[rgba(200,232,78,0.1)] flex items-center justify-center flex-shrink-0 mt-0.5">
-            <svg className="w-4 h-4 text-[#6b8a00]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <svg className="w-4 h-4 text-[#c8e84e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-5h2v2h-2zm0-8h2v6h-2z"
                 strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -51,7 +51,7 @@ export default function CookieBanner() {
               Aucun cookie publicitaire ou de suivi sans votre accord.{' '}
               <Link
                 href="/politique-de-confidentialite"
-                className="text-[#6b8a00] hover:underline"
+                className="text-[#c8e84e] hover:underline"
               >
                 En savoir plus
               </Link>
@@ -84,7 +84,7 @@ export default function CookieBanner() {
           </button>
           <Link
             href="/politique-de-confidentialite"
-            className="text-xs text-[#5a5a5a] hover:text-[#9a9a9a] transition-colors sm:ml-auto"
+            className="text-xs text-[#7a7a7a] hover:text-[#9a9a9a] transition-colors sm:ml-auto"
           >
             Politique de confidentialité
           </Link>

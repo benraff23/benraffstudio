@@ -46,7 +46,7 @@ html {
 }
 
 body {
-  background-color: #f5f4f0;
+  background-color: #1e1e1e;
   color: #0f0f0f;
   font-family: var(--font-sans);
   overflow-x: hidden;
@@ -81,7 +81,7 @@ a, button { cursor: none; }
 ::selection { background: var(--color-lime); color: var(--color-black); }
 
 ::-webkit-scrollbar       { width: 3px; }
-::-webkit-scrollbar-track { background: #f5f4f0; }
+::-webkit-scrollbar-track { background: #1e1e1e; }
 ::-webkit-scrollbar-thumb { background: var(--color-grey-300); border-radius: 99px; }
 
 /* ─── Reveal animations ─── */

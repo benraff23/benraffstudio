@@ -54,17 +54,17 @@ function FaqItem({ question, answer, index }: { question: string; answer: string
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="border-b border-black/[0.1]">
+    <div className="border-b border-white/[0.1]">
       <button
         onClick={() => setOpen(o => !o)}
         className="w-full flex items-start justify-between gap-6 py-6 text-left group"
         aria-expanded={open}
       >
         <span className="flex items-start gap-4">
-          <span className="text-xs font-medium tabular-nums text-[#6b8a00] mt-0.5 flex-shrink-0">
+          <span className="text-xs font-medium tabular-nums text-[#c8e84e] mt-0.5 flex-shrink-0">
             {String(index + 1).padStart(2, '0')}
           </span>
-          <span className="text-base font-semibold text-[#0f0f0f] group-hover:text-[#4a4a4a] transition-colors leading-snug">
+          <span className="text-base font-semibold text-white group-hover:text-[#b8b8b8] transition-colors leading-snug">
             {question}
           </span>
         </span>
@@ -80,7 +80,7 @@ function FaqItem({ question, answer, index }: { question: string; answer: string
 
       {open && (
         <div className="pb-6 pl-10 pr-6">
-          <p className="text-base font-light text-[#6a6a6a] leading-relaxed">{answer}</p>
+          <p className="text-base font-light text-[#9a9a9a] leading-relaxed">{answer}</p>
         </div>
       )}
     </div>
@@ -90,7 +90,7 @@ function FaqItem({ question, answer, index }: { question: string; answer: string
 // ─── Section exportée ─────────────────────────────────────────────────────────
 export default function Faq() {
   return (
-    <section id="faq" className="py-24 sm:py-32 bg-[#f5f4f0]" aria-label="Questions fréquentes">
+    <section id="faq" className="py-24 sm:py-32 bg-[#1e1e1e]" aria-label="Questions fréquentes">
       {/* Schema JSON-LD */}
       <script
         type="application/ld+json"
@@ -102,10 +102,10 @@ export default function Faq() {
           {/* Left */}
           <div className="lg:sticky lg:top-32 lg:self-start">
             <span className="label reveal">Questions fréquentes</span>
-            <h2 className="reveal delay-1 mt-4 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#0f0f0f]">
+            <h2 className="reveal delay-1 mt-4 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-white">
               Tout ce que vous voulez savoir.
             </h2>
-            <p className="reveal delay-2 mt-6 text-lg font-light text-[#6a6a6a] leading-relaxed">
+            <p className="reveal delay-2 mt-6 text-lg font-light text-[#9a9a9a] leading-relaxed">
               Perspectiviste basé à Rennes, j&apos;accompagne des projets d&apos;architecture dans
               toute la France. Retrouvez ci-dessous les réponses aux questions les plus courantes.
             </p>
@@ -125,7 +125,7 @@ export default function Faq() {
           </div>
 
           {/* Right · accordion */}
-          <div className="divide-y divide-black/[0.1] border-t border-black/[0.1]">
+          <div className="divide-y divide-black/[0.1] border-t border-white/[0.1]">
             {faqs.map(({ question, answer }, i) => (
               <FaqItem key={question} question={question} answer={answer} index={i} />
             ))}

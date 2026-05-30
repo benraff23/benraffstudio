@@ -26,7 +26,7 @@ function ProcessStep({ num, title, text, isActive }: {
         } : {
           borderColor: "rgba(0,0,0,0.12)",
           color: "#b0b0b0",
-          backgroundColor: "#f5f4f0",
+          backgroundColor: "#1e1e1e",
           boxShadow: "0 0 0px rgba(200,232,78,0)",
         }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -71,13 +71,13 @@ export default function Process() {
   return (
     /* Conteneur scrollable · 300vh pour que chaque 1/6 ≈ 50vh de scroll */
     <div ref={containerRef} style={{ height: "300vh" }} id="process">
-      <div className="sticky top-0 bg-[#f5f4f0] py-24 sm:py-32 min-h-screen flex flex-col justify-center">
+      <div className="sticky top-0 bg-[#1e1e1e] py-24 sm:py-32 min-h-screen flex flex-col justify-center">
         <div className="max-w-[1400px] mx-auto px-[var(--gutter)] w-full">
 
           {/* Header */}
           <div className="text-center max-w-[50ch] mx-auto mb-16 sm:mb-20">
             <span className="label">Process</span>
-            <h2 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#0f0f0f]">
+            <h2 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-white">
               Six étapes. Zéro surprise.
             </h2>
           </div>
@@ -103,7 +103,7 @@ export default function Process() {
           <motion.p
             animate={{ opacity: activeCount >= 6 ? 0 : 0.35 }}
             transition={{ duration: 0.5 }}
-            className="text-center text-xs text-[#6a6a6a] tracking-widest uppercase mt-16 select-none"
+            className="text-center text-xs text-[#9a9a9a] tracking-widest uppercase mt-16 select-none"
           >
             ↓ Continuez à défiler
           </motion.p>
