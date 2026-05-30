@@ -83,7 +83,7 @@ export default function ContactForm() {
     return (
       <div className="text-center py-16">
         <div className="w-16 h-16 rounded-full bg-[rgba(200,232,78,0.12)] flex items-center justify-center mx-auto mb-6">
-          <svg className="w-7 h-7 text-[#c8e84e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <svg className="w-7 h-7 text-[#6b8a00]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
           </svg>
         </div>
@@ -164,11 +164,11 @@ export default function ContactForm() {
         />
         <label htmlFor="rgpd" className="text-xs text-[#6a6a6a] leading-relaxed cursor-pointer">
           J&apos;accepte que BenRaff Studio traite mes données personnelles afin de répondre à ma demande.{' '}
-          <Link href="/politique-de-confidentialite" target="_blank" className="text-[#c8e84e] hover:underline">
+          <Link href="/politique-de-confidentialite" target="_blank" className="text-[#6b8a00] hover:underline">
             Politique de confidentialité
           </Link>
           {' · '}
-          <Link href="/mentions-legales" target="_blank" className="text-[#c8e84e] hover:underline">
+          <Link href="/mentions-legales" target="_blank" className="text-[#6b8a00] hover:underline">
             Mentions légales
           </Link>
         </label>

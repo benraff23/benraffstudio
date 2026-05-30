@@ -133,7 +133,7 @@ function Problems() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-black/[0.05] border border-black/[0.05] rounded-2xl overflow-hidden">
         {items.map(([num, title, text], i) => (
           <div key={num} className={`reveal delay-${i + 1} bg-[#f5f4f0] hover:bg-[#e8e5df] transition-colors duration-400 p-10`}>
-            <div className="text-xs font-medium tracking-[0.15em] uppercase text-[#c8e84e] mb-6 tabular-nums">{num}</div>
+            <div className="text-xs font-medium tracking-[0.15em] uppercase text-[#6b8a00] mb-6 tabular-nums">{num}</div>
             <h3 className="text-xl font-semibold tracking-tight text-[#0f0f0f] mb-3 leading-snug">{title}</h3>
             <p className="text-base text-[#6a6a6a] leading-relaxed max-w-[32ch]">{text}</p>
           </div>
@@ -146,7 +146,7 @@ function Problems() {
 // ─── Services ─────────────────────────────────────────────────────────────────
 const ServiceIcon = ({ path }: { path: string }) => (
   <div className="w-12 h-12 rounded-xl bg-[rgba(200,232,78,0.12)] flex items-center justify-center mb-6">
-    <svg className="w-[22px] h-[22px] text-[#c8e84e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <svg className="w-[22px] h-[22px] text-[#6b8a00]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d={path} strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   </div>
@@ -258,7 +258,7 @@ function Why() {
             {points.map(({ icon, title, text }, i) => (
               <div key={title} className={`reveal delay-${i + 2} why-point flex gap-5 items-start p-5 rounded-xl hover:bg-[#e8e5df] transition-colors`}>
                 <div className="w-9 h-9 rounded-lg bg-[rgba(200,232,78,0.12)] flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-[#c8e84e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <svg className="w-4 h-4 text-[#6b8a00]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d={icon} strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
@@ -300,7 +300,7 @@ function Craft() {
   )
   const Check = () => (
     <div className="w-4 h-4 rounded-full bg-[rgba(200,232,78,0.12)] flex items-center justify-center flex-shrink-0 mt-0.5">
-      <svg className="w-2.5 h-2.5 text-[#c8e84e]" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M2 5l2.5 2.5L8 2"/></svg>
+      <svg className="w-2.5 h-2.5 text-[#6b8a00]" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M2 5l2.5 2.5L8 2"/></svg>
     </div>
   )
   const pillars = [
@@ -338,7 +338,7 @@ function Craft() {
           <div className="w-px h-10 bg-black/10" />
         </div>
         <div className="reveal-right">
-          <div className="text-xs font-medium tracking-[0.15em] uppercase text-[#c8e84e] mb-6 pb-4 border-b border-[rgba(200,232,78,0.2)]">BenRaff Studio</div>
+          <div className="text-xs font-medium tracking-[0.15em] uppercase text-[#6b8a00] mb-6 pb-4 border-b border-[rgba(200,232,78,0.2)]">BenRaff Studio</div>
           <div className="flex flex-col gap-4">
             {studioItems.map(t => (
               <div key={t} className="flex gap-3 items-start">
@@ -385,7 +385,7 @@ function Platform() {
           <div className="flex flex-col gap-5">
             {features.map(([title, text], i) => (
               <div key={title} className={`reveal delay-${i + 2} flex gap-4 items-start`}>
-                <div className="w-7 h-7 rounded-full border border-[#c8e84e] flex items-center justify-center text-xs font-semibold text-[#c8e84e] flex-shrink-0 tabular-nums">{i + 1}</div>
+                <div className="w-7 h-7 rounded-full border border-[#c8e84e] flex items-center justify-center text-xs font-semibold text-[#6b8a00] flex-shrink-0 tabular-nums">{i + 1}</div>
                 <div>
                   <div className="text-base font-semibold text-[#0f0f0f] mb-1">{title}</div>
                   <p className="text-sm text-[#6a6a6a] leading-relaxed">{text}</p>
@@ -408,7 +408,7 @@ function Platform() {
           <div className="p-6 flex flex-col gap-4">
             <div className="flex items-center justify-between">
               <span className="text-base font-semibold text-[#0f0f0f]">Villa Moderne · Aix-en-Provence</span>
-              <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[#c8e84e] bg-[rgba(200,232,78,0.12)] px-3 py-1 rounded-full">
+              <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[#6b8a00] bg-[rgba(200,232,78,0.12)] px-3 py-1 rounded-full">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#c8e84e]" />
                 En cours
               </span>
@@ -416,7 +416,7 @@ function Platform() {
             <div>
               <div className="flex justify-between mb-1.5">
                 <span className="text-xs text-[#6a6a6a]">Avancement global</span>
-                <span className="text-xs font-semibold text-[#c8e84e]">68%</span>
+                <span className="text-xs font-semibold text-[#6b8a00]">68%</span>
               </div>
               <div className="h-1 bg-black/[0.08] rounded-full overflow-hidden">
                 <div id="progressFill" className="h-full bg-[#c8e84e] rounded-full transition-[width] duration-[1500ms]" style={{ width: '0%' }} />
@@ -481,7 +481,7 @@ function Contact() {
 
           {/* Garantie */}
           <div className="reveal delay-4 bg-[rgba(200,232,78,0.06)] border border-[rgba(200,232,78,0.2)] rounded-xl p-5 text-sm text-[#4a4a4a] leading-relaxed mb-8">
-            <strong className="text-[#c8e84e]">Garantie :</strong> Si le premier rendu ne correspond pas à votre brief, on le retravaille sans frais supplémentaires. Toujours.
+            <strong className="text-[#6b8a00]">Garantie :</strong> Si le premier rendu ne correspond pas à votre brief, on le retravaille sans frais supplémentaires. Toujours.
           </div>
 
           {/* Contacts directs */}
@@ -497,7 +497,7 @@ function Contact() {
               </svg>
               WhatsApp · 06 24 51 76 41
             </a>
-            <a href="mailto:contact@benraffstudio.com" className="inline-flex items-center gap-3 text-base font-medium text-[#0f0f0f] hover:text-[#c8e84e] transition-colors">
+            <a href="mailto:contact@benraffstudio.com" className="inline-flex items-center gap-3 text-base font-medium text-[#0f0f0f] hover:text-[#6b8a00] transition-colors">
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
               </svg>

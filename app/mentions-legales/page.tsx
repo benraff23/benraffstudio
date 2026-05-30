@@ -23,7 +23,7 @@ export default function MentionsLegales() {
       </header>
 
       <main className="max-w-3xl mx-auto px-6 py-20">
-        <p className="text-xs font-medium tracking-[0.15em] uppercase text-[#c8e84e] mb-4">Informations légales</p>
+        <p className="text-xs font-medium tracking-[0.15em] uppercase text-[#6b8a00] mb-4">Informations légales</p>
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0f0f0f] mb-16">
           Mentions légales
         </h1>
@@ -42,7 +42,7 @@ export default function MentionsLegales() {
               <li><span className="text-[#6a6a6a]">Adresse :</span> Rennes (35000), Ille-et-Vilaine, France</li>
               <li><span className="text-[#6a6a6a]">Téléphone :</span> 06 24 51 76 41</li>
               <li><span className="text-[#6a6a6a]">Email :</span>{' '}
-                <a href="mailto:contact@benraffstudio.com" className="text-[#c8e84e] hover:underline">
+                <a href="mailto:contact@benraffstudio.com" className="text-[#6b8a00] hover:underline">
                   contact@benraffstudio.com
                 </a>
               </li>
@@ -67,7 +67,7 @@ export default function MentionsLegales() {
               <li><span className="text-[#6a6a6a]">Société :</span> Vercel Inc.</li>
               <li><span className="text-[#6a6a6a]">Adresse :</span> 340 Pine Street, Suite 600, San Francisco, CA 94104, États-Unis</li>
               <li><span className="text-[#6a6a6a]">Site :</span>{' '}
-                <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="text-[#c8e84e] hover:underline">
+                <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="text-[#6b8a00] hover:underline">
                   vercel.com
                 </a>
               </li>
@@ -117,7 +117,7 @@ export default function MentionsLegales() {
             </h2>
             <p className="text-sm">
               Pour toute information relative au traitement de vos données personnelles, consultez notre{' '}
-              <Link href="/politique-de-confidentialite" className="text-[#c8e84e] hover:underline">
+              <Link href="/politique-de-confidentialite" className="text-[#6b8a00] hover:underline">
                 Politique de confidentialité
               </Link>.
             </p>

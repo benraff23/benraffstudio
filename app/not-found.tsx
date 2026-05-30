@@ -26,7 +26,7 @@ export default function NotFound() {
         <div className="-mt-4 mb-8">
           <div className="inline-flex items-center gap-2 mb-5">
             <div className="w-1.5 h-1.5 rounded-full bg-[#c8e84e]" />
-            <span className="text-xs font-medium tracking-[0.15em] uppercase text-[#c8e84e]">
+            <span className="text-xs font-medium tracking-[0.15em] uppercase text-[#6b8a00]">
               Page introuvable
             </span>
           </div>

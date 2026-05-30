@@ -23,7 +23,7 @@ export default function PolitiqueConfidentialite() {
       </header>
 
       <main className="max-w-3xl mx-auto px-6 py-20">
-        <p className="text-xs font-medium tracking-[0.15em] uppercase text-[#c8e84e] mb-4">Vos droits &amp; vos données</p>
+        <p className="text-xs font-medium tracking-[0.15em] uppercase text-[#6b8a00] mb-4">Vos droits &amp; vos données</p>
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0f0f0f] mb-4">
           Politique de confidentialité
         </h1>
@@ -40,7 +40,7 @@ export default function PolitiqueConfidentialite() {
               <li><span className="text-[#6a6a6a]">Nom :</span> Benjamin Raffegeau · BenRaff Studio</li>
               <li><span className="text-[#6a6a6a]">Adresse :</span> Rennes (35000), France</li>
               <li><span className="text-[#6a6a6a]">Email :</span>{' '}
-                <a href="mailto:contact@benraffstudio.com" className="text-[#c8e84e] hover:underline">
+                <a href="mailto:contact@benraffstudio.com" className="text-[#6b8a00] hover:underline">
                   contact@benraffstudio.com
                 </a>
               </li>
@@ -91,7 +91,7 @@ export default function PolitiqueConfidentialite() {
             <h2 className="text-lg font-semibold text-[#0f0f0f] mb-4 pb-3 border-b border-black/[0.1]">
               3. Durée de conservation
             </h2>
-            <ul className="flex flex-col gap-2 text-sm list-disc list-inside marker:text-[#c8e84e]">
+            <ul className="flex flex-col gap-2 text-sm list-disc list-inside marker:text-[#6b8a00]">
               <li>Données du formulaire de contact : <strong className="text-[#0f0f0f]">3 ans</strong> à compter du dernier contact</li>
               <li>Données clients (devis, contrats) : <strong className="text-[#0f0f0f]">5 ans</strong> (obligation légale comptable)</li>
               <li>Logs techniques : <strong className="text-[#0f0f0f]">12 mois</strong> maximum</li>
@@ -110,11 +110,11 @@ export default function PolitiqueConfidentialite() {
               <p className="font-medium text-[#0f0f0f] mb-3">Cookies utilisés :</p>
               <ul className="flex flex-col gap-2 text-[#6a6a6a]">
                 <li className="flex gap-3">
-                  <span className="text-[#c8e84e] flex-shrink-0">→</span>
+                  <span className="text-[#6b8a00] flex-shrink-0">→</span>
                   <span><strong className="text-[#0f0f0f]">Cookie de session</strong> : technique, nécessaire au fonctionnement du formulaire de contact. Durée : session.</span>
                 </li>
                 <li className="flex gap-3">
-                  <span className="text-[#c8e84e] flex-shrink-0">→</span>
+                  <span className="text-[#6b8a00] flex-shrink-0">→</span>
                   <span><strong className="text-[#0f0f0f]">Préférences cookies</strong> : mémorise votre choix sur la bannière de consentement. Durée : 12 mois.</span>
                 </li>
               </ul>
@@ -130,7 +130,7 @@ export default function PolitiqueConfidentialite() {
               Vos données personnelles ne sont <strong className="text-[#0f0f0f]">jamais vendues ni cédées</strong> à des tiers à des fins commerciales.
             </p>
             <p className="text-sm mb-3">Elles peuvent être transmises aux sous-traitants techniques suivants, dans le strict cadre de leur mission :</p>
-            <ul className="flex flex-col gap-2 text-sm list-disc list-inside marker:text-[#c8e84e]">
+            <ul className="flex flex-col gap-2 text-sm list-disc list-inside marker:text-[#6b8a00]">
               <li><strong className="text-[#0f0f0f]">Vercel Inc.</strong> (hébergement) · politique disponible sur vercel.com/legal/privacy-policy</li>
               <li><strong className="text-[#0f0f0f]">Prestataires email</strong> utilisés pour répondre à vos demandes (Gmail / messagerie professionnelle)</li>
             </ul>
@@ -161,14 +161,14 @@ export default function PolitiqueConfidentialite() {
             </div>
             <p className="text-sm mt-6">
               Pour exercer vos droits, contactez-nous par email à{' '}
-              <a href="mailto:contact@benraffstudio.com" className="text-[#c8e84e] hover:underline">
+              <a href="mailto:contact@benraffstudio.com" className="text-[#6b8a00] hover:underline">
                 contact@benraffstudio.com
               </a>{' '}
               en précisant votre demande. Nous nous engageons à répondre sous <strong className="text-[#0f0f0f]">30 jours</strong>.
             </p>
             <p className="text-sm mt-4">
               Vous pouvez également introduire une réclamation auprès de la{' '}
-              <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="text-[#c8e84e] hover:underline">
+              <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="text-[#6b8a00] hover:underline">
                 CNIL (cnil.fr)
               </a>.
             </p>
@@ -191,7 +191,7 @@ export default function PolitiqueConfidentialite() {
             </h2>
             <p className="text-sm">
               Pour toute question relative à cette politique ou à vos données personnelles :{' '}
-              <a href="mailto:contact@benraffstudio.com" className="text-[#c8e84e] hover:underline">
+              <a href="mailto:contact@benraffstudio.com" className="text-[#6b8a00] hover:underline">
                 contact@benraffstudio.com
               </a>
             </p>

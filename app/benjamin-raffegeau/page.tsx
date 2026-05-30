@@ -100,7 +100,7 @@ function SkillBar({ name, level, category }: { name: string; level: number; cate
           <span className="text-sm font-semibold text-[#0f0f0f]">{name}</span>
           <span className="ml-2 text-xs text-[#5a5a5a]">{category}</span>
         </div>
-        <span className="text-xs font-medium text-[#c8e84e] tabular-nums">{level}%</span>
+        <span className="text-xs font-medium text-[#6b8a00] tabular-nums">{level}%</span>
       </div>
       <div className="h-1 bg-black/[0.1] rounded-full overflow-hidden">
         <div
@@ -168,7 +168,7 @@ export default function BenjaminRaffegeau() {
 
           {/* Bio */}
           <div>
-            <span className="inline-flex items-center gap-2 text-[#c8e84e] text-xs font-medium tracking-[0.15em] uppercase mb-5">
+            <span className="inline-flex items-center gap-2 text-[#6b8a00] text-xs font-medium tracking-[0.15em] uppercase mb-5">
               <span className="block w-4 h-px bg-[#c8e84e]" />
               Perspectiviste 3D · Rennes
             </span>
@@ -245,7 +245,7 @@ export default function BenjaminRaffegeau() {
         {/* ── Histoire ── */}
         <div className="mb-28 grid lg:grid-cols-[1fr_2fr] gap-12 items-start">
           <div>
-            <span className="inline-flex items-center gap-2 text-[#c8e84e] text-xs font-medium tracking-[0.15em] uppercase mb-3">
+            <span className="inline-flex items-center gap-2 text-[#6b8a00] text-xs font-medium tracking-[0.15em] uppercase mb-3">
               <span className="block w-4 h-px bg-[#c8e84e]" />
               Parcours
             </span>
@@ -296,7 +296,7 @@ export default function BenjaminRaffegeau() {
         {/* ── Expertise ── */}
         <div className="mb-28">
           <div className="mb-10">
-            <span className="inline-flex items-center gap-2 text-[#c8e84e] text-xs font-medium tracking-[0.15em] uppercase mb-3">
+            <span className="inline-flex items-center gap-2 text-[#6b8a00] text-xs font-medium tracking-[0.15em] uppercase mb-3">
               <span className="block w-4 h-px bg-[#c8e84e]" />
               Domaines d'expertise
             </span>
@@ -310,7 +310,7 @@ export default function BenjaminRaffegeau() {
                            rounded-xl px-5 py-4 hover:border-black/[0.12] hover:bg-[#dedad4] transition-all"
               >
                 <div className="w-9 h-9 rounded-lg bg-[rgba(200,232,78,0.1)] flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-[#c8e84e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <svg className="w-4 h-4 text-[#6b8a00]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d={icon} strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
@@ -323,7 +323,7 @@ export default function BenjaminRaffegeau() {
         {/* ── Outils ── */}
         <div className="grid lg:grid-cols-2 gap-16 mb-28 items-start">
           <div>
-            <span className="inline-flex items-center gap-2 text-[#c8e84e] text-xs font-medium tracking-[0.15em] uppercase mb-3">
+            <span className="inline-flex items-center gap-2 text-[#6b8a00] text-xs font-medium tracking-[0.15em] uppercase mb-3">
               <span className="block w-4 h-px bg-[#c8e84e]" />
               Outils & logiciels
             </span>
@@ -360,7 +360,7 @@ export default function BenjaminRaffegeau() {
         {/* ── Formation ── */}
         <div className="mb-28">
           <div className="mb-10">
-            <span className="inline-flex items-center gap-2 text-[#c8e84e] text-xs font-medium tracking-[0.15em] uppercase mb-3">
+            <span className="inline-flex items-center gap-2 text-[#6b8a00] text-xs font-medium tracking-[0.15em] uppercase mb-3">
               <span className="block w-4 h-px bg-[#c8e84e]" />
               Parcours
             </span>
@@ -374,7 +374,7 @@ export default function BenjaminRaffegeau() {
                 <div key={i} className="sm:pl-10 relative">
                   <div className="hidden sm:block absolute left-0 top-1.5 w-3.5 h-3.5 rounded-full
                                   border-2 border-[#c8e84e] bg-[#f5f4f0]" />
-                  <p className="text-xs font-medium tracking-wider uppercase text-[#c8e84e] mb-2">{period}</p>
+                  <p className="text-xs font-medium tracking-wider uppercase text-[#6b8a00] mb-2">{period}</p>
                   <h3 className="text-base font-semibold text-[#0f0f0f] mb-0.5">{title}</h3>
                   <p className="text-xs text-[#5a5a5a] mb-3 tracking-wide">{school}</p>
                   <p className="text-sm text-[#6a6a6a] leading-relaxed max-w-[52ch]">{desc}</p>
@@ -388,7 +388,7 @@ export default function BenjaminRaffegeau() {
         <div className="mb-28">
           <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
             <div>
-              <span className="inline-flex items-center gap-2 text-[#c8e84e] text-xs font-medium tracking-[0.15em] uppercase mb-3">
+              <span className="inline-flex items-center gap-2 text-[#6b8a00] text-xs font-medium tracking-[0.15em] uppercase mb-3">
                 <span className="block w-4 h-px bg-[#c8e84e]" />
                 Réalisations
               </span>
@@ -437,7 +437,7 @@ export default function BenjaminRaffegeau() {
 
         {/* ── CTA Contact ── */}
         <div className="bg-[#e8e5df] border border-black/[0.1] rounded-3xl p-10 sm:p-14 text-center">
-          <span className="inline-flex items-center gap-2 text-[#c8e84e] text-xs font-medium tracking-[0.15em] uppercase mb-4">
+          <span className="inline-flex items-center gap-2 text-[#6b8a00] text-xs font-medium tracking-[0.15em] uppercase mb-4">
             <span className="block w-4 h-px bg-[#c8e84e]" />
             Collaboration
           </span>

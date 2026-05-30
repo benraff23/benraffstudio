@@ -37,7 +37,7 @@ export default function LaunchOffer() {
           <div className="inline-flex items-center gap-2 mb-5">
             <div className="w-1.5 h-1.5 rounded-full bg-[#c8e84e]"
                  style={{ animation: 'pulse 2s ease-in-out infinite' }} />
-            <span className="text-xs font-medium tracking-[0.15em] uppercase text-[#c8e84e]">
+            <span className="text-xs font-medium tracking-[0.15em] uppercase text-[#6b8a00]">
               Studio en lancement · 3 créneaux disponibles
             </span>
           </div>
@@ -59,7 +59,7 @@ export default function LaunchOffer() {
               <div className={`w-10 h-10 rounded-full border flex items-center justify-center text-xs font-semibold
                 ${n <= 2
                   ? 'border-black/[0.12] bg-black/[0.04] text-[#5a5a5a] line-through'
-                  : 'border-[#c8e84e] bg-[rgba(200,232,78,0.1)] text-[#c8e84e]'
+                  : 'border-[#c8e84e] bg-[rgba(200,232,78,0.1)] text-[#6b8a00]'
                 }`}>
                 {n}
               </div>
@@ -78,7 +78,7 @@ export default function LaunchOffer() {
             <div key={num}
                  className="bg-[#e8e5df] border border-black/[0.08] rounded-2xl p-7
                             hover:border-black/[0.15] hover:bg-[#dedad4] transition-all duration-300">
-              <span className="text-xs font-medium tracking-[0.15em] uppercase text-[#c8e84e] mb-4 block">
+              <span className="text-xs font-medium tracking-[0.15em] uppercase text-[#6b8a00] mb-4 block">
                 {num}
               </span>
               <h3 className="text-base font-semibold text-[#0f0f0f] mb-2 leading-snug">{title}</h3>

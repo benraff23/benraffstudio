@@ -188,7 +188,7 @@ const ProjectModal = ({ item, onClose }: { item: ImageItem; onClose: () => void 
       >
         <div>
           {item.category && (
-            <p className="text-[#c8e84e] text-[10px] font-medium tracking-[0.2em] uppercase mb-0.5">
+            <p className="text-[#6b8a00] text-[10px] font-medium tracking-[0.2em] uppercase mb-0.5">
               {item.category}
             </p>
           )}
@@ -307,7 +307,7 @@ const ProjectModal = ({ item, onClose }: { item: ImageItem; onClose: () => void 
             )}
             {item.livraison && (
               <div className="bg-[rgba(200,232,78,0.06)] border border-[rgba(200,232,78,0.2)] rounded-xl p-5">
-                <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-[#c8e84e] mb-2">
+                <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-[#6b8a00] mb-2">
                   Livraison
                 </p>
                 <p className="text-sm text-[#4a4a4a] leading-relaxed">{item.livraison}</p>
@@ -452,7 +452,7 @@ const InteractiveImageBentoGallery: React.FC<InteractiveImageBentoGalleryProps> 
         <motion.div style={{ opacity, y }} className="px-[var(--gutter)] mb-14">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
             <div>
-              <span className="inline-flex items-center gap-2 text-[#c8e84e] text-xs font-medium tracking-[0.15em] uppercase mb-4">
+              <span className="inline-flex items-center gap-2 text-[#6b8a00] text-xs font-medium tracking-[0.15em] uppercase mb-4">
                 <span className="block w-4 h-px bg-[#c8e84e]" />
                 Portfolio
               </span>
@@ -541,7 +541,7 @@ const InteractiveImageBentoGallery: React.FC<InteractiveImageBentoGalleryProps> 
                                 transition-all duration-500
                                 group-hover:translate-y-0 group-hover:opacity-100">
                   {item.category && (
-                    <p className="text-[10px] font-medium tracking-[0.15em] uppercase text-[#c8e84e] mb-1">
+                    <p className="text-[10px] font-medium tracking-[0.15em] uppercase text-[#6b8a00] mb-1">
                       {item.category}
                     </p>
                   )}

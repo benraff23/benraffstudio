@@ -61,7 +61,7 @@ function FaqItem({ question, answer, index }: { question: string; answer: string
         aria-expanded={open}
       >
         <span className="flex items-start gap-4">
-          <span className="text-xs font-medium tabular-nums text-[#c8e84e] mt-0.5 flex-shrink-0">
+          <span className="text-xs font-medium tabular-nums text-[#6b8a00] mt-0.5 flex-shrink-0">
             {String(index + 1).padStart(2, '0')}
           </span>
           <span className="text-base font-semibold text-[#0f0f0f] group-hover:text-[#4a4a4a] transition-colors leading-snug">
