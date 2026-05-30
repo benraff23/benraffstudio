@@ -29,8 +29,8 @@
   --gutter: clamp(1.5rem, 5vw, 4rem);
   --max-width: 1400px;
 
-  --border-subtle: 1px solid rgba(255,255,255,0.06);
-  --border-dim:    1px solid rgba(255,255,255,0.1);
+  --border-subtle: 1px solid rgba(0,0,0,0.08);
+  --border-dim:    1px solid rgba(0,0,0,0.12);
   --border-lime:   1px solid rgba(200,232,78,0.3);
 }
 
@@ -46,8 +46,8 @@ html {
 }
 
 body {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: #f5f4f0;
+  color: #0f0f0f;
   font-family: var(--font-sans);
   overflow-x: hidden;
   cursor: none;
@@ -81,7 +81,7 @@ a, button { cursor: none; }
 ::selection { background: var(--color-lime); color: var(--color-black); }
 
 ::-webkit-scrollbar       { width: 3px; }
-::-webkit-scrollbar-track { background: var(--color-black); }
+::-webkit-scrollbar-track { background: #f5f4f0; }
 ::-webkit-scrollbar-thumb { background: var(--color-grey-300); border-radius: 99px; }
 
 /* ─── Reveal animations ─── */

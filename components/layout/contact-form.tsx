@@ -87,32 +87,32 @@ export default function ContactForm() {
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
           </svg>
         </div>
-        <h3 className="text-xl font-semibold text-white mb-2">Demande envoyée.</h3>
-        <p className="text-[#9a9a9a] text-base">Je reviens vers vous sous 24h. Merci pour votre confiance.</p>
+        <h3 className="text-xl font-semibold text-[#0f0f0f] mb-2">Demande envoyée.</h3>
+        <p className="text-[#6a6a6a] text-base">Je reviens vers vous sous 24h. Merci pour votre confiance.</p>
       </div>
     )
   }
 
-  const inputCls = `w-full bg-[#1e1e1e] border border-white/[0.14] rounded-lg px-5 py-4
-    font-sans text-base text-white placeholder-[#5a5a5a] outline-none appearance-none
-    focus:border-[rgba(200,232,78,0.5)] focus:bg-[#222] transition-colors duration-200`
+  const inputCls = `w-full bg-[#ece9e3] border border-black/[0.15] rounded-lg px-5 py-4
+    font-sans text-base text-[#0f0f0f] placeholder-[#888888] outline-none appearance-none
+    focus:border-[rgba(200,232,78,0.6)] focus:bg-[#e5e2dc] transition-colors duration-200`
 
-  const selectStyle: React.CSSProperties = { colorScheme: 'dark' }
+  const selectStyle: React.CSSProperties = { colorScheme: 'light' }
 
   return (
     <form ref={formRef} onSubmit={handleSubmit} noValidate>
-      <h3 className="text-xl font-semibold text-white mb-8">Décrivez votre projet</h3>
+      <h3 className="text-xl font-semibold text-[#0f0f0f] mb-8">Décrivez votre projet</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-2">
-          <label className="text-xs font-semibold tracking-widest uppercase text-[#b8b8b8]" htmlFor="name">Nom / Société</label>
+          <label className="text-xs font-semibold tracking-widest uppercase text-[#4a4a4a]" htmlFor="name">Nom / Société</label>
           <input className={inputCls} type="text" id="name" name="name" placeholder="Jean Dupont" autoComplete="name" />
         </div>
         <div className="flex flex-col gap-2">
-          <label className="text-xs font-semibold tracking-widest uppercase text-[#b8b8b8]" htmlFor="email">Email</label>
+          <label className="text-xs font-semibold tracking-widest uppercase text-[#4a4a4a]" htmlFor="email">Email</label>
           <input className={inputCls} type="email" id="email" name="email" placeholder="jean@studio.fr" autoComplete="email" />
         </div>
         <div className="flex flex-col gap-2">
-          <label className="text-xs font-semibold tracking-widest uppercase text-[#b8b8b8]" htmlFor="profile">Votre profil</label>
+          <label className="text-xs font-semibold tracking-widest uppercase text-[#4a4a4a]" htmlFor="profile">Votre profil</label>
           <select className={`${inputCls} cursor-pointer`} style={selectStyle} id="profile" name="profile" defaultValue="">
             <option value="" disabled>Sélectionnez</option>
             <option value="architecte">Architecte</option>
@@ -123,7 +123,7 @@ export default function ContactForm() {
           </select>
         </div>
         <div className="flex flex-col gap-2">
-          <label className="text-xs font-semibold tracking-widest uppercase text-[#b8b8b8]" htmlFor="service">Type de prestation</label>
+          <label className="text-xs font-semibold tracking-widest uppercase text-[#4a4a4a]" htmlFor="service">Type de prestation</label>
           <select className={`${inputCls} cursor-pointer`} style={selectStyle} id="service" name="service" defaultValue="">
             <option value="" disabled>Sélectionnez</option>
             <option value="rendu-fixe">Rendus fixes</option>
@@ -134,7 +134,7 @@ export default function ContactForm() {
           </select>
         </div>
         <div className="flex flex-col gap-2 sm:col-span-2">
-          <label className="text-xs font-semibold tracking-widest uppercase text-[#b8b8b8]" htmlFor="budget">Budget envisagé</label>
+          <label className="text-xs font-semibold tracking-widest uppercase text-[#4a4a4a]" htmlFor="budget">Budget envisagé</label>
           <select className={`${inputCls} cursor-pointer`} style={selectStyle} id="budget" name="budget" defaultValue="">
             <option value="" disabled>Fourchette budgétaire</option>
             <option value="500-1500">500 € – 1 500 €</option>
@@ -145,7 +145,7 @@ export default function ContactForm() {
           </select>
         </div>
         <div className="flex flex-col gap-2 sm:col-span-2">
-          <label className="text-xs font-semibold tracking-widest uppercase text-[#b8b8b8]" htmlFor="project">Décrivez votre projet</label>
+          <label className="text-xs font-semibold tracking-widest uppercase text-[#4a4a4a]" htmlFor="project">Décrivez votre projet</label>
           <textarea
             className={`${inputCls} resize-none min-h-[120px]`}
             id="project" name="project"
@@ -162,7 +162,7 @@ export default function ContactForm() {
           required
           className="mt-1 w-4 h-4 flex-shrink-0 accent-[#c8e84e] cursor-pointer"
         />
-        <label htmlFor="rgpd" className="text-xs text-[#9a9a9a] leading-relaxed cursor-pointer">
+        <label htmlFor="rgpd" className="text-xs text-[#6a6a6a] leading-relaxed cursor-pointer">
           J&apos;accepte que BenRaff Studio traite mes données personnelles afin de répondre à ma demande.{' '}
           <Link href="/politique-de-confidentialite" target="_blank" className="text-[#c8e84e] hover:underline">
             Politique de confidentialité
@@ -190,7 +190,7 @@ export default function ContactForm() {
           </svg>
         )}
       </button>
-      <p className="text-center text-xs text-[#7a7a7a] mt-5 leading-relaxed">
+      <p className="text-center text-xs text-[#6a6a6a] mt-5 leading-relaxed">
         Réponse garantie sous 24h, je réponds personnellement à chaque demande sérieuse.
       </p>
     </form>

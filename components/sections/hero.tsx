@@ -114,7 +114,7 @@ export default function Hero() {
             Décrire mon projet
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </a>
-          <a href="#portfolio" className="inline-flex items-center gap-3 text-xs font-medium tracking-wider uppercase text-[#b8b8b8] border border-white/[0.12] px-8 py-4 rounded-full hover:text-white hover:border-white/30 hover:-translate-y-0.5 transition-all duration-200">
+          <a href="#portfolio" className="inline-flex items-center gap-3 text-xs font-medium tracking-wider uppercase text-[#b8b8b8] border border-white/[0.3] px-8 py-4 rounded-full hover:text-white hover:border-white/50 hover:-translate-y-0.5 transition-all duration-200">
             Voir le portfolio
           </a>
         </div>

@@ -24,9 +24,9 @@ function ProcessStep({ num, title, text, isActive }: {
           backgroundColor: "rgba(200,232,78,0.10)",
           boxShadow: "0 0 28px rgba(200,232,78,0.25)",
         } : {
-          borderColor: "rgba(255,255,255,0.08)",
-          color: "#3a3a3a",
-          backgroundColor: "#080808",
+          borderColor: "rgba(0,0,0,0.12)",
+          color: "#b0b0b0",
+          backgroundColor: "#f5f4f0",
           boxShadow: "0 0 0px rgba(200,232,78,0)",
         }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -37,7 +37,7 @@ function ProcessStep({ num, title, text, isActive }: {
       </motion.div>
 
       <motion.h3
-        animate={{ color: isActive ? "#ffffff" : "#3a3a3a" }}
+        animate={{ color: isActive ? "#0f0f0f" : "#b0b0b0" }}
         transition={{ duration: 0.4, ease: "easeOut" }}
         className="text-base font-semibold mb-3"
       >
@@ -45,7 +45,7 @@ function ProcessStep({ num, title, text, isActive }: {
       </motion.h3>
 
       <motion.p
-        animate={{ opacity: isActive ? 1 : 0.2, color: isActive ? "#9a9a9a" : "#5a5a5a" }}
+        animate={{ opacity: isActive ? 1 : 0.4, color: isActive ? "#6a6a6a" : "#9a9a9a" }}
         transition={{ duration: 0.4, ease: "easeOut" }}
         className="text-sm leading-relaxed max-w-[18ch] mx-auto"
       >
@@ -71,13 +71,13 @@ export default function Process() {
   return (
     /* Conteneur scrollable · 300vh pour que chaque 1/6 ≈ 50vh de scroll */
     <div ref={containerRef} style={{ height: "300vh" }} id="process">
-      <div className="sticky top-0 bg-[#080808] py-24 sm:py-32 min-h-screen flex flex-col justify-center">
+      <div className="sticky top-0 bg-[#f5f4f0] py-24 sm:py-32 min-h-screen flex flex-col justify-center">
         <div className="max-w-[1400px] mx-auto px-[var(--gutter)] w-full">
 
           {/* Header */}
           <div className="text-center max-w-[50ch] mx-auto mb-16 sm:mb-20">
             <span className="label">Process</span>
-            <h2 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-white">
+            <h2 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#0f0f0f]">
               Six étapes. Zéro surprise.
             </h2>
           </div>
@@ -103,7 +103,7 @@ export default function Process() {
           <motion.p
             animate={{ opacity: activeCount >= 6 ? 0 : 0.35 }}
             transition={{ duration: 0.5 }}
-            className="text-center text-xs text-[#5a5a5a] tracking-widest uppercase mt-16 select-none"
+            className="text-center text-xs text-[#6a6a6a] tracking-widest uppercase mt-16 select-none"
           >
             ↓ Continuez à défiler
           </motion.p>

@@ -170,7 +170,7 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="bg-[#080808] py-24 sm:py-32 overflow-hidden"
+      className="bg-[#f5f4f0] py-24 sm:py-32 overflow-hidden"
       aria-labelledby="portfolio-title"
     >
       <InteractiveImageBentoGallery
@@ -181,9 +181,9 @@ export default function Portfolio() {
 
       {/* CTA strip */}
       <div className="mt-14 mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
-        <div className="pt-12 border-t border-white/[0.06] flex flex-col sm:flex-row
+        <div className="pt-12 border-t border-black/[0.08] flex flex-col sm:flex-row
                         items-start sm:items-center justify-between gap-6">
-          <p className="text-2xl sm:text-3xl font-semibold tracking-tight text-white">
+          <p className="text-2xl sm:text-3xl font-semibold tracking-tight text-[#0f0f0f]">
             Vous avez un projet à visualiser ?
           </p>
           <a

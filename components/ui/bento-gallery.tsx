@@ -173,7 +173,7 @@ const ProjectModal = ({ item, onClose }: { item: ImageItem; onClose: () => void 
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.25 }}
-      className="fixed inset-0 z-[1010] bg-[#080808] overflow-y-auto"
+      className="fixed inset-0 z-[1010] bg-[#f5f4f0] overflow-y-auto"
       data-lenis-prevent
     >
       {/* ── Sticky header ── */}
@@ -183,8 +183,8 @@ const ProjectModal = ({ item, onClose }: { item: ImageItem; onClose: () => void 
         transition={{ delay: 0.1 }}
         className="sticky top-0 z-10 flex items-center justify-between
                    px-6 sm:px-10 py-4
-                   bg-[rgba(8,8,8,0.92)] backdrop-blur-xl
-                   border-b border-white/[0.06]"
+                   bg-[rgba(245,244,240,0.92)] backdrop-blur-xl
+                   border-b border-black/[0.08]"
       >
         <div>
           {item.category && (
@@ -192,7 +192,7 @@ const ProjectModal = ({ item, onClose }: { item: ImageItem; onClose: () => void 
               {item.category}
             </p>
           )}
-          <h2 className="text-white text-lg font-semibold tracking-tight leading-tight">
+          <h2 className="text-[#0f0f0f] text-lg font-semibold tracking-tight leading-tight">
             {item.title}
           </h2>
         </div>
@@ -200,8 +200,8 @@ const ProjectModal = ({ item, onClose }: { item: ImageItem; onClose: () => void 
           onClick={onClose}
           aria-label="Fermer"
           className="flex items-center gap-2 text-xs font-medium tracking-wider uppercase
-                     text-[#9a9a9a] hover:text-white transition-colors px-3 py-2 rounded-lg
-                     hover:bg-white/[0.06]"
+                     text-[#6a6a6a] hover:text-[#0f0f0f] transition-colors px-3 py-2 rounded-lg
+                     hover:bg-black/[0.06]"
         >
           <X size={16} strokeWidth={1.5} />
           <span className="hidden sm:inline">Fermer</span>
@@ -250,13 +250,13 @@ const ProjectModal = ({ item, onClose }: { item: ImageItem; onClose: () => void 
         className="max-w-4xl mx-auto px-6 sm:px-10 py-12 sm:py-16"
       >
         {(item.client || item.location || item.year || item.category) && (
-          <div className="flex flex-wrap gap-6 sm:gap-10 mb-10 pb-10 border-b border-white/[0.06]">
+          <div className="flex flex-wrap gap-6 sm:gap-10 mb-10 pb-10 border-b border-black/[0.08]">
             {item.client && (
               <div className="flex items-start gap-2">
                 <User size={13} className="text-[#5a5a5a] mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-[10px] font-medium tracking-[0.15em] uppercase text-[#5a5a5a] mb-1">Client</p>
-                  <p className="text-sm font-medium text-white">{item.client}</p>
+                  <p className="text-sm font-medium text-[#0f0f0f]">{item.client}</p>
                 </div>
               </div>
             )}
@@ -265,7 +265,7 @@ const ProjectModal = ({ item, onClose }: { item: ImageItem; onClose: () => void 
                 <MapPin size={13} className="text-[#5a5a5a] mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-[10px] font-medium tracking-[0.15em] uppercase text-[#5a5a5a] mb-1">Localisation</p>
-                  <p className="text-sm font-medium text-white">{item.location}</p>
+                  <p className="text-sm font-medium text-[#0f0f0f]">{item.location}</p>
                 </div>
               </div>
             )}
@@ -274,7 +274,7 @@ const ProjectModal = ({ item, onClose }: { item: ImageItem; onClose: () => void 
                 <Calendar size={13} className="text-[#5a5a5a] mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-[10px] font-medium tracking-[0.15em] uppercase text-[#5a5a5a] mb-1">Année</p>
-                  <p className="text-sm font-medium text-white">{item.year}</p>
+                  <p className="text-sm font-medium text-[#0f0f0f]">{item.year}</p>
                 </div>
               </div>
             )}
@@ -283,14 +283,14 @@ const ProjectModal = ({ item, onClose }: { item: ImageItem; onClose: () => void 
                 <Tag size={13} className="text-[#5a5a5a] mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-[10px] font-medium tracking-[0.15em] uppercase text-[#5a5a5a] mb-1">Prestation</p>
-                  <p className="text-sm font-medium text-white">{item.category}</p>
+                  <p className="text-sm font-medium text-[#0f0f0f]">{item.category}</p>
                 </div>
               </div>
             )}
           </div>
         )}
 
-        <p className="text-lg sm:text-xl font-light text-[#b8b8b8] leading-relaxed mb-8">
+        <p className="text-lg sm:text-xl font-light text-[#4a4a4a] leading-relaxed mb-8">
           {item.fullDesc || item.desc}
         </p>
 
@@ -298,19 +298,19 @@ const ProjectModal = ({ item, onClose }: { item: ImageItem; onClose: () => void 
         {(item.brief || item.livraison) && (
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
             {item.brief && (
-              <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5">
+              <div className="bg-black/[0.03] border border-black/[0.08] rounded-xl p-5">
                 <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-[#5a5a5a] mb-2">
                   Brief & Objectif
                 </p>
-                <p className="text-sm text-[#b8b8b8] leading-relaxed">{item.brief}</p>
+                <p className="text-sm text-[#4a4a4a] leading-relaxed">{item.brief}</p>
               </div>
             )}
             {item.livraison && (
-              <div className="bg-[rgba(200,232,78,0.04)] border border-[rgba(200,232,78,0.12)] rounded-xl p-5">
+              <div className="bg-[rgba(200,232,78,0.06)] border border-[rgba(200,232,78,0.2)] rounded-xl p-5">
                 <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-[#c8e84e] mb-2">
                   Livraison
                 </p>
-                <p className="text-sm text-[#b8b8b8] leading-relaxed">{item.livraison}</p>
+                <p className="text-sm text-[#4a4a4a] leading-relaxed">{item.livraison}</p>
               </div>
             )}
           </div>
@@ -321,8 +321,8 @@ const ProjectModal = ({ item, onClose }: { item: ImageItem; onClose: () => void 
             {item.tags.map(tag => (
               <span
                 key={tag}
-                className="text-xs font-medium tracking-wider text-[#7a7a7a]
-                           border border-white/[0.1] px-3 py-1.5 rounded-full"
+                className="text-xs font-medium tracking-wider text-[#5a5a5a]
+                           border border-black/[0.12] px-3 py-1.5 rounded-full"
               >
                 {tag}
               </span>
@@ -457,13 +457,13 @@ const InteractiveImageBentoGallery: React.FC<InteractiveImageBentoGalleryProps> 
                 Portfolio
               </span>
               {title && (
-                <h2 className="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-white">
+                <h2 className="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#0f0f0f]">
                   {title}
                 </h2>
               )}
             </div>
             {description && (
-              <p className="text-[#9a9a9a] text-base font-light leading-relaxed sm:max-w-[32ch] sm:text-right">
+              <p className="text-[#6a6a6a] text-base font-light leading-relaxed sm:max-w-[32ch] sm:text-right">
                 {description}
               </p>
             )}
@@ -474,9 +474,9 @@ const InteractiveImageBentoGallery: React.FC<InteractiveImageBentoGalleryProps> 
       {/* Horizontal drag-scroll strip */}
       <div ref={containerRef} className="relative w-full cursor-grab active:cursor-grabbing" data-lenis-prevent>
         <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 z-10
-                        bg-gradient-to-r from-[#080808] to-transparent" />
+                        bg-gradient-to-r from-[#f5f4f0] to-transparent" />
         <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 z-10
-                        bg-gradient-to-l from-[#080808] to-transparent" />
+                        bg-gradient-to-l from-[#f5f4f0] to-transparent" />
 
         <motion.div
           className="w-max"
@@ -504,8 +504,8 @@ const InteractiveImageBentoGallery: React.FC<InteractiveImageBentoGalleryProps> 
                 variants={itemVariants}
                 className={cn(
                   "group relative flex items-end overflow-hidden rounded-2xl",
-                  "border border-white/[0.06] bg-[#1a1a1a]",
-                  "cursor-pointer shadow-[0_2px_8px_rgba(0,0,0,0.4)]",
+                  "border border-black/[0.08] bg-[#e8e5df]",
+                  "cursor-pointer shadow-[0_2px_8px_rgba(0,0,0,0.1)]",
                   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c8e84e]",
                   item.span,
                 )}
@@ -557,7 +557,7 @@ const InteractiveImageBentoGallery: React.FC<InteractiveImageBentoGalleryProps> 
       {/* Drag hint */}
       <motion.p
         style={{ opacity }}
-        className="mt-5 text-center text-xs text-[#5a5a5a] tracking-wider select-none"
+        className="mt-5 text-center text-xs text-[#6a6a6a] tracking-wider select-none"
       >
         ← Glissez pour explorer · Cliquez pour ouvrir →
       </motion.p>

@@ -97,12 +97,12 @@ function SkillBar({ name, level, category }: { name: string; level: number; cate
     <div>
       <div className="flex items-center justify-between mb-2">
         <div>
-          <span className="text-sm font-semibold text-white">{name}</span>
+          <span className="text-sm font-semibold text-[#0f0f0f]">{name}</span>
           <span className="ml-2 text-xs text-[#5a5a5a]">{category}</span>
         </div>
         <span className="text-xs font-medium text-[#c8e84e] tabular-nums">{level}%</span>
       </div>
-      <div className="h-1 bg-white/[0.08] rounded-full overflow-hidden">
+      <div className="h-1 bg-black/[0.1] rounded-full overflow-hidden">
         <div
           className="h-full bg-gradient-to-r from-[#c8e84e] to-[#a8c83e] rounded-full"
           style={{ width: `${level}%` }}
@@ -115,20 +115,20 @@ function SkillBar({ name, level, category }: { name: string; level: number; cate
 // ─── Page ──────────────────────────────────────────────────────────────────────
 export default function BenjaminRaffegeau() {
   return (
-    <div className="min-h-screen bg-[#080808] text-[#f5f5f0]">
+    <div className="min-h-screen bg-[#f5f4f0] text-[#0f0f0f]">
       <ClientEffects />
 
       {/* Nav */}
-      <header className="sticky top-0 z-50 border-b border-white/[0.06] px-6 py-4
-                         bg-[rgba(8,8,8,0.92)] backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-black/[0.08] px-6 py-4
+                         bg-[rgba(245,244,240,0.92)] backdrop-blur-xl">
         <div className="max-w-[1200px] mx-auto flex items-center justify-between">
           <Link href="/" className="hover:opacity-70 transition-opacity">
-            <img src="/logo-blanc.webp" alt="BenRaff Studio" className="h-7 w-auto" />
+            <img src="/logo-noir.webp" alt="BenRaff Studio" className="h-7 w-auto" />
           </Link>
           <div className="flex items-center gap-4">
             <Link
               href="/#portfolio"
-              className="text-xs font-medium tracking-wider uppercase text-[#9a9a9a] hover:text-white transition-colors hidden sm:block"
+              className="text-xs font-medium tracking-wider uppercase text-[#6a6a6a] hover:text-[#0f0f0f] transition-colors hidden sm:block"
             >
               Portfolio
             </Link>
@@ -149,7 +149,7 @@ export default function BenjaminRaffegeau() {
         {/* ── Hero ── */}
         <div className="grid lg:grid-cols-[1fr_2fr] gap-16 mb-28 items-center">
           {/* Photo */}
-          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-[#1a1a1a] max-w-sm mx-auto w-full lg:max-w-none">
+          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-[#e8e5df] max-w-sm mx-auto w-full lg:max-w-none">
             <img
               src="/Portrait benjamin Raffegeau.webp"
               alt="Benjamin Raffegeau, perspectiviste 3D et fondateur BenRaff Studio à Rennes"
@@ -173,17 +173,17 @@ export default function BenjaminRaffegeau() {
               Perspectiviste 3D · Rennes
             </span>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.02] text-white mb-6">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.02] text-[#0f0f0f] mb-6">
               Benjamin<br />Raffegeau
             </h1>
 
-            <p className="text-xl font-light text-[#b8b8b8] leading-relaxed mb-8 max-w-[48ch]">
-              Fondateur de <strong className="text-white font-semibold">BenRaff Studio</strong>, je conçois des visualisations
+            <p className="text-xl font-light text-[#4a4a4a] leading-relaxed mb-8 max-w-[48ch]">
+              Fondateur de <strong className="text-[#0f0f0f] font-semibold">BenRaff Studio</strong>, je conçois des visualisations
               architecturales qui font vendre des projets non encore construits. Chaque image est
               le résultat d'une intention, pas d'un rendu aléatoire.
             </p>
 
-            <p className="text-base font-light text-[#9a9a9a] leading-relaxed mb-10 max-w-[46ch]">
+            <p className="text-base font-light text-[#6a6a6a] leading-relaxed mb-10 max-w-[46ch]">
               Spécialisé en aménagement extérieur et intérieur, j'interviens pour des architectes,
               promoteurs et paysagistes partout en France. Mon approche : composition narrative,
               lumière choisie, cohérence des matériaux.
@@ -208,8 +208,8 @@ export default function BenjaminRaffegeau() {
               <a
                 href="tel:+33624517641"
                 className="inline-flex items-center gap-2 text-xs font-medium tracking-wider uppercase
-                           text-[#b8b8b8] border border-white/[0.12] px-6 py-3 rounded-full
-                           hover:text-white hover:border-white/30 transition-all duration-200"
+                           text-[#4a4a4a] border border-black/[0.12] px-6 py-3 rounded-full
+                           hover:text-[#0f0f0f] hover:border-black/30 transition-all duration-200"
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91A16 16 0 0 0 16 17l.91-.85a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 23 18.2v.72z"/>
@@ -219,8 +219,8 @@ export default function BenjaminRaffegeau() {
               <a
                 href="https://benraffstudio.com"
                 className="inline-flex items-center gap-2 text-xs font-medium tracking-wider uppercase
-                           text-[#b8b8b8] border border-white/[0.12] px-6 py-3 rounded-full
-                           hover:text-white hover:border-white/30 transition-all duration-200"
+                           text-[#4a4a4a] border border-black/[0.12] px-6 py-3 rounded-full
+                           hover:text-[#0f0f0f] hover:border-black/30 transition-all duration-200"
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
@@ -233,10 +233,10 @@ export default function BenjaminRaffegeau() {
         </div>
 
         {/* ── Stats ── */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden mb-28">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-black/[0.06] border border-black/[0.06] rounded-2xl overflow-hidden mb-28">
           {stats.map(({ value, label }) => (
-            <div key={label} className="bg-[#080808] px-8 py-8 hover:bg-[#111] transition-colors">
-              <div className="text-4xl font-bold tracking-tight text-white leading-none mb-2">{value}</div>
+            <div key={label} className="bg-[#f5f4f0] px-8 py-8 hover:bg-[#e8e5df] transition-colors">
+              <div className="text-4xl font-bold tracking-tight text-[#0f0f0f] leading-none mb-2">{value}</div>
               <div className="text-xs font-medium tracking-wider uppercase text-[#5a5a5a]">{label}</div>
             </div>
           ))}
@@ -249,14 +249,14 @@ export default function BenjaminRaffegeau() {
               <span className="block w-4 h-px bg-[#c8e84e]" />
               Parcours
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">Mon histoire.</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0f0f0f]">Mon histoire.</h2>
           </div>
-          <div className="flex flex-col gap-5 text-[#9a9a9a] text-base font-light leading-relaxed">
+          <div className="flex flex-col gap-5 text-[#6a6a6a] text-base font-light leading-relaxed">
             <p>
               Tout a commencé par une obsession pour les images, pas les images qui décorent,
               mais celles qui font ressentir quelque chose. En classe prépa arts appliqués, j&apos;apprends
               à regarder autrement : la composition, la lumière, le rapport entre les formes et le vide.
-              C&apos;est là que naît une conviction que je n&apos;ai jamais quittée : <strong className="text-white font-medium">une image est une décision, pas un résultat.</strong>
+              C&apos;est là que naît une conviction que je n&apos;ai jamais quittée : <strong className="text-[#0f0f0f] font-medium">une image est une décision, pas un résultat.</strong>
             </p>
             <p>
               À LISAA Rennes, l&apos;architecture intérieure me donne un langage plus précis.
@@ -266,26 +266,26 @@ export default function BenjaminRaffegeau() {
             </p>
             <p>
               Avant de me spécialiser dans la visualisation 3D, j&apos;exerce pendant plusieurs années
-              en tant que <strong className="text-white font-medium">graphiste 360</strong>, une expérience atypique qui forge une polyvalence rare
+              en tant que <strong className="text-[#0f0f0f] font-medium">graphiste 360</strong>, une expérience atypique qui forge une polyvalence rare
               dans le secteur. Identité visuelle, direction artistique, motion design, webdesign :
               je développe une maîtrise complète de la chaîne de création visuelle, de la conception
               jusqu&apos;à la livraison finale. C&apos;est cette vision globale qui change ma façon
-              d&apos;aborder un rendu : je ne pense pas seulement l&apos;image, <strong className="text-white font-medium">je pense l&apos;écosystème dans lequel elle va vivre.</strong>
+              d&apos;aborder un rendu : je ne pense pas seulement l&apos;image, <strong className="text-[#0f0f0f] font-medium">je pense l&apos;écosystème dans lequel elle va vivre.</strong>
             </p>
             <p>
               Cette double compétence (image 3D et création digitale) me permet aujourd&apos;hui
               de proposer des livrables que peu de perspectivistes peuvent offrir : des
-              <strong className="text-white font-medium"> mini-sites de présentation immobilière</strong> intégrant directement les rendus,
+              <strong className="text-[#0f0f0f] font-medium"> mini-sites de présentation immobilière</strong> intégrant directement les rendus,
               les plans et les éléments de commercialisation pour les promoteurs.
               Un projet, une plateforme, une expérience de vente cohérente de bout en bout.
             </p>
             <p>
-              En 2025, je fonde <strong className="text-white font-medium">BenRaff Studio</strong> à Rennes pour
+              En 2025, je fonde <strong className="text-[#0f0f0f] font-medium">BenRaff Studio</strong> à Rennes pour
               réunir ces disciplines sous un même toit. Visualisation architecturale ultra-réaliste,
               animation vidéo, visite virtuelle et supports digitaux : tout ce dont un promoteur
               ou un architecte a besoin pour présenter, convaincre et vendre, sans multiplier les prestataires.
             </p>
-            <p className="text-[#7a7a7a]">
+            <p className="text-[#888888]">
               Ce qui me motive chaque jour, c&apos;est cette tension entre technique et narration.
               L&apos;IA générative fait partie de mon workflow, non pas comme raccourci, mais comme
               un outil supplémentaire au service d&apos;une vision. Le regard, lui, reste humain.
@@ -300,21 +300,21 @@ export default function BenjaminRaffegeau() {
               <span className="block w-4 h-px bg-[#c8e84e]" />
               Domaines d'expertise
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">Ce que je maîtrise.</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0f0f0f]">Ce que je maîtrise.</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {expertise.map(({ icon, label }) => (
               <div
                 key={label}
-                className="flex items-center gap-4 bg-[#111] border border-white/[0.06]
-                           rounded-xl px-5 py-4 hover:border-white/[0.12] hover:bg-[#161616] transition-all"
+                className="flex items-center gap-4 bg-[#e8e5df] border border-black/[0.06]
+                           rounded-xl px-5 py-4 hover:border-black/[0.12] hover:bg-[#dedad4] transition-all"
               >
                 <div className="w-9 h-9 rounded-lg bg-[rgba(200,232,78,0.1)] flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4 text-[#c8e84e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d={icon} strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <span className="text-sm font-medium text-[#d4d4d0]">{label}</span>
+                <span className="text-sm font-medium text-[#0f0f0f]">{label}</span>
               </div>
             ))}
           </div>
@@ -327,7 +327,7 @@ export default function BenjaminRaffegeau() {
               <span className="block w-4 h-px bg-[#c8e84e]" />
               Outils & logiciels
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-8">Stack technique.</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0f0f0f] mb-8">Stack technique.</h2>
             <div className="flex flex-col gap-6">
               {tools.map((tool) => (
                 <SkillBar key={tool.name} {...tool} />
@@ -336,8 +336,8 @@ export default function BenjaminRaffegeau() {
           </div>
 
           {/* Soft skills */}
-          <div className="bg-[#111] border border-white/[0.06] rounded-2xl p-8">
-            <h3 className="text-lg font-semibold text-white mb-6">Approche de travail</h3>
+          <div className="bg-[#e8e5df] border border-black/[0.06] rounded-2xl p-8">
+            <h3 className="text-lg font-semibold text-[#0f0f0f] mb-6">Approche de travail</h3>
             <div className="flex flex-col gap-5">
               {[
                 ['Écoute du brief', "Chaque projet commence par comprendre l'objectif, pas juste les dimensions du terrain."],
@@ -348,8 +348,8 @@ export default function BenjaminRaffegeau() {
                 <div key={titre} className="flex gap-4 items-start">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#c8e84e] mt-2 flex-shrink-0" />
                   <div>
-                    <p className="text-sm font-semibold text-white mb-1">{titre}</p>
-                    <p className="text-sm text-[#7a7a7a] leading-relaxed">{desc}</p>
+                    <p className="text-sm font-semibold text-[#0f0f0f] mb-1">{titre}</p>
+                    <p className="text-sm text-[#5a5a5a] leading-relaxed">{desc}</p>
                   </div>
                 </div>
               ))}
@@ -364,20 +364,20 @@ export default function BenjaminRaffegeau() {
               <span className="block w-4 h-px bg-[#c8e84e]" />
               Parcours
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">Formation.</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0f0f0f]">Formation.</h2>
           </div>
           <div className="relative">
             {/* Ligne verticale */}
-            <div className="absolute left-[7px] top-2 bottom-2 w-px bg-white/[0.08] hidden sm:block" />
+            <div className="absolute left-[7px] top-2 bottom-2 w-px bg-black/[0.1] hidden sm:block" />
             <div className="flex flex-col gap-10">
               {formation.map(({ period, title, school, desc }, i) => (
                 <div key={i} className="sm:pl-10 relative">
                   <div className="hidden sm:block absolute left-0 top-1.5 w-3.5 h-3.5 rounded-full
-                                  border-2 border-[#c8e84e] bg-[#080808]" />
+                                  border-2 border-[#c8e84e] bg-[#f5f4f0]" />
                   <p className="text-xs font-medium tracking-wider uppercase text-[#c8e84e] mb-2">{period}</p>
-                  <h3 className="text-base font-semibold text-white mb-0.5">{title}</h3>
+                  <h3 className="text-base font-semibold text-[#0f0f0f] mb-0.5">{title}</h3>
                   <p className="text-xs text-[#5a5a5a] mb-3 tracking-wide">{school}</p>
-                  <p className="text-sm text-[#9a9a9a] leading-relaxed max-w-[52ch]">{desc}</p>
+                  <p className="text-sm text-[#6a6a6a] leading-relaxed max-w-[52ch]">{desc}</p>
                 </div>
               ))}
             </div>
@@ -392,13 +392,13 @@ export default function BenjaminRaffegeau() {
                 <span className="block w-4 h-px bg-[#c8e84e]" />
                 Réalisations
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">Projets sélectionnés.</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0f0f0f]">Projets sélectionnés.</h2>
             </div>
             <Link
               href="/#portfolio"
-              className="text-xs font-medium tracking-wider uppercase text-[#9a9a9a]
-                         border border-white/[0.12] px-5 py-2.5 rounded-full
-                         hover:text-white hover:border-white/30 transition-all"
+              className="text-xs font-medium tracking-wider uppercase text-[#6a6a6a]
+                         border border-black/[0.12] px-5 py-2.5 rounded-full
+                         hover:text-[#0f0f0f] hover:border-black/30 transition-all"
             >
               Voir tout le portfolio →
             </Link>
@@ -407,8 +407,8 @@ export default function BenjaminRaffegeau() {
             {projects.map(({ title, tags, img, desc }) => (
               <div
                 key={title}
-                className="group relative overflow-hidden rounded-2xl bg-[#111]
-                           border border-white/[0.06] hover:border-white/[0.12] transition-all"
+                className="group relative overflow-hidden rounded-2xl bg-[#e8e5df]
+                           border border-black/[0.06] hover:border-black/[0.12] transition-all"
               >
                 <div className="aspect-[16/10] overflow-hidden">
                   <img
@@ -419,12 +419,12 @@ export default function BenjaminRaffegeau() {
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="text-sm font-semibold text-white mb-2">{title}</h3>
-                  <p className="text-xs text-[#7a7a7a] leading-relaxed mb-3">{desc}</p>
+                  <h3 className="text-sm font-semibold text-[#0f0f0f] mb-2">{title}</h3>
+                  <p className="text-xs text-[#5a5a5a] leading-relaxed mb-3">{desc}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {tags.map(tag => (
                       <span key={tag} className="text-[10px] font-medium tracking-wider text-[#5a5a5a]
-                                                  border border-white/[0.08] px-2 py-1 rounded-full">
+                                                  border border-black/[0.1] px-2 py-1 rounded-full">
                         {tag}
                       </span>
                     ))}
@@ -436,15 +436,15 @@ export default function BenjaminRaffegeau() {
         </div>
 
         {/* ── CTA Contact ── */}
-        <div className="bg-[#111] border border-white/[0.08] rounded-3xl p-10 sm:p-14 text-center">
+        <div className="bg-[#e8e5df] border border-black/[0.1] rounded-3xl p-10 sm:p-14 text-center">
           <span className="inline-flex items-center gap-2 text-[#c8e84e] text-xs font-medium tracking-[0.15em] uppercase mb-4">
             <span className="block w-4 h-px bg-[#c8e84e]" />
             Collaboration
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0f0f0f] mb-4">
             Un projet à visualiser ?
           </h2>
-          <p className="text-lg font-light text-[#9a9a9a] mb-8 max-w-[44ch] mx-auto leading-relaxed">
+          <p className="text-lg font-light text-[#6a6a6a] mb-8 max-w-[44ch] mx-auto leading-relaxed">
             Studio indépendant basé à Rennes, disponible pour des missions en France et à l'international.
             Premier rendu livré en 72h.
           </p>
@@ -465,8 +465,8 @@ export default function BenjaminRaffegeau() {
             <Link
               href="/#portfolio"
               className="inline-flex items-center gap-2 text-xs font-medium tracking-wider uppercase
-                         text-[#b8b8b8] border border-white/[0.12] px-8 py-4 rounded-full
-                         hover:text-white hover:border-white/30 transition-all duration-200"
+                         text-[#4a4a4a] border border-black/[0.12] px-8 py-4 rounded-full
+                         hover:text-[#0f0f0f] hover:border-black/30 transition-all duration-200"
             >
               Voir le portfolio
             </Link>
@@ -476,13 +476,13 @@ export default function BenjaminRaffegeau() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-white/[0.06] mt-20 py-8 px-6">
+      <footer className="border-t border-black/[0.08] mt-20 py-8 px-6">
         <div className="max-w-[1200px] mx-auto flex items-center justify-between flex-wrap gap-4">
           <p className="text-xs text-[#5a5a5a]">© 2026 BenRaff Studio · Benjamin Raffegeau · Rennes</p>
           <div className="flex items-center gap-5">
-            <Link href="/mentions-legales" className="text-xs text-[#5a5a5a] hover:text-[#9a9a9a] transition-colors">Mentions légales</Link>
-            <Link href="/politique-de-confidentialite" className="text-xs text-[#5a5a5a] hover:text-[#9a9a9a] transition-colors">Confidentialité</Link>
-            <Link href="/" className="text-xs text-[#5a5a5a] hover:text-[#9a9a9a] transition-colors">← Site principal</Link>
+            <Link href="/mentions-legales" className="text-xs text-[#5a5a5a] hover:text-[#0f0f0f] transition-colors">Mentions légales</Link>
+            <Link href="/politique-de-confidentialite" className="text-xs text-[#5a5a5a] hover:text-[#0f0f0f] transition-colors">Confidentialité</Link>
+            <Link href="/" className="text-xs text-[#5a5a5a] hover:text-[#0f0f0f] transition-colors">← Site principal</Link>
           </div>
         </div>
       </footer>

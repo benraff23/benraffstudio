@@ -10,49 +10,49 @@ export const metadata: Metadata = {
 
 export default function MentionsLegales() {
   return (
-    <div className="min-h-screen bg-[#080808] text-[#f5f5f0]">
+    <div className="min-h-screen bg-[#f5f4f0] text-[#0f0f0f]">
       <ClientEffects />
       {/* Nav minimaliste */}
-      <header className="border-b border-white/[0.06] px-6 py-5 flex items-center justify-between max-w-[1400px] mx-auto">
+      <header className="border-b border-black/[0.08] px-6 py-5 flex items-center justify-between max-w-[1400px] mx-auto">
         <Link href="/" className="hover:opacity-70 transition-opacity">
-          <img src="/logo-blanc.webp" alt="BenRaff Studio" className="h-7 w-auto" />
+          <img src="/logo-noir.webp" alt="BenRaff Studio" className="h-7 w-auto" />
         </Link>
-        <Link href="/" className="text-xs font-medium tracking-wider uppercase text-[#9a9a9a] hover:text-white transition-colors">
+        <Link href="/" className="text-xs font-medium tracking-wider uppercase text-[#6a6a6a] hover:text-[#0f0f0f] transition-colors">
           ← Retour au site
         </Link>
       </header>
 
       <main className="max-w-3xl mx-auto px-6 py-20">
         <p className="text-xs font-medium tracking-[0.15em] uppercase text-[#c8e84e] mb-4">Informations légales</p>
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-16">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0f0f0f] mb-16">
           Mentions légales
         </h1>
 
-        <div className="flex flex-col gap-14 text-[#b8b8b8] leading-relaxed">
+        <div className="flex flex-col gap-14 text-[#4a4a4a] leading-relaxed">
 
           {/* Éditeur */}
           <section>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-3 border-b border-white/[0.08]">
+            <h2 className="text-lg font-semibold text-[#0f0f0f] mb-4 pb-3 border-b border-black/[0.1]">
               1. Éditeur du site
             </h2>
-            <p className="mb-2">Le site <strong className="text-white">benraffstudio.com</strong> est édité par :</p>
+            <p className="mb-2">Le site <strong className="text-[#0f0f0f]">benraffstudio.com</strong> est édité par :</p>
             <ul className="flex flex-col gap-1.5 text-sm">
-              <li><span className="text-[#7a7a7a]">Nom :</span> Benjamin Raffegeau</li>
-              <li><span className="text-[#7a7a7a]">Activité :</span> BenRaff Studio · Studio de visualisation architecturale 3D</li>
-              <li><span className="text-[#7a7a7a]">Adresse :</span> Rennes (35000), Ille-et-Vilaine, France</li>
-              <li><span className="text-[#7a7a7a]">Téléphone :</span> 06 24 51 76 41</li>
-              <li><span className="text-[#7a7a7a]">Email :</span>{' '}
+              <li><span className="text-[#6a6a6a]">Nom :</span> Benjamin Raffegeau</li>
+              <li><span className="text-[#6a6a6a]">Activité :</span> BenRaff Studio · Studio de visualisation architecturale 3D</li>
+              <li><span className="text-[#6a6a6a]">Adresse :</span> Rennes (35000), Ille-et-Vilaine, France</li>
+              <li><span className="text-[#6a6a6a]">Téléphone :</span> 06 24 51 76 41</li>
+              <li><span className="text-[#6a6a6a]">Email :</span>{' '}
                 <a href="mailto:contact@benraffstudio.com" className="text-[#c8e84e] hover:underline">
                   contact@benraffstudio.com
                 </a>
               </li>
-              <li><span className="text-[#7a7a7a]">SIRET :</span> 878 174 739</li>
+              <li><span className="text-[#6a6a6a]">SIRET :</span> 878 174 739</li>
             </ul>
           </section>
 
           {/* Directeur de publication */}
           <section>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-3 border-b border-white/[0.08]">
+            <h2 className="text-lg font-semibold text-[#0f0f0f] mb-4 pb-3 border-b border-black/[0.1]">
               2. Directeur de la publication
             </h2>
             <p className="text-sm">Benjamin Raffegeau, en qualité de responsable de BenRaff Studio.</p>
@@ -60,13 +60,13 @@ export default function MentionsLegales() {
 
           {/* Hébergeur */}
           <section>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-3 border-b border-white/[0.08]">
+            <h2 className="text-lg font-semibold text-[#0f0f0f] mb-4 pb-3 border-b border-black/[0.1]">
               3. Hébergeur
             </h2>
             <ul className="flex flex-col gap-1.5 text-sm">
-              <li><span className="text-[#7a7a7a]">Société :</span> Vercel Inc.</li>
-              <li><span className="text-[#7a7a7a]">Adresse :</span> 340 Pine Street, Suite 600, San Francisco, CA 94104, États-Unis</li>
-              <li><span className="text-[#7a7a7a]">Site :</span>{' '}
+              <li><span className="text-[#6a6a6a]">Société :</span> Vercel Inc.</li>
+              <li><span className="text-[#6a6a6a]">Adresse :</span> 340 Pine Street, Suite 600, San Francisco, CA 94104, États-Unis</li>
+              <li><span className="text-[#6a6a6a]">Site :</span>{' '}
                 <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="text-[#c8e84e] hover:underline">
                   vercel.com
                 </a>
@@ -76,7 +76,7 @@ export default function MentionsLegales() {
 
           {/* Propriété intellectuelle */}
           <section>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-3 border-b border-white/[0.08]">
+            <h2 className="text-lg font-semibold text-[#0f0f0f] mb-4 pb-3 border-b border-black/[0.1]">
               4. Propriété intellectuelle
             </h2>
             <p className="text-sm mb-3">
@@ -89,7 +89,7 @@ export default function MentionsLegales() {
 
           {/* Responsabilité */}
           <section>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-3 border-b border-white/[0.08]">
+            <h2 className="text-lg font-semibold text-[#0f0f0f] mb-4 pb-3 border-b border-black/[0.1]">
               5. Limitation de responsabilité
             </h2>
             <p className="text-sm mb-3">
@@ -102,7 +102,7 @@ export default function MentionsLegales() {
 
           {/* Droit applicable */}
           <section>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-3 border-b border-white/[0.08]">
+            <h2 className="text-lg font-semibold text-[#0f0f0f] mb-4 pb-3 border-b border-black/[0.1]">
               6. Droit applicable et juridiction
             </h2>
             <p className="text-sm">
@@ -112,7 +112,7 @@ export default function MentionsLegales() {
 
           {/* Données personnelles */}
           <section>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-3 border-b border-white/[0.08]">
+            <h2 className="text-lg font-semibold text-[#0f0f0f] mb-4 pb-3 border-b border-black/[0.1]">
               7. Données personnelles
             </h2>
             <p className="text-sm">
@@ -123,7 +123,7 @@ export default function MentionsLegales() {
             </p>
           </section>
 
-          <p className="text-xs text-[#5a5a5a] border-t border-white/[0.06] pt-8">
+          <p className="text-xs text-[#5a5a5a] border-t border-black/[0.08] pt-8">
             Dernière mise à jour : mai 2026
           </p>
         </div>

@@ -3,13 +3,13 @@ import ClientEffects from '@/components/layout/client-effects'
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-[#080808] text-[#f5f5f0] flex flex-col">
+    <div className="min-h-screen bg-[#f5f4f0] text-[#0f0f0f] flex flex-col">
       <ClientEffects />
 
       {/* Nav minimaliste */}
-      <header className="border-b border-white/[0.06] px-6 py-5 flex items-center justify-between max-w-[1400px] mx-auto w-full">
+      <header className="border-b border-black/[0.08] px-6 py-5 flex items-center justify-between max-w-[1400px] mx-auto w-full">
         <Link href="/" className="hover:opacity-70 transition-opacity">
-          <img src="/logo-blanc.webp" alt="BenRaff Studio" className="h-7 w-auto" />
+          <img src="/logo-noir.webp" alt="BenRaff Studio" className="h-7 w-auto" />
         </Link>
       </header>
 
@@ -30,10 +30,10 @@ export default function NotFound() {
               Page introuvable
             </span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0f0f0f] mb-4">
             Cette page n&apos;existe pas.
           </h1>
-          <p className="text-[#7a7a7a] text-base leading-relaxed max-w-[40ch] mx-auto">
+          <p className="text-[#6a6a6a] text-base leading-relaxed max-w-[40ch] mx-auto">
             Elle a peut-être été déplacée ou supprimée.
             Revenez à l&apos;accueil pour explorer le studio.
           </p>
@@ -57,8 +57,8 @@ export default function NotFound() {
           <Link
             href="/#contact"
             className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase
-                       text-white border border-white/[0.14] px-8 py-4 rounded-full
-                       hover:border-white/30 hover:-translate-y-0.5
+                       text-[#0f0f0f] border border-black/[0.15] px-8 py-4 rounded-full
+                       hover:border-black/30 hover:-translate-y-0.5
                        transition-all duration-200"
           >
             Décrire un projet
@@ -67,7 +67,7 @@ export default function NotFound() {
       </main>
 
       {/* Footer minimaliste */}
-      <footer className="border-t border-white/[0.06] px-6 py-5 text-center">
+      <footer className="border-t border-black/[0.08] px-6 py-5 text-center">
         <p className="text-xs text-[#5a5a5a]">
           BenRaff Studio · Perspectiviste indépendant · Rennes
         </p>

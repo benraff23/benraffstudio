@@ -10,47 +10,47 @@ export const metadata: Metadata = {
 
 export default function PolitiqueConfidentialite() {
   return (
-    <div className="min-h-screen bg-[#080808] text-[#f5f5f0]">
+    <div className="min-h-screen bg-[#f5f4f0] text-[#0f0f0f]">
       <ClientEffects />
       {/* Nav minimaliste */}
-      <header className="border-b border-white/[0.06] px-6 py-5 flex items-center justify-between max-w-[1400px] mx-auto">
+      <header className="border-b border-black/[0.08] px-6 py-5 flex items-center justify-between max-w-[1400px] mx-auto">
         <Link href="/" className="hover:opacity-70 transition-opacity">
-          <img src="/logo-blanc.webp" alt="BenRaff Studio" className="h-7 w-auto" />
+          <img src="/logo-noir.webp" alt="BenRaff Studio" className="h-7 w-auto" />
         </Link>
-        <Link href="/" className="text-xs font-medium tracking-wider uppercase text-[#9a9a9a] hover:text-white transition-colors">
+        <Link href="/" className="text-xs font-medium tracking-wider uppercase text-[#6a6a6a] hover:text-[#0f0f0f] transition-colors">
           ← Retour au site
         </Link>
       </header>
 
       <main className="max-w-3xl mx-auto px-6 py-20">
         <p className="text-xs font-medium tracking-[0.15em] uppercase text-[#c8e84e] mb-4">Vos droits &amp; vos données</p>
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0f0f0f] mb-4">
           Politique de confidentialité
         </h1>
-        <p className="text-[#7a7a7a] text-sm mb-16">Conforme au Règlement Général sur la Protection des Données (RGPD, UE 2016/679)</p>
+        <p className="text-[#6a6a6a] text-sm mb-16">Conforme au Règlement Général sur la Protection des Données (RGPD, UE 2016/679)</p>
 
-        <div className="flex flex-col gap-14 text-[#b8b8b8] leading-relaxed">
+        <div className="flex flex-col gap-14 text-[#4a4a4a] leading-relaxed">
 
           {/* Responsable */}
           <section>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-3 border-b border-white/[0.08]">
+            <h2 className="text-lg font-semibold text-[#0f0f0f] mb-4 pb-3 border-b border-black/[0.1]">
               1. Responsable du traitement
             </h2>
             <ul className="flex flex-col gap-1.5 text-sm">
-              <li><span className="text-[#7a7a7a]">Nom :</span> Benjamin Raffegeau · BenRaff Studio</li>
-              <li><span className="text-[#7a7a7a]">Adresse :</span> Rennes (35000), France</li>
-              <li><span className="text-[#7a7a7a]">Email :</span>{' '}
+              <li><span className="text-[#6a6a6a]">Nom :</span> Benjamin Raffegeau · BenRaff Studio</li>
+              <li><span className="text-[#6a6a6a]">Adresse :</span> Rennes (35000), France</li>
+              <li><span className="text-[#6a6a6a]">Email :</span>{' '}
                 <a href="mailto:contact@benraffstudio.com" className="text-[#c8e84e] hover:underline">
                   contact@benraffstudio.com
                 </a>
               </li>
-              <li><span className="text-[#7a7a7a]">Téléphone :</span> 06 24 51 76 41</li>
+              <li><span className="text-[#6a6a6a]">Téléphone :</span> 06 24 51 76 41</li>
             </ul>
           </section>
 
           {/* Données collectées */}
           <section>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-3 border-b border-white/[0.08]">
+            <h2 className="text-lg font-semibold text-[#0f0f0f] mb-4 pb-3 border-b border-black/[0.1]">
               2. Données collectées et finalités
             </h2>
             <p className="text-sm mb-6">
@@ -59,13 +59,13 @@ export default function PolitiqueConfidentialite() {
             <div className="overflow-x-auto">
               <table className="w-full text-sm border-collapse">
                 <thead>
-                  <tr className="border-b border-white/[0.1]">
-                    <th className="text-left text-xs font-semibold tracking-wider uppercase text-[#7a7a7a] pb-3 pr-6">Donnée</th>
-                    <th className="text-left text-xs font-semibold tracking-wider uppercase text-[#7a7a7a] pb-3 pr-6">Finalité</th>
-                    <th className="text-left text-xs font-semibold tracking-wider uppercase text-[#7a7a7a] pb-3">Base légale</th>
+                  <tr className="border-b border-black/[0.1]">
+                    <th className="text-left text-xs font-semibold tracking-wider uppercase text-[#6a6a6a] pb-3 pr-6">Donnée</th>
+                    <th className="text-left text-xs font-semibold tracking-wider uppercase text-[#6a6a6a] pb-3 pr-6">Finalité</th>
+                    <th className="text-left text-xs font-semibold tracking-wider uppercase text-[#6a6a6a] pb-3">Base légale</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-white/[0.05]">
+                <tbody className="divide-y divide-black/[0.05]">
                   {[
                     ['Nom / société', "Identification de l'interlocuteur", 'Intérêt légitime'],
                     ['Adresse email', 'Réponse à votre demande de contact', "Exécution d'un contrat"],
@@ -76,9 +76,9 @@ export default function PolitiqueConfidentialite() {
                     ['Données de navigation', 'Fonctionnement technique du site', 'Intérêt légitime'],
                   ].map(([donnee, finalite, base]) => (
                     <tr key={donnee}>
-                      <td className="py-3 pr-6 text-white font-medium">{donnee}</td>
-                      <td className="py-3 pr-6 text-[#9a9a9a]">{finalite}</td>
-                      <td className="py-3 text-[#9a9a9a]">{base}</td>
+                      <td className="py-3 pr-6 text-[#0f0f0f] font-medium">{donnee}</td>
+                      <td className="py-3 pr-6 text-[#6a6a6a]">{finalite}</td>
+                      <td className="py-3 text-[#6a6a6a]">{base}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -88,34 +88,34 @@ export default function PolitiqueConfidentialite() {
 
           {/* Durée de conservation */}
           <section>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-3 border-b border-white/[0.08]">
+            <h2 className="text-lg font-semibold text-[#0f0f0f] mb-4 pb-3 border-b border-black/[0.1]">
               3. Durée de conservation
             </h2>
             <ul className="flex flex-col gap-2 text-sm list-disc list-inside marker:text-[#c8e84e]">
-              <li>Données du formulaire de contact : <strong className="text-white">3 ans</strong> à compter du dernier contact</li>
-              <li>Données clients (devis, contrats) : <strong className="text-white">5 ans</strong> (obligation légale comptable)</li>
-              <li>Logs techniques : <strong className="text-white">12 mois</strong> maximum</li>
+              <li>Données du formulaire de contact : <strong className="text-[#0f0f0f]">3 ans</strong> à compter du dernier contact</li>
+              <li>Données clients (devis, contrats) : <strong className="text-[#0f0f0f]">5 ans</strong> (obligation légale comptable)</li>
+              <li>Logs techniques : <strong className="text-[#0f0f0f]">12 mois</strong> maximum</li>
             </ul>
           </section>
 
           {/* Cookies */}
           <section>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-3 border-b border-white/[0.08]">
+            <h2 className="text-lg font-semibold text-[#0f0f0f] mb-4 pb-3 border-b border-black/[0.1]">
               4. Cookies et traceurs
             </h2>
             <p className="text-sm mb-4">
-              Ce site utilise uniquement des cookies <strong className="text-white">strictement nécessaires</strong> à son fonctionnement technique. Aucun cookie publicitaire, de profilage ou de suivi analytique n'est déposé sans votre consentement.
+              Ce site utilise uniquement des cookies <strong className="text-[#0f0f0f]">strictement nécessaires</strong> à son fonctionnement technique. Aucun cookie publicitaire, de profilage ou de suivi analytique n'est déposé sans votre consentement.
             </p>
-            <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-5 text-sm">
-              <p className="font-medium text-white mb-3">Cookies utilisés :</p>
-              <ul className="flex flex-col gap-2 text-[#9a9a9a]">
+            <div className="bg-black/[0.03] border border-black/[0.08] rounded-xl p-5 text-sm">
+              <p className="font-medium text-[#0f0f0f] mb-3">Cookies utilisés :</p>
+              <ul className="flex flex-col gap-2 text-[#6a6a6a]">
                 <li className="flex gap-3">
                   <span className="text-[#c8e84e] flex-shrink-0">→</span>
-                  <span><strong className="text-white">Cookie de session</strong> : technique, nécessaire au fonctionnement du formulaire de contact. Durée : session.</span>
+                  <span><strong className="text-[#0f0f0f]">Cookie de session</strong> : technique, nécessaire au fonctionnement du formulaire de contact. Durée : session.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#c8e84e] flex-shrink-0">→</span>
-                  <span><strong className="text-white">Préférences cookies</strong> : mémorise votre choix sur la bannière de consentement. Durée : 12 mois.</span>
+                  <span><strong className="text-[#0f0f0f]">Préférences cookies</strong> : mémorise votre choix sur la bannière de consentement. Durée : 12 mois.</span>
                 </li>
               </ul>
             </div>
@@ -123,22 +123,22 @@ export default function PolitiqueConfidentialite() {
 
           {/* Partage des données */}
           <section>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-3 border-b border-white/[0.08]">
+            <h2 className="text-lg font-semibold text-[#0f0f0f] mb-4 pb-3 border-b border-black/[0.1]">
               5. Partage des données
             </h2>
             <p className="text-sm mb-3">
-              Vos données personnelles ne sont <strong className="text-white">jamais vendues ni cédées</strong> à des tiers à des fins commerciales.
+              Vos données personnelles ne sont <strong className="text-[#0f0f0f]">jamais vendues ni cédées</strong> à des tiers à des fins commerciales.
             </p>
             <p className="text-sm mb-3">Elles peuvent être transmises aux sous-traitants techniques suivants, dans le strict cadre de leur mission :</p>
             <ul className="flex flex-col gap-2 text-sm list-disc list-inside marker:text-[#c8e84e]">
-              <li><strong className="text-white">Vercel Inc.</strong> (hébergement) · politique disponible sur vercel.com/legal/privacy-policy</li>
-              <li><strong className="text-white">Prestataires email</strong> utilisés pour répondre à vos demandes (Gmail / messagerie professionnelle)</li>
+              <li><strong className="text-[#0f0f0f]">Vercel Inc.</strong> (hébergement) · politique disponible sur vercel.com/legal/privacy-policy</li>
+              <li><strong className="text-[#0f0f0f]">Prestataires email</strong> utilisés pour répondre à vos demandes (Gmail / messagerie professionnelle)</li>
             </ul>
           </section>
 
           {/* Vos droits */}
           <section>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-3 border-b border-white/[0.08]">
+            <h2 className="text-lg font-semibold text-[#0f0f0f] mb-4 pb-3 border-b border-black/[0.1]">
               6. Vos droits
             </h2>
             <p className="text-sm mb-5">
@@ -153,9 +153,9 @@ export default function PolitiqueConfidentialite() {
                 ["Droit d'opposition", "Vous opposer à un traitement basé sur notre intérêt légitime"],
                 ['Droit de limitation', "Demander la suspension temporaire d'un traitement"],
               ].map(([droit, desc]) => (
-                <div key={droit} className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-4">
-                  <p className="text-sm font-semibold text-white mb-1">{droit}</p>
-                  <p className="text-xs text-[#9a9a9a]">{desc}</p>
+                <div key={droit} className="bg-black/[0.03] border border-black/[0.08] rounded-xl p-4">
+                  <p className="text-sm font-semibold text-[#0f0f0f] mb-1">{droit}</p>
+                  <p className="text-xs text-[#6a6a6a]">{desc}</p>
                 </div>
               ))}
             </div>
@@ -164,7 +164,7 @@ export default function PolitiqueConfidentialite() {
               <a href="mailto:contact@benraffstudio.com" className="text-[#c8e84e] hover:underline">
                 contact@benraffstudio.com
               </a>{' '}
-              en précisant votre demande. Nous nous engageons à répondre sous <strong className="text-white">30 jours</strong>.
+              en précisant votre demande. Nous nous engageons à répondre sous <strong className="text-[#0f0f0f]">30 jours</strong>.
             </p>
             <p className="text-sm mt-4">
               Vous pouvez également introduire une réclamation auprès de la{' '}
@@ -176,7 +176,7 @@ export default function PolitiqueConfidentialite() {
 
           {/* Sécurité */}
           <section>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-3 border-b border-white/[0.08]">
+            <h2 className="text-lg font-semibold text-[#0f0f0f] mb-4 pb-3 border-b border-black/[0.1]">
               7. Sécurité des données
             </h2>
             <p className="text-sm">
@@ -186,7 +186,7 @@ export default function PolitiqueConfidentialite() {
 
           {/* Contact DPO */}
           <section>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-3 border-b border-white/[0.08]">
+            <h2 className="text-lg font-semibold text-[#0f0f0f] mb-4 pb-3 border-b border-black/[0.1]">
               8. Contact
             </h2>
             <p className="text-sm">
@@ -197,7 +197,7 @@ export default function PolitiqueConfidentialite() {
             </p>
           </section>
 
-          <p className="text-xs text-[#5a5a5a] border-t border-white/[0.06] pt-8">
+          <p className="text-xs text-[#5a5a5a] border-t border-black/[0.08] pt-8">
             Dernière mise à jour : mai 2026. BenRaff Studio se réserve le droit de modifier cette politique à tout moment. La version en vigueur est celle publiée sur cette page.
           </p>
         </div>
