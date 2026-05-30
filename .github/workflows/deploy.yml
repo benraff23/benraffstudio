@@ -8,19 +8,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy sur le VPS
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-            cd /var/www/benraffstudio
-            git pull
-            npm ci
-            npm run build
-            cp -r .next/static .next/standalone/.next/static
-            cp -r public .next/standalone/public
-            pm2 restart benraffstudio
+      - name: Déclencher le déploiement
+        run: |
+          curl -X POST https://benraffstudio.com/deploy \
+            -H "x-deploy-token: benraff_deploy_2026"
