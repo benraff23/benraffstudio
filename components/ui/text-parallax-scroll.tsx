@@ -37,7 +37,7 @@ const StickyImage = ({ imgUrl }: { imgUrl: string }) => {
     <motion.div
       ref={targetRef}
       style={{
-        backgroundImage: `url('${imgUrl}')`,
+        backgroundImage: `url('${imgUrl.split('/').map(s => encodeURIComponent(s)).join('/')}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: `calc(100vh - ${IMG_PADDING * 2}px)`,
