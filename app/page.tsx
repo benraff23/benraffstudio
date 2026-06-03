@@ -365,11 +365,12 @@ function Craft() {
 // ─── Platform ─────────────────────────────────────────────────────────────────
 function Platform() {
   const features = [
-    ['Avancement en temps réel', 'Vous voyez exactement à quelle étape se trouve votre projet, sans avoir à relancer.'],
-    ['Annotations directes sur le rendu', 'Pointez directement sur l\'image pour exprimer une correction. Plus besoin de décrire avec des mots ce qui se voit.'],
-    ['Versioning automatique', 'Chaque version est sauvegardée. Retrouvez n\'importe quelle étape en un clic, sans risque de perte.'],
-    ['Livraison multi-formats', 'PNG, TIFF, PDF, vidéo : tout est disponible au téléchargement dès validation.'],
-    ['Page de présentation automatique', 'À la validation finale, une page de présentation client est générée, prête à partager avec vos investisseurs.'],
+    ['Lien unique par email', 'Pas d\'inscription, pas de mot de passe. Vous recevez un magic link qui ouvre directement votre espace sécurisé.'],
+    ['Brief en ligne complet', 'Remplissez votre brief directement sur la plateforme : type de projet, nombre de vues, surfaces, références, deadline et budget.'],
+    ['Validation clay render', 'Avant le rendu final, vous validez le modèle 3D non texturé : proportions, angles de vue et composition.'],
+    ['Annotations sur les rendus', 'Dessinez et commentez directement sur les images. Benjamin intègre chaque correction et soumet une nouvelle version.'],
+    ['Notifications email', 'Vous êtes alerté à chaque avancement : proposition disponible, rendu prêt, livraison finale — rien ne se perd.'],
+    ['Livrables en téléchargement direct', 'Fichiers haute résolution, multi-formats. Visites virtuelles et vidéos accessibles depuis votre espace dès validation.'],
   ]
   return (
     <Sec id="plateforme" bg="#111111">
@@ -377,12 +378,12 @@ function Platform() {
         <div>
           <Label>Plateforme client</Label>
           <h2 className="reveal delay-1 mt-4 mb-6 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-white">
-            Un tableau de bord,<br/>zéro zone d&apos;ombre.
+            Un espace dédié,<br/>zéro zone d&apos;ombre.
           </h2>
           <p className="reveal delay-2 text-lg font-light text-[#9a9a9a] leading-relaxed mb-10">
-            Pas d&apos;emails perdus, pas de versions nommées &ldquo;final_v3_ok_bis&rdquo;. Votre projet vit dans un espace unique, clair et accessible à tout moment.
+            Pas d&apos;emails perdus, pas de versions nommées &ldquo;final_v3_ok_bis&rdquo;. Du brief aux livrables, tout se passe sur <strong className="text-white font-medium">clients.benraffstudio.com</strong> — un lien unique, neuf étapes claires, un guide à chaque stade.
           </p>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 mb-10">
             {features.map(([title, text], i) => (
               <div key={title} className={`reveal delay-${i + 2} flex gap-4 items-start`}>
                 <div className="w-7 h-7 rounded-full border border-[#c8e84e] flex items-center justify-center text-xs font-semibold text-[#c8e84e] flex-shrink-0 tabular-nums">{i + 1}</div>
@@ -402,7 +403,7 @@ function Platform() {
               {['#ff5f57','#febc2e','#28c840'].map(c => <div key={c} className="w-2.5 h-2.5 rounded-full" style={{ background: c }} />)}
             </div>
             <div className="flex-1 bg-[#1e1e1e] rounded px-3 py-1 text-xs text-[#9a9a9a] text-center">
-              studio.benraffstudio.com/projets/villa-moderne
+              clients.benraffstudio.com/projet/villa-moderne
             </div>
           </div>
           <div className="p-6 flex flex-col gap-4">
@@ -413,17 +414,24 @@ function Platform() {
                 En cours
               </span>
             </div>
+            {/* Barre de progression 9 étapes */}
             <div>
-              <div className="flex justify-between mb-1.5">
-                <span className="text-xs text-[#9a9a9a]">Avancement global</span>
-                <span className="text-xs font-semibold text-[#c8e84e]">68%</span>
+              <div className="flex justify-between mb-2">
+                <span className="text-xs text-[#9a9a9a]">Étape 6 / 9 — Rendus</span>
+                <span className="text-xs font-semibold text-[#c8e84e]">Annotation en cours</span>
               </div>
-              <div className="h-1 bg-black/[0.08] rounded-full overflow-hidden">
-                <div id="progressFill" className="h-full bg-[#c8e84e] rounded-full transition-[width] duration-[1500ms]" style={{ width: '0%' }} />
+              <div className="flex gap-1">
+                {Array.from({ length: 9 }, (_, i) => (
+                  <div
+                    key={i}
+                    className="flex-1 h-1 rounded-full"
+                    style={{ background: i < 6 ? '#c8e84e' : 'rgba(200,232,78,0.12)' }}
+                  />
+                ))}
               </div>
             </div>
             <div className="grid grid-cols-3 gap-3">
-              {[['Étape', 'Modélisation'], ['Versions', 'v3 / active'], ['Livraison', 'J+3']].map(([l, v]) => (
+              {[['Étape', '06 / Rendus'], ['Paiement', 'Acompte ✓'], ['Livraison', 'J+3']].map(([l, v]) => (
                 <div key={l} className="bg-black/[0.03] border border-white/[0.06] rounded-xl p-3">
                   <div className="text-xs text-[#9a9a9a] mb-1">{l}</div>
                   <div className="text-sm font-semibold text-white">{v}</div>
