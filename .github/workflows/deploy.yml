@@ -1,14 +1,13 @@
 name: Deploy to VPS
 
+# Déploiement désactivé — déclenché manuellement via deploy.sh depuis le PC local
+# (Hostinger bloque les IPs GitHub/Azure)
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Déclencher le déploiement
-        run: |
-          curl -X POST https://benraffstudio.com/deploy \
-            -H "x-deploy-token: benraff_deploy_2026"
+      - name: Info
+        run: echo "Lancer deploy.sh depuis le PC local pour déployer."
