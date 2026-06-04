@@ -18,8 +18,15 @@ export default function SmoothScroll() {
     }
     animFrame = requestAnimationFrame(raf)
 
+    const stop = () => lenis.stop()
+    const start = () => lenis.start()
+    window.addEventListener('modal-open', stop)
+    window.addEventListener('modal-close', start)
+
     return () => {
       cancelAnimationFrame(animFrame)
+      window.removeEventListener('modal-open', stop)
+      window.removeEventListener('modal-close', start)
       lenis.destroy()
     }
   }, [])

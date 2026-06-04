@@ -3,8 +3,15 @@ import Link from 'next/link'
 import { useRef } from 'react'
 import { portfolioProjects } from '@/lib/portfolio-data'
 
+// 6 derniers projets affichés (teaser)
+const displayedProjects = portfolioProjects.slice(-6)
+
 export default function Portfolio() {
   const scrollRef = useRef<HTMLDivElement>(null)
+
+  const scroll = (dir: 'left' | 'right') => {
+    scrollRef.current?.scrollBy({ left: dir === 'right' ? 380 : -380, behavior: 'smooth' })
+  }
 
   return (
     <section
@@ -20,21 +27,46 @@ export default function Portfolio() {
             Projets réalisés.
           </h2>
           <p className="mt-3 text-base font-light text-[#9a9a9a]">
-            Glissez pour explorer · Chaque projet raconte une intention.
+            6 projets récents · Portfolio complet sur la page dédiée.
           </p>
         </div>
-        <Link
-          href="/portfolio"
-          className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase
-                     text-white border border-white/[0.14] px-6 py-3 rounded-full flex-shrink-0
-                     hover:border-white/30 hover:-translate-y-0.5 transition-all duration-200"
-        >
-          Voir tous les projets
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5"
-                  strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </Link>
+        <div className="flex items-center gap-3 flex-shrink-0">
+          {/* Flèches navigation */}
+          <div className="flex gap-2">
+            <button
+              onClick={() => scroll('left')}
+              aria-label="Projet précédent"
+              className="w-10 h-10 rounded-full border border-white/[0.14] flex items-center justify-center
+                         text-white hover:border-white/40 hover:bg-white/[0.05] transition-all duration-200"
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M10 4l-4 4 4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            <button
+              onClick={() => scroll('right')}
+              aria-label="Projet suivant"
+              className="w-10 h-10 rounded-full border border-white/[0.14] flex items-center justify-center
+                         text-white hover:border-white/40 hover:bg-white/[0.05] transition-all duration-200"
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M6 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <Link
+            href="/portfolio"
+            className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase
+                       text-white border border-white/[0.14] px-6 py-3 rounded-full
+                       hover:border-white/30 hover:-translate-y-0.5 transition-all duration-200"
+          >
+            Voir tous les projets
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5"
+                    strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </Link>
+        </div>
       </div>
 
       {/* Carousel horizontal */}
@@ -45,7 +77,7 @@ export default function Portfolio() {
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         data-lenis-prevent
       >
-        {portfolioProjects.map((project) => (
+        {displayedProjects.map((project) => (
           <Link
             key={project.id}
             href={`/portfolio#projet-${project.id}`}
@@ -93,26 +125,6 @@ export default function Portfolio() {
           </Link>
         ))}
 
-        {/* Dernière carte CTA */}
-        <Link
-          href="/portfolio"
-          className="flex-shrink-0 w-[200px] sm:w-[240px] snap-start"
-        >
-          <div className="aspect-[3/4] rounded-2xl border border-white/[0.08] flex flex-col
-                          items-center justify-center gap-4 text-center p-6
-                          hover:border-[#c8e84e]/40 hover:bg-white/[0.02] transition-all duration-300">
-            <div className="w-12 h-12 rounded-full border border-[#c8e84e]/40 flex items-center justify-center">
-              <svg width="20" height="20" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="#c8e84e" strokeWidth="1.5"
-                      strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
-            <div>
-              <p className="text-sm font-semibold text-white mb-1">Tous les projets</p>
-              <p className="text-xs text-[#9a9a9a]">8 études de cas</p>
-            </div>
-          </div>
-        </Link>
       </div>
 
       {/* CTA strip */}
