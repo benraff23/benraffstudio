@@ -363,43 +363,219 @@ function Craft() {
 }
 
 // ─── Platform ─────────────────────────────────────────────────────────────────
+const platformFeatures = [
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+      </svg>
+    ),
+    title: 'Accès par lien unique',
+    desc: 'Pas de compte, pas de mot de passe. Un magic link envoyé par email ouvre directement votre espace sécurisé.',
+  },
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+      </svg>
+    ),
+    title: 'Brief structuré en ligne',
+    desc: 'Type de projet, nombre de vues, surfaces, plans, références visuelles, deadline, budget. Tout dans un formulaire guidé.',
+  },
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+      </svg>
+    ),
+    title: 'Suivi en temps réel',
+    desc: "Barre de progression sur 9 étapes. Vous savez exactement où en est votre projet, sans avoir à relancer.",
+  },
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
+      </svg>
+    ),
+    title: 'Clay render intermédiaire',
+    desc: "Avant le rendu final, vous validez le modèle 3D non texturé : proportions, angles, composition. Zéro surprise.",
+  },
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+      </svg>
+    ),
+    title: 'Annotations sur les rendus',
+    desc: 'Dessinez et commentez directement sur les images. Benjamin intègre chaque retour et soumet une nouvelle version.',
+  },
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+      </svg>
+    ),
+    title: 'Paiement en deux fois',
+    desc: "Acompte à la validation de la proposition. Solde avant livraison des fichiers finaux. Liens sécurisés sur la plateforme.",
+  },
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+    ),
+    title: 'Livraison multi-formats',
+    desc: "Fichiers haute résolution téléchargeables dès validation. PNG, TIFF, PDF, vidéo, visite virtuelle selon la prestation.",
+  },
+]
+
 function Platform() {
-  const features = [
-    ['Accès sans compte', 'Pas d\'inscription, pas de mot de passe. Vous recevez un magic link par email qui ouvre directement votre espace sécurisé.'],
-    ['Brief structuré en ligne', 'Remplissez votre brief sur la plateforme : type de projet, nombre de vues, surfaces, plans, références visuelles, deadline et budget.'],
-    ['Clay render avant rendu final', 'Avant la mise en couleur, vous validez le modèle 3D non texturé — proportions, angles de vue, composition. Aucune surprise au rendu final.'],
-    ['Annotations directes sur les images', 'Dessinez et commentez sur les rendus. Benjamin intègre chaque retour et soumet une nouvelle version jusqu\'à validation complète.'],
-    ['Paiement en deux fois sécurisé', 'Acompte à la validation de la proposition, solde avant livraison des fichiers finaux — via lien de paiement sur la plateforme.'],
-    ['Guide contextuel à chaque étape', 'La plateforme vous explique quoi faire à chaque stade. Notifications email à chaque avancement. Rien ne se perd, rien ne traîne.'],
-    ['Livrables en téléchargement direct', 'Fichiers haute résolution, multi-formats. Visites virtuelles et vidéos téléchargeables depuis votre espace dès la livraison finale.'],
-  ]
   return (
-    <Sec id="plateforme" bg="#111111">
-      <div className="grid lg:grid-cols-[5fr_7fr] gap-24 items-center">
-        <div>
+    <section id="plateforme" className="py-24 sm:py-32 bg-[#111111]">
+      <div className="max-w-[1400px] mx-auto px-[var(--gutter)]">
+
+        {/* Header */}
+        <div className="text-center max-w-[52ch] mx-auto mb-16">
           <Label>Plateforme client</Label>
-          <h2 className="reveal delay-1 mt-4 mb-6 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-white">
-            Un espace dédié,<br/>zéro zone d&apos;ombre.
+          <h2 className="reveal mt-4 mb-5 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-white">
+            Un espace dédié,<br />zéro zone d&apos;ombre.
           </h2>
-          <p className="reveal delay-2 text-lg font-light text-[#9a9a9a] leading-relaxed mb-10">
-            Pas d&apos;emails perdus, pas de versions nommées &ldquo;final_v3_ok_bis&rdquo;. Du brief aux livrables, tout se passe sur <strong className="text-white font-medium">clients.benraffstudio.com</strong> — un lien unique, neuf étapes claires, un guide à chaque stade.
+          <p className="reveal text-lg font-light text-[#9a9a9a] leading-relaxed">
+            Pas d&apos;emails perdus, pas de versions &ldquo;final_v3_ok_bis&rdquo;. Du brief aux livrables,
+            tout se passe sur <strong className="text-white font-medium">clients.benraffstudio.com</strong>.
           </p>
-          <div className="flex flex-col gap-5 mb-10">
-            {features.map(([title, text], i) => (
-              <div key={title} className={`reveal delay-${i + 2} flex gap-4 items-start`}>
-                <div className="w-7 h-7 rounded-full border border-[#c8e84e] flex items-center justify-center text-xs font-semibold text-[#c8e84e] flex-shrink-0 tabular-nums">{i + 1}</div>
+        </div>
+
+        {/* Features grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-14">
+          {platformFeatures.map(({ icon, title, desc }, i) => (
+            <div
+              key={title}
+              className={`reveal bg-[#1a1a1a] border border-white/[0.06] rounded-2xl p-6
+                          hover:border-white/[0.12] hover:bg-[#1e1e1e] transition-all duration-300
+                          ${i === 6 ? 'sm:col-span-2 lg:col-span-1 xl:col-span-1' : ''}`}
+            >
+              <div className="w-10 h-10 rounded-xl bg-[rgba(200,232,78,0.08)] border border-[rgba(200,232,78,0.15)]
+                              flex items-center justify-center text-[#c8e84e] mb-4">
+                {icon}
+              </div>
+              <h3 className="text-sm font-semibold text-white mb-2 leading-snug">{title}</h3>
+              <p className="text-xs text-[#7a7a7a] leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Mockup navigateur */}
+        <div className="reveal bg-[#1a1a1a] border border-white/[0.08] rounded-3xl overflow-hidden
+                        shadow-[0_24px_80px_rgba(0,0,0,0.4)] mb-10">
+          {/* Barre navigateur */}
+          <div className="bg-[#141414] px-5 py-3 flex items-center gap-3 border-b border-white/[0.06]">
+            <div className="flex gap-1.5">
+              {['#ff5f57','#febc2e','#28c840'].map(c => (
+                <div key={c} className="w-3 h-3 rounded-full" style={{ background: c }} />
+              ))}
+            </div>
+            <div className="flex-1 bg-[#1e1e1e] rounded-lg px-4 py-1.5 text-xs text-[#7a7a7a] text-center max-w-sm mx-auto">
+              clients.benraffstudio.com/projet/villa-moderne
+            </div>
+          </div>
+
+          {/* Contenu mockup */}
+          <div className="p-6 sm:p-8 grid lg:grid-cols-[1fr_1.4fr] gap-8 items-start">
+            {/* Infos projet */}
+            <div className="flex flex-col gap-5">
+              <div className="flex items-center justify-between">
                 <div>
-                  <div className="text-base font-semibold text-white mb-1">{title}</div>
-                  <p className="text-sm text-[#9a9a9a] leading-relaxed">{text}</p>
+                  <p className="text-xs text-[#7a7a7a] mb-1">Projet en cours</p>
+                  <h3 className="text-base font-bold text-white">Villa Moderne · Aix-en-Provence</h3>
+                </div>
+                <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[#c8e84e]
+                                 bg-[rgba(200,232,78,0.1)] px-3 py-1.5 rounded-full">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c8e84e]" style={{ animation: 'pulse 2s ease-in-out infinite' }} />
+                  En cours
+                </span>
+              </div>
+
+              {/* Étapes */}
+              <div>
+                <div className="flex justify-between mb-2">
+                  <span className="text-xs text-[#7a7a7a]">Étape 06 / 09 — Rendus</span>
+                  <span className="text-xs font-semibold text-[#c8e84e]">67%</span>
+                </div>
+                <div className="flex gap-1">
+                  {Array.from({ length: 9 }, (_, i) => (
+                    <div key={i} className="flex-1 h-1.5 rounded-full"
+                      style={{ background: i < 6 ? '#c8e84e' : 'rgba(200,232,78,0.12)' }} />
+                  ))}
+                </div>
+                <div className="flex justify-between mt-2">
+                  {['Brief', '', '', 'Démarrage', '', 'Clay', 'Rendus', '', 'Livraison'].map((label, i) => (
+                    <span key={i} className={`text-[9px] ${label ? (i < 6 ? 'text-[#c8e84e]' : 'text-[#5a5a5a]') : ''}`}>
+                      {label}
+                    </span>
+                  ))}
                 </div>
               </div>
-            ))}
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-3">
+                {[['Étape', '06 / Rendus'], ['Acompte', 'Reçu ✓'], ['Livraison', 'J + 3']].map(([l, v]) => (
+                  <div key={l} className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-3">
+                    <p className="text-[10px] text-[#7a7a7a] mb-1">{l}</p>
+                    <p className="text-xs font-semibold text-white">{v}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Guide contextuel */}
+              <div className="bg-[rgba(200,232,78,0.06)] border border-[rgba(200,232,78,0.15)] rounded-xl p-4">
+                <p className="text-[10px] font-semibold tracking-wider uppercase text-[#c8e84e] mb-1.5">
+                  Guide · Étape en cours
+                </p>
+                <p className="text-xs text-[#9a9a9a] leading-relaxed">
+                  Vos premiers rendus sont disponibles. Annotez directement sur les images pour indiquer vos retours à Benjamin.
+                </p>
+              </div>
+            </div>
+
+            {/* Rendu avec annotation */}
+            <div className="relative rounded-2xl overflow-hidden aspect-video">
+              <img
+                src="/projets/Intérieur scandinave/Close up Salon.jpeg"
+                alt="Rendu avec annotation · Plateforme client BenRaff Studio"
+                className="w-full h-full object-cover object-center"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-black/10" />
+              {/* Annotation simulée */}
+              <div className="absolute top-[35%] left-[38%] flex items-center gap-2">
+                <div className="w-6 h-6 rounded-full bg-[#c8e84e] flex items-center justify-center
+                                text-[11px] font-bold text-[#1e1e1e] shadow-lg flex-shrink-0"
+                  style={{ animation: 'annotationPulse 2s ease-in-out infinite' }}>1</div>
+                <div className="bg-[#c8e84e] text-[#1e1e1e] text-[10px] font-semibold
+                                px-2.5 py-1 rounded-lg shadow-lg whitespace-nowrap">
+                  Teinte trop froide ici
+                </div>
+              </div>
+              <div className="absolute top-[55%] left-[60%] flex items-center gap-2">
+                <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center
+                                text-[11px] font-bold text-[#1e1e1e] shadow-lg flex-shrink-0">2</div>
+                <div className="bg-white text-[#1e1e1e] text-[10px] font-semibold
+                                px-2.5 py-1 rounded-lg shadow-lg whitespace-nowrap">
+                  Lumière OK ✓
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center">
           <a
             href="https://clients.benraffstudio.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="reveal inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase
+            className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase
                        text-[#1e1e1e] bg-[#c8e84e] px-8 py-4 rounded-full
                        hover:bg-[#d4f05a] hover:-translate-y-0.5
                        hover:shadow-[0_8px_32px_rgba(200,232,78,0.35)]
@@ -413,65 +589,8 @@ function Platform() {
           </a>
         </div>
 
-        {/* Mockup */}
-        <div className="reveal-right bg-[#1e1e1e] border border-white/[0.1] rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.1)]">
-          <div className="bg-[#1a1a1a] px-5 py-3 flex items-center gap-2 border-b border-white/[0.06]">
-            <div className="flex gap-1.5">
-              {['#ff5f57','#febc2e','#28c840'].map(c => <div key={c} className="w-2.5 h-2.5 rounded-full" style={{ background: c }} />)}
-            </div>
-            <div className="flex-1 bg-[#1e1e1e] rounded px-3 py-1 text-xs text-[#9a9a9a] text-center">
-              clients.benraffstudio.com/projet/villa-moderne
-            </div>
-          </div>
-          <div className="p-6 flex flex-col gap-4">
-            <div className="flex items-center justify-between">
-              <span className="text-base font-semibold text-white">Villa Moderne · Aix-en-Provence</span>
-              <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[#c8e84e] bg-[rgba(200,232,78,0.12)] px-3 py-1 rounded-full">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#c8e84e]" />
-                En cours
-              </span>
-            </div>
-            {/* Barre de progression 9 étapes */}
-            <div>
-              <div className="flex justify-between mb-2">
-                <span className="text-xs text-[#9a9a9a]">Étape 6 / 9 — Rendus</span>
-                <span className="text-xs font-semibold text-[#c8e84e]">Annotation en cours</span>
-              </div>
-              <div className="flex gap-1">
-                {Array.from({ length: 9 }, (_, i) => (
-                  <div
-                    key={i}
-                    className="flex-1 h-1 rounded-full"
-                    style={{ background: i < 6 ? '#c8e84e' : 'rgba(200,232,78,0.12)' }}
-                  />
-                ))}
-              </div>
-            </div>
-            <div className="grid grid-cols-3 gap-3">
-              {[['Étape', '06 / Rendus'], ['Paiement', 'Acompte ✓'], ['Livraison', 'J+3']].map(([l, v]) => (
-                <div key={l} className="bg-black/[0.03] border border-white/[0.06] rounded-xl p-3">
-                  <div className="text-xs text-[#9a9a9a] mb-1">{l}</div>
-                  <div className="text-sm font-semibold text-white">{v}</div>
-                </div>
-              ))}
-            </div>
-            <div className="aspect-video rounded-xl relative overflow-hidden">
-              <img
-                src="/projets/Intérieur scandinave/Close up Salon.jpeg"
-                alt="Aperçu rendu · Close up Salon"
-                className="w-full h-full object-cover object-center"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-[#080808]/20" />
-              <div className="absolute top-[30%] left-[40%] flex items-center gap-1.5">
-                <div className="w-5 h-5 rounded-full bg-[#c8e84e] flex items-center justify-center text-[10px] font-bold text-[#080808]" style={{ animation: 'annotationPulse 2s ease-in-out infinite' }}>1</div>
-                <div className="bg-[#c8e84e] text-[#080808] text-[10px] font-semibold px-2 py-0.5 rounded whitespace-nowrap">Teinte trop froide ici</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-    </Sec>
+    </section>
   )
 }
 
