@@ -365,12 +365,13 @@ function Craft() {
 // ─── Platform ─────────────────────────────────────────────────────────────────
 function Platform() {
   const features = [
-    ['Lien unique par email', 'Pas d\'inscription, pas de mot de passe. Vous recevez un magic link qui ouvre directement votre espace sécurisé.'],
-    ['Brief en ligne complet', 'Remplissez votre brief directement sur la plateforme : type de projet, nombre de vues, surfaces, références, deadline et budget.'],
-    ['Validation clay render', 'Avant le rendu final, vous validez le modèle 3D non texturé : proportions, angles de vue et composition.'],
-    ['Annotations sur les rendus', 'Dessinez et commentez directement sur les images. Benjamin intègre chaque correction et soumet une nouvelle version.'],
-    ['Notifications email', 'Vous êtes alerté à chaque avancement : proposition disponible, rendu prêt, livraison finale — rien ne se perd.'],
-    ['Livrables en téléchargement direct', 'Fichiers haute résolution, multi-formats. Visites virtuelles et vidéos accessibles depuis votre espace dès validation.'],
+    ['Accès sans compte', 'Pas d\'inscription, pas de mot de passe. Vous recevez un magic link par email qui ouvre directement votre espace sécurisé.'],
+    ['Brief structuré en ligne', 'Remplissez votre brief sur la plateforme : type de projet, nombre de vues, surfaces, plans, références visuelles, deadline et budget.'],
+    ['Clay render avant rendu final', 'Avant la mise en couleur, vous validez le modèle 3D non texturé — proportions, angles de vue, composition. Aucune surprise au rendu final.'],
+    ['Annotations directes sur les images', 'Dessinez et commentez sur les rendus. Benjamin intègre chaque retour et soumet une nouvelle version jusqu\'à validation complète.'],
+    ['Paiement en deux fois sécurisé', 'Acompte à la validation de la proposition, solde avant livraison des fichiers finaux — via lien de paiement sur la plateforme.'],
+    ['Guide contextuel à chaque étape', 'La plateforme vous explique quoi faire à chaque stade. Notifications email à chaque avancement. Rien ne se perd, rien ne traîne.'],
+    ['Livrables en téléchargement direct', 'Fichiers haute résolution, multi-formats. Visites virtuelles et vidéos téléchargeables depuis votre espace dès la livraison finale.'],
   ]
   return (
     <Sec id="plateforme" bg="#111111">
@@ -394,6 +395,22 @@ function Platform() {
               </div>
             ))}
           </div>
+          <a
+            href="https://clients.benraffstudio.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="reveal inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase
+                       text-[#1e1e1e] bg-[#c8e84e] px-8 py-4 rounded-full
+                       hover:bg-[#d4f05a] hover:-translate-y-0.5
+                       hover:shadow-[0_8px_32px_rgba(200,232,78,0.35)]
+                       transition-all duration-200"
+          >
+            Accéder à la plateforme
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5"
+                    strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </a>
         </div>
 
         {/* Mockup */}
