@@ -25,3 +25,6 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# Config serveur (contient des clés API — géré directement sur le VPS)
+ecosystem.config.js
