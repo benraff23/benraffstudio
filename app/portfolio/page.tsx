@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ClientEffects from '@/components/layout/client-effects'
-import { portfolioProjects } from '@/components/sections/portfolio'
+import { portfolioProjects } from '@/lib/portfolio-data'
 
 export const metadata: Metadata = {
   title: 'Portfolio · Rendus 3D architecturaux · BenRaff Studio',
