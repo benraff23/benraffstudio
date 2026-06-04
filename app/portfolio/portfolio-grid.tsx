@@ -89,15 +89,11 @@ function ProjectModal({ project, onClose }: { project: PortfolioProject; onClose
   const [lightbox, setLightbox] = useState(false)
   const images = project.images.filter(img => !img.endsWith('.mp4'))
 
-  // Lock scroll (body + Lenis)
+  // Lock body scroll
   useEffect(() => {
     const prev = document.body.style.overflow
     document.body.style.overflow = 'hidden'
-    window.dispatchEvent(new Event('modal-open'))
-    return () => {
-      document.body.style.overflow = prev
-      window.dispatchEvent(new Event('modal-close'))
-    }
+    return () => { document.body.style.overflow = prev }
   }, [])
 
   // Keyboard: Escape closes modal
@@ -113,6 +109,7 @@ function ProjectModal({ project, onClose }: { project: PortfolioProject; onClose
       <div
         className="fixed inset-0 z-[900] flex items-center justify-center p-4 sm:p-8"
         onClick={onClose}
+        data-lenis-prevent
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
