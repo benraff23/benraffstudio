@@ -97,42 +97,35 @@ export default function Hero() {
       <div className="relative z-10 max-w-[1400px] w-full mx-auto px-[var(--gutter)] pb-20 pt-24">
         <div className="hero__eyebrow flex items-center gap-3 mb-8">
           <div className="w-1.5 h-1.5 rounded-full bg-[#c8e84e]" />
-          <span className="text-xs font-medium tracking-[0.15em] uppercase text-[#c8e84e]">Perspectiviste &amp; studio de visualisation architecturale · Rennes</span>
+          <span className="text-xs font-medium tracking-[0.15em] uppercase text-[#c8e84e]">Séries cinématographiques · Visualisation architecturale · Rennes</span>
         </div>
 
-        <h1 className="hero__title text-[clamp(3.5rem,8vw,7.5rem)] font-bold leading-[1.05] tracking-tight text-white max-w-[14ch] mb-6">
-          Des rendus qui <em className="not-italic text-[#c8e84e]">font vendre.</em>
+        <h1 className="hero__title text-[clamp(3rem,7vw,6.5rem)] font-bold leading-[1.05] tracking-tight text-white max-w-[16ch] mb-6">
+          Vous cherchez plus qu&apos;un <em className="not-italic text-[#c8e84e]">rendu 3D.</em>
         </h1>
 
-        <p className="hero__sub text-[clamp(1.1rem,1.8vw,1.25rem)] font-light text-[#b8b8b8] max-w-[44ch] mb-12 leading-normal">
-          Visualisation 3D ultra réaliste pour architectes, promoteurs et paysagistes.
-          Pas une image générée, une intention composée, cadrée, éclairée pour convaincre.
+        <p className="hero__sub text-[clamp(1.1rem,1.8vw,1.25rem)] font-light text-[#b8b8b8] max-w-[52ch] mb-6 leading-normal">
+          Je crée des séries cinématographiques qui font ressentir vos projets avant qu&apos;ils existent.
+          Et je vous accompagne pas à pas pour y arriver.
+        </p>
+
+        <p className="hero__sub text-base font-light text-[#9a9a9a] max-w-[50ch] mb-12 leading-relaxed">
+          Si vous êtes ici, c&apos;est que vous savez qu&apos;une belle image ne suffit plus.
+          Vos clients ont besoin d&apos;être transportés. Pas informés.
         </p>
 
         <div className="hero__actions flex items-center gap-5 flex-wrap">
           <a href="#contact" className="inline-flex items-center gap-3 text-xs font-semibold tracking-wider uppercase text-[#080808] bg-[#c8e84e] px-8 py-4 rounded-full hover:bg-[#d4f05a] hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(200,232,78,0.35)] transition-all duration-200">
-            Décrire mon projet
+            Démarrer mon projet
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-          </a>
-          <a href="#portfolio" className="inline-flex items-center gap-3 text-xs font-medium tracking-wider uppercase text-[#b8b8b8] border border-white/[0.3] px-8 py-4 rounded-full hover:text-white hover:border-white/50 hover:-translate-y-0.5 transition-all duration-200">
-            Voir le portfolio
           </a>
         </div>
         <div className="hero__sub flex items-center gap-2 mt-6">
           <div className="w-1.5 h-1.5 rounded-full bg-[#c8e84e] flex-shrink-0"
                style={{ animation: 'pulse 2s ease-in-out infinite' }} />
           <span className="text-xs text-[#c8e84e] font-medium">
-            1 créneau disponible en juin · Premier rendu livré en 72h
+            Disponible pour nouveaux projets — Juin 2026
           </span>
-        </div>
-
-        <div className="hero__stats grid grid-cols-3 sm:grid-cols-3 gap-px mt-16 bg-white/[0.06] border-t border-white/[0.06]">
-          {[['100%', 'Sur-mesure'], ['72h', 'Premier rendu livré'], ['0', 'Compromis sur la qualité']].map(([num, label]) => (
-            <div key={label} className="bg-[rgba(8,8,8,0.6)] px-6 py-6 backdrop-blur-sm">
-              <div className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold tracking-tight text-white leading-none mb-2">{num}</div>
-              <div className="text-xs font-medium tracking-wider uppercase text-[#7a7a7a]">{label}</div>
-            </div>
-          ))}
         </div>
       </div>
 

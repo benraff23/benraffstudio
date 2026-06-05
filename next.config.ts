@@ -9,6 +9,12 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'cdn.pixabay.com' },
     ],
   },
+  async redirects() {
+    return [
+      { source: '/portfolio', destination: '/projets', permanent: true },
+      { source: '/portfolio/:path*', destination: '/projets', permanent: true },
+    ]
+  },
 }
 
 export default nextConfig

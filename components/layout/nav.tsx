@@ -5,10 +5,9 @@ interface NavProps {
 export default function Nav({ base = '' }: NavProps) {
   const logoHref = base === '' ? '#accueil' : '/'
   const links: [string, string][] = [
-    [`${base}#services`, 'Services'],
-    [`${base}#portfolio`, 'Portfolio'],
-    [`${base}#plateforme`, 'Plateforme'],
-    [`${base}#process`, 'Process'],
+    ['/projets', 'Projets'],
+    ['/benjamin-raffegeau', 'À propos'],
+    ['/blog', 'Blog'],
   ]
 
   return (
@@ -76,7 +75,7 @@ export default function Nav({ base = '' }: NavProps) {
                      hover:bg-[#d4f05a] hover:-translate-y-px hover:shadow-[0_4px_20px_rgba(200,232,78,0.3)]
                      transition-all duration-200"
         >
-          Démarrer un projet
+          Démarrer mon projet
         </a>
       </div>
 
@@ -94,7 +93,7 @@ export default function Nav({ base = '' }: NavProps) {
         {links.map(([href, label]) => (
           <a key={href} href={href} className="text-4xl font-light tracking-tight text-[#d4d4d0] hover:text-white transition-colors">{label}</a>
         ))}
-        <a href={`${base}#contact`} className="mt-4 text-sm font-semibold tracking-wider uppercase text-[#080808] bg-[#c8e84e] px-10 py-4 rounded-full">Démarrer un projet</a>
+        <a href={`${base}#contact`} className="mt-4 text-sm font-semibold tracking-wider uppercase text-[#080808] bg-[#c8e84e] px-10 py-4 rounded-full">Démarrer mon projet</a>
       </div>
     </nav>
   )

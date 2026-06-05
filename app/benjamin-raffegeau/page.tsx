@@ -1,18 +1,70 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ClientEffects from '@/components/layout/client-effects'
+import FloatingCta from '@/components/layout/floating-cta'
+import Nav from '@/components/layout/nav'
 
 export const metadata: Metadata = {
-  title: 'Benjamin Raffegeau · Perspectiviste 3D & Visualisation Architecturale · Rennes',
+  title: 'Benjamin Raffegeau · Perspectiviste & Directeur artistique · Rennes',
   description:
-    'Perspectiviste 3D basé à Rennes, fondateur de BenRaff Studio. Spécialisé en visualisation architecturale ultra-réaliste : rendus fixes, animations, visites virtuelles. SketchUp, D5 Render, Photoshop.',
+    'Benjamin Raffegeau, directeur artistique à l\'œil de photographe et perspectiviste à Rennes. Fondateur de BenRaff Studio, je crée des séries cinématographiques en visualisation architecturale. SketchUp, D5 Render, Photoshop, post-production IA. Toute la France, 100 % à distance.',
+  keywords: [
+    'perspectiviste Rennes',
+    'rendu 3D Rennes',
+    'visualisation architecturale Bretagne',
+    'Benjamin Raffegeau',
+    'BenRaff Studio',
+    'directeur artistique 3D',
+  ],
   openGraph: {
-    title: 'Benjamin Raffegeau · Perspectiviste 3D à Rennes',
-    description: 'Fondateur de BenRaff Studio. Visualisation architecturale ultra-réaliste pour architectes, promoteurs et paysagistes.',
+    title: 'Benjamin Raffegeau · Perspectiviste à Rennes',
+    description: 'Directeur artistique à l\'œil de photographe. Je crée des séries cinématographiques pour architectes, promoteurs et paysagistes.',
     type: 'profile',
     url: 'https://benraffstudio.com/benjamin-raffegeau',
   },
   alternates: { canonical: 'https://benraffstudio.com/benjamin-raffegeau' },
+}
+
+const SITE = 'https://benraffstudio.com'
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': `${SITE}/#person`,
+      name: 'Benjamin Raffegeau',
+      jobTitle: 'Directeur artistique & perspectiviste',
+      worksFor: { '@type': 'Organization', name: 'BenRaff Studio', url: SITE },
+      url: `${SITE}/benjamin-raffegeau`,
+      email: 'contact@benraffstudio.com',
+      telephone: '+33624517641',
+      image: `${SITE}/Portrait benjamin Raffegeau.webp`,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Rennes',
+        addressRegion: 'Bretagne',
+        addressCountry: 'FR',
+      },
+      alumniOf: { '@type': 'CollegeOrUniversity', name: 'LISAA Rennes' },
+      knowsAbout: [
+        'Visualisation architecturale',
+        'Perspectiviste',
+        'Direction artistique',
+        'Rendu 3D architectural',
+        'D5 Render',
+        'SketchUp',
+        'Photographie d\'architecture',
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE },
+        { '@type': 'ListItem', position: 2, name: 'Benjamin Raffegeau', item: `${SITE}/benjamin-raffegeau` },
+      ],
+    },
+  ],
 }
 
 // ─── Data ──────────────────────────────────────────────────────────────────────
@@ -38,9 +90,9 @@ const expertise = [
 const formation = [
   {
     period: 'Avril 2025',
-    title: 'Formation spécialisée : Visualisation architecturale 3D',
-    school: 'Formation professionnelle',
-    desc: "Maîtrise des outils de rendu photoréaliste, composition architecturale, éclairage artificiel et naturel, post-production et livraison client.",
+    title: 'Formation spécialisée : Visualisation architecturale & photoréalisme 3D',
+    school: 'D5 Render · avec Kevin Leclerc',
+    desc: "Maîtrise du rendu photoréaliste sous D5 Render, composition cinématographique, éclairage naturel et artificiel, post-production et livraison client.",
   },
   {
     period: '2016 / 2017',
@@ -85,8 +137,8 @@ const projects = [
 
 const stats = [
   { value: '100%', label: 'Sur-mesure' },
-  { value: '72h', label: 'Premier rendu' },
-  { value: '3+', label: "Années d'expérience" },
+  { value: 'France', label: '100 % à distance' },
+  { value: 'Peu', label: 'de projets à la fois' },
   { value: '0', label: 'Compromis qualité' },
 ]
 
@@ -116,35 +168,12 @@ function SkillBar({ name, level, category }: { name: string; level: number; cate
 export default function BenjaminRaffegeau() {
   return (
     <div className="min-h-screen bg-[#1e1e1e] text-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ClientEffects />
+      <FloatingCta />
+      <Nav base="/" />
 
-      {/* Nav */}
-      <header className="sticky top-0 z-50 border-b border-white/[0.06] px-6 py-4
-                         bg-[rgba(245,244,240,0.92)] backdrop-blur-xl">
-        <div className="max-w-[1200px] mx-auto flex items-center justify-between">
-          <Link href="/" className="hover:opacity-70 transition-opacity">
-            <img src="/logo-blanc.webp" alt="BenRaff Studio" className="h-7 w-auto" />
-          </Link>
-          <div className="flex items-center gap-4">
-            <Link
-              href="/#portfolio"
-              className="text-xs font-medium tracking-wider uppercase text-[#9a9a9a] hover:text-white transition-colors hidden sm:block"
-            >
-              Portfolio
-            </Link>
-            <a
-              href="mailto:contact@benraffstudio.com"
-              className="text-xs font-semibold tracking-wider uppercase text-[#080808]
-                         bg-[#c8e84e] px-5 py-2.5 rounded-full
-                         hover:bg-[#d4f05a] transition-colors"
-            >
-              Me contacter
-            </a>
-          </div>
-        </div>
-      </header>
-
-      <main className="max-w-[1200px] mx-auto px-6 py-20">
+      <main className="max-w-[1200px] mx-auto px-6 pt-40 pb-20">
 
         {/* ── Hero ── */}
         <div className="grid lg:grid-cols-[1fr_2fr] gap-16 mb-28 items-center">
@@ -170,7 +199,7 @@ export default function BenjaminRaffegeau() {
           <div>
             <span className="inline-flex items-center gap-2 text-[#c8e84e] text-xs font-medium tracking-[0.15em] uppercase mb-5">
               <span className="block w-4 h-px bg-[#c8e84e]" />
-              Perspectiviste 3D · Rennes
+              Directeur artistique &amp; perspectiviste · Rennes
             </span>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.02] text-white mb-6">
@@ -178,15 +207,16 @@ export default function BenjaminRaffegeau() {
             </h1>
 
             <p className="text-xl font-light text-[#b8b8b8] leading-relaxed mb-8 max-w-[48ch]">
-              Fondateur de <strong className="text-white font-semibold">BenRaff Studio</strong>, je conçois des visualisations
-              architecturales qui font vendre des projets non encore construits. Chaque image est
-              le résultat d'une intention, pas d'un rendu aléatoire.
+              Fondateur de <strong className="text-white font-semibold">BenRaff Studio</strong>, je suis un
+              directeur artistique à l&apos;œil de photographe. Je ne livre pas des fichiers 3D :
+              je crée des <strong className="text-white font-semibold">séries cinématographiques</strong> qui font
+              ressentir un projet avant qu&apos;il existe.
             </p>
 
             <p className="text-base font-light text-[#9a9a9a] leading-relaxed mb-10 max-w-[46ch]">
-              Spécialisé en aménagement extérieur et intérieur, j'interviens pour des architectes,
-              promoteurs et paysagistes partout en France. Mon approche : composition narrative,
-              lumière choisie, cohérence des matériaux.
+              Lumière, cadrage, atmosphère, émotion : mon approche est celle d&apos;un photographe.
+              J&apos;interviens pour des architectes, promoteurs et paysagistes dans toute la France,
+              100 % à distance, avec un accompagnement humain de bout en bout.
             </p>
 
             {/* Contact chips */}
@@ -395,12 +425,12 @@ export default function BenjaminRaffegeau() {
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">Projets sélectionnés.</h2>
             </div>
             <Link
-              href="/#portfolio"
+              href="/projets"
               className="text-xs font-medium tracking-wider uppercase text-[#9a9a9a]
                          border border-white/[0.12] px-5 py-2.5 rounded-full
                          hover:text-white hover:border-black/30 transition-all"
             >
-              Voir tout le portfolio →
+              Voir tous les projets →
             </Link>
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -442,33 +472,33 @@ export default function BenjaminRaffegeau() {
             Collaboration
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
-            Un projet à visualiser ?
+            Un projet à faire ressentir ?
           </h2>
           <p className="text-lg font-light text-[#9a9a9a] mb-8 max-w-[44ch] mx-auto leading-relaxed">
-            Studio indépendant basé à Rennes, disponible pour des missions en France et à l'international.
-            Premier rendu livré en 72h.
+            Studio indépendant basé à Rennes, disponible pour de nouveaux projets en France,
+            100 % à distance. Je vous réponds personnellement sous 24h.
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
-            <a
-              href="mailto:contact@benraffstudio.com"
+            <Link
+              href="/#contact"
               className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase
                          text-[#080808] bg-[#c8e84e] px-8 py-4 rounded-full
                          hover:bg-[#d4f05a] hover:-translate-y-0.5
                          hover:shadow-[0_8px_32px_rgba(200,232,78,0.35)]
                          transition-all duration-200"
             >
-              Écrire un message
+              Démarrer mon projet
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </a>
+            </Link>
             <Link
-              href="/#portfolio"
+              href="/projets"
               className="inline-flex items-center gap-2 text-xs font-medium tracking-wider uppercase
                          text-[#b8b8b8] border border-white/[0.12] px-8 py-4 rounded-full
                          hover:text-white hover:border-black/30 transition-all duration-200"
             >
-              Voir le portfolio
+              Voir les projets
             </Link>
           </div>
         </div>

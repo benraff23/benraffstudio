@@ -12,7 +12,7 @@ const schemaOrg = {
       '@id': 'https://benraffstudio.com/#business',
       name: 'BenRaff Studio',
       description:
-        'Studio de visualisation 3D architecturale à Rennes. Perspectiviste spécialisé en rendus fixes, animations vidéo et visites virtuelles pour architectes, promoteurs et paysagistes.',
+        'Studio de visualisation architecturale à Rennes. Directeur artistique à l\'œil de photographe, je crée des séries cinématographiques qui font ressentir les projets d\'architectes, promoteurs et paysagistes avant qu\'ils existent.',
       url: 'https://benraffstudio.com',
       telephone: '+33624517641',
       email: 'contact@benraffstudio.com',
@@ -29,11 +29,11 @@ const schemaOrg = {
         { '@type': 'Country', name: 'France' },
       ],
       serviceType: [
-        'Rendu 3D architectural',
+        'Série cinématographique en visualisation architecturale',
         'Visualisation architecturale',
-        'Perspectiviste 3D',
-        'Animation 3D architecture',
-        'Visite virtuelle 360°',
+        'Perspectiviste',
+        'Direction artistique',
+        'Rendu 3D architectural',
       ],
       priceRange: '€€€',
       image: 'https://benraffstudio.com/logo-blanc.webp',
@@ -46,7 +46,7 @@ const schemaOrg = {
       '@type': 'Person',
       '@id': 'https://benraffstudio.com/#person',
       name: 'Benjamin Raffegeau',
-      jobTitle: 'Perspectiviste 3D & fondateur',
+      jobTitle: 'Directeur artistique & perspectiviste',
       worksFor: { '@id': 'https://benraffstudio.com/#business' },
       url: 'https://benraffstudio.com',
       email: 'contact@benraffstudio.com',
@@ -88,27 +88,26 @@ const schemaOrg = {
 }
 
 export const metadata: Metadata = {
-  title: 'BenRaff Studio · Rendu 3D & Visualisation Architecturale à Rennes',
+  metadataBase: new URL('https://benraffstudio.com'),
+  title: 'BenRaff Studio · Séries cinématographiques & visualisation architecturale à Rennes',
   description:
-    'Studio de visualisation 3D architecturale à Rennes. Perspectiviste spécialisé en rendus fixes 4K, animations vidéo et visites virtuelles pour architectes, promoteurs et paysagistes. Premier rendu en 72h.',
+    'Vous cherchez plus qu\'un rendu 3D. Directeur artistique à l\'œil de photographe, je crée des séries cinématographiques qui font ressentir vos projets avant qu\'ils existent. Perspectiviste à Rennes, toute la France.',
   keywords: [
+    'perspectiviste Rennes',
     'rendu 3D Rennes',
     'visualisation architecturale Rennes',
-    'studio 3D Rennes',
-    'perspectiviste Rennes',
-    'infographiste 3D Rennes',
-    'rendu 3D architecture Rennes',
-    'visualisation 3D extérieur Rennes',
-    'animation 3D architecture Rennes',
-    'visite virtuelle 3D Rennes',
     'visualisation architecturale Bretagne',
+    'studio 3D Rennes',
+    'image cinématographique architecture',
+    'série cinématographique architecture',
+    'directeur artistique 3D',
     'perspectiviste architecture extérieur',
     'BenRaff Studio',
   ],
   openGraph: {
-    title: 'BenRaff Studio · Rendu 3D & Visualisation Architecturale à Rennes',
+    title: 'BenRaff Studio · Séries cinématographiques & visualisation architecturale',
     description:
-      'Perspectiviste à Rennes. Des rendus 3D qui vendent : composition, lumière, intention. Pas des images générées.',
+      'Je crée des séries cinématographiques qui font ressentir vos projets avant qu\'ils existent. Pas des images générées : une intention, composée et éclairée.',
     type: 'website',
     url: 'https://benraffstudio.com',
     locale: 'fr_FR',
@@ -116,9 +115,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BenRaff Studio · Rendu 3D Rennes',
+    title: 'BenRaff Studio · Visualisation architecturale cinématographique · Rennes',
     description:
-      'Studio de visualisation architecturale à Rennes. Rendus ultra-réalistes pour architectes et promoteurs.',
+      'Des séries cinématographiques qui font ressentir vos projets avant qu\'ils existent. Perspectiviste à Rennes.',
   },
   icons: {
     icon: [

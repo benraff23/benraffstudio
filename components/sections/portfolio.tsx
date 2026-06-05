@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { useRef } from 'react'
 import { portfolioProjects } from '@/lib/portfolio-data'
 
-// 6 derniers projets affichés (teaser)
-const displayedProjects = portfolioProjects.slice(-6)
+// 6 meilleurs projets affichés (teaser)
+const displayedProjects = portfolioProjects.slice(0, 6)
 
 export default function Portfolio() {
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -22,12 +22,12 @@ export default function Portfolio() {
       {/* Header */}
       <div className="max-w-[1400px] mx-auto px-[var(--gutter)] mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
         <div>
-          <span className="label">Études de cas</span>
+          <span className="label">Portfolio</span>
           <h2 id="portfolio-title" className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-white">
-            Projets réalisés.
+            Des projets. Pas des rendus.
           </h2>
-          <p className="mt-3 text-base font-light text-[#9a9a9a]">
-            6 projets récents · Portfolio complet sur la page dédiée.
+          <p className="mt-3 text-base font-light text-[#9a9a9a] max-w-[44ch]">
+            Chaque série raconte l&apos;histoire d&apos;un espace avant qu&apos;il existe.
           </p>
         </div>
         <div className="flex items-center gap-3 flex-shrink-0">
@@ -55,7 +55,7 @@ export default function Portfolio() {
             </button>
           </div>
           <Link
-            href="/portfolio"
+            href="/projets"
             className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase
                        text-white border border-white/[0.14] px-6 py-3 rounded-full
                        hover:border-white/30 hover:-translate-y-0.5 transition-all duration-200"
@@ -80,7 +80,7 @@ export default function Portfolio() {
         {displayedProjects.map((project) => (
           <Link
             key={project.id}
-            href={`/portfolio#projet-${project.id}`}
+            href={`/projets/${project.slug}`}
             className="flex-shrink-0 w-[300px] sm:w-[360px] snap-start group"
           >
             {/* Image uniforme */}
@@ -132,16 +132,16 @@ export default function Portfolio() {
         <div className="pt-12 border-t border-white/[0.06] flex flex-col sm:flex-row
                         items-start sm:items-center justify-between gap-6">
           <p className="text-2xl sm:text-3xl font-semibold tracking-tight text-white">
-            Vous avez un projet à visualiser ?
+            Une série à imaginer pour votre projet ?
           </p>
           <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
             <Link
-              href="/portfolio"
+              href="/projets"
               className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider
                          uppercase text-white border border-white/[0.14] px-6 py-4 rounded-full
                          hover:border-white/30 hover:-translate-y-0.5 transition-all duration-200"
             >
-              Voir le portfolio
+              Voir tous les projets
             </Link>
             <a
               href="#contact"
@@ -151,7 +151,7 @@ export default function Portfolio() {
                          hover:shadow-[0_8px_32px_rgba(200,232,78,0.35)]
                          transition-all duration-200"
             >
-              Démarrer un projet
+              Démarrer mon projet
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5"
                       strokeLinecap="round" strokeLinejoin="round"/>

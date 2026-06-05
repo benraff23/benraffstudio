@@ -46,14 +46,14 @@ export default function FloatingCta() {
 
       {/* CTA principal */}
       <a
-        href="#contact"
+        href="/#contact"
         className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-wider uppercase
                    text-[#080808] bg-[#c8e84e] px-5 py-3 rounded-full
                    shadow-[0_4px_24px_rgba(200,232,78,0.35)]
                    hover:bg-[#d4f05a] hover:-translate-y-0.5 active:translate-y-0
                    transition-all duration-200"
       >
-        Décrire mon projet
+        Démarrer mon projet
         <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
           <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5"
                 strokeLinecap="round" strokeLinejoin="round" />
