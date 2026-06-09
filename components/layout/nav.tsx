@@ -62,6 +62,11 @@ export default function Nav({ base = '' }: NavProps) {
         }
         .nav__link:hover::after { width: 100%; }
 
+        /* ── Hamburger — couleur selon état nav ── */
+        #nav .nav__hamburger span { background: rgba(247,245,241,0.8); }
+        #nav.scrolled .nav__hamburger span { background: #1c1c1c; }
+        #nav.menu-open .nav__hamburger span { background: #1c1c1c; }
+
         /* ── Menu mobile ── */
         #nav.menu-open .nav__mobile { opacity: 1; pointer-events: all; }
         #nav.menu-open .nav__hamburger span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
@@ -110,15 +115,18 @@ export default function Nav({ base = '' }: NavProps) {
         </a>
       </div>
 
-      {/* Hamburger mobile */}
+      {/* Hamburger mobile — z-[1001] pour rester au-dessus de l'overlay */}
       <button
         id="hamburger"
-        className="nav__hamburger md:hidden flex flex-col gap-[5px] p-2"
+        className="nav__hamburger md:hidden flex flex-col gap-[5px] p-2 relative z-[1001]"
         aria-label="Menu" aria-expanded="false"
       >
-        <span className="block w-6 h-px bg-current transition-transform duration-300" style={{ color: 'inherit' }} />
-        <span className="block w-6 h-px bg-current transition-opacity duration-300" />
-        <span className="block w-6 h-px bg-current transition-transform duration-300" />
+        <span className="block w-6 h-px transition-transform duration-300 bg-[#f7f5f1]
+                         [#nav.scrolled_&]:bg-[#1c1c1c]" />
+        <span className="block w-6 h-px transition-opacity duration-300 bg-[#f7f5f1]
+                         [#nav.scrolled_&]:bg-[#1c1c1c]" />
+        <span className="block w-6 h-px transition-transform duration-300 bg-[#f7f5f1]
+                         [#nav.scrolled_&]:bg-[#1c1c1c]" />
       </button>
 
       {/* Menu mobile overlay */}
@@ -127,6 +135,18 @@ export default function Nav({ base = '' }: NavProps) {
         className="nav__mobile fixed inset-0 bg-[#f7f5f1] flex flex-col items-center justify-center gap-8
                    opacity-0 pointer-events-none transition-opacity duration-300 z-[999]"
       >
+        {/* Bouton fermer */}
+        <button
+          id="mobileClose"
+          aria-label="Fermer le menu"
+          className="absolute top-6 right-5 w-10 h-10 flex items-center justify-center text-[#1c1c1c]
+                     hover:text-[#6b6b6b] transition-colors"
+        >
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M4 4l12 12M16 4l-12 12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+          </svg>
+        </button>
+
         {links.map(([href, label]) => (
           <a key={href} href={href}
             className="text-4xl font-light tracking-tight text-[#1c1c1c] hover:text-[#6b6b6b] transition-colors">

@@ -79,18 +79,21 @@ export default function ClientEffects() {
     // ── Mobile menu ──
     const hamburger = document.getElementById('hamburger')
     const mobileMenu = document.getElementById('mobileMenu')
+    const mobileClose = document.getElementById('mobileClose')
     if (hamburger && mobileMenu && nav) {
+      const closeMenu = () => {
+        nav.classList.remove('menu-open')
+        hamburger.setAttribute('aria-expanded', 'false')
+        document.body.style.overflow = ''
+      }
       hamburger.addEventListener('click', () => {
         const open = nav.classList.toggle('menu-open')
         hamburger.setAttribute('aria-expanded', String(open))
         document.body.style.overflow = open ? 'hidden' : ''
       })
+      mobileClose?.addEventListener('click', closeMenu)
       mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          nav.classList.remove('menu-open')
-          hamburger.setAttribute('aria-expanded', 'false')
-          document.body.style.overflow = ''
-        })
+        link.addEventListener('click', closeMenu)
       })
     }
 
