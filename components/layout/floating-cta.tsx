@@ -47,10 +47,10 @@ export default function FloatingCta() {
       {/* CTA principal */}
       <a
         href="/#contact"
-        className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-wider uppercase
-                   text-[#080808] bg-[#c8e84e] px-5 py-3 rounded-full
-                   shadow-[0_4px_24px_rgba(200,232,78,0.35)]
-                   hover:bg-[#d4f05a] hover:-translate-y-0.5 active:translate-y-0
+        className="inline-flex items-center gap-2 text-[11px] font-medium tracking-[0.1em] uppercase
+                   text-[#f7f5f1] bg-[#1c1c1c] px-5 py-3 rounded-full
+                   shadow-[0_4px_20px_rgba(28,28,28,0.2)]
+                   hover:bg-[#333333] hover:-translate-y-0.5 active:translate-y-0
                    transition-all duration-200"
       >
         Démarrer mon projet

@@ -10,22 +10,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // BenRaff Studio design tokens
+        // BenRaff Studio design tokens — palette architecturale
         brand: {
-          black:   '#080808',
-          white:   '#f5f5f0',
-          lime:    '#c8e84e',
-          'lime-dim': 'rgba(200,232,78,0.12)',
-          'lime-subtle': 'rgba(200,232,78,0.06)',
-          grey: {
-            100: '#1a1a1a',
-            200: '#242424',
-            300: '#3a3a3a',
-            400: '#5a5a5a',
-            500: '#7a7a7a',
-            600: '#9a9a9a',
-            700: '#b8b8b8',
-            800: '#d4d4d0',
+          dark:  '#1c1c1c',
+          bg:    '#f7f5f1',
+          cream: '#ede9e2',
+          white: '#ffffff',
+          text:  {
+            primary:   '#1c1c1c',
+            secondary: '#6b6b6b',
+            muted:     '#9a9a9a',
+            'on-dark': '#f7f5f1',
           },
         },
       },
@@ -44,13 +39,6 @@ const config: Config = {
       },
       animation: {
         'spin-slow': 'spin 2s linear infinite',
-        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
-      },
-      keyframes: {
-        pulseGlow: {
-          '0%, 100%': { boxShadow: '0 0 10px #c8e84e' },
-          '50%': { boxShadow: '0 0 20px #c8e84e, 0 0 40px rgba(200,232,78,0.2)' },
-        },
       },
       // Safelist needed for dynamic bento span classes
     },

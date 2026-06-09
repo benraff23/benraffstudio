@@ -145,7 +145,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
         />
       </head>
-      <body className="bg-[#080808] text-[#f5f5f0] antialiased overflow-x-hidden" suppressHydrationWarning>
+      <body className="bg-[#f7f5f1] text-[#1c1c1c] antialiased overflow-x-hidden" suppressHydrationWarning>
         <SmoothScroll />
         {children}
         <CookieBanner />

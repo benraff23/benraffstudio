@@ -82,39 +82,39 @@ export default function ContactForm() {
   if (status === 'success') {
     return (
       <div className="text-center py-16">
-        <div className="w-16 h-16 rounded-full bg-[rgba(200,232,78,0.12)] flex items-center justify-center mx-auto mb-6">
-          <svg className="w-7 h-7 text-[#c8e84e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <div className="w-16 h-16 rounded-full bg-[rgba(28,28,28,0.06)] flex items-center justify-center mx-auto mb-6">
+          <svg className="w-7 h-7 text-[#1c1c1c]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
           </svg>
         </div>
-        <h3 className="text-xl font-semibold text-white mb-2">Brief envoyé.</h3>
-        <p className="text-[#9a9a9a] text-base">Je reviens vers vous personnellement sous 24h. Merci pour votre confiance.</p>
+        <h3 className="text-xl font-semibold text-[#1c1c1c] mb-2">Brief envoyé.</h3>
+        <p className="text-[#6b6b6b] text-base">Je reviens vers vous personnellement sous 24h. Merci pour votre confiance.</p>
       </div>
     )
   }
 
-  const inputCls = `w-full bg-[#1e1e1e] border border-white/[0.14] rounded-lg px-5 py-4
-    font-sans text-base text-white placeholder-[#888888] outline-none appearance-none
-    focus:border-[rgba(200,232,78,0.6)] focus:bg-[#222222] transition-colors duration-200`
+  const inputCls = `w-full bg-white border border-[rgba(28,28,28,0.12)] rounded-lg px-5 py-4
+    font-sans text-base text-[#1c1c1c] placeholder-[#aaaaaa] outline-none appearance-none
+    focus:border-[rgba(28,28,28,0.4)] transition-colors duration-200`
 
   return (
     <form ref={formRef} onSubmit={handleSubmit} noValidate>
-      <h3 className="text-xl font-semibold text-white mb-8">Décrivez votre projet</h3>
+      <h3 className="text-xl font-semibold text-[#1c1c1c] mb-8">Décrivez votre projet</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-2">
-          <label className="text-xs font-semibold tracking-widest uppercase text-[#b8b8b8]" htmlFor="name">Votre nom</label>
+          <label className="text-xs font-medium tracking-widest uppercase text-[#9a9a9a]" htmlFor="name">Votre nom</label>
           <input className={inputCls} type="text" id="name" name="name" placeholder="Jean Dupont" autoComplete="name" />
         </div>
         <div className="flex flex-col gap-2">
-          <label className="text-xs font-semibold tracking-widest uppercase text-[#b8b8b8]" htmlFor="email">Votre email</label>
+          <label className="text-xs font-medium tracking-widest uppercase text-[#9a9a9a]" htmlFor="email">Votre email</label>
           <input className={inputCls} type="email" id="email" name="email" placeholder="jean@studio.fr" autoComplete="email" />
         </div>
         <div className="flex flex-col gap-2 sm:col-span-2">
-          <label className="text-xs font-semibold tracking-widest uppercase text-[#b8b8b8]" htmlFor="projectType">Type de projet</label>
+          <label className="text-xs font-medium tracking-widest uppercase text-[#9a9a9a]" htmlFor="projectType">Type de projet</label>
           <input className={inputCls} type="text" id="projectType" name="projectType" placeholder="Promotion immobilière, villa, aménagement extérieur, concours…" />
         </div>
         <div className="flex flex-col gap-2 sm:col-span-2">
-          <label className="text-xs font-semibold tracking-widest uppercase text-[#b8b8b8]" htmlFor="project">Décrivez votre projet et ce que vous voulez déclencher chez votre client</label>
+          <label className="text-xs font-medium tracking-widest uppercase text-[#9a9a9a]" htmlFor="project">Décrivez votre projet et ce que vous voulez déclencher chez votre client</label>
           <textarea
             className={`${inputCls} resize-none min-h-[140px]`}
             id="project" name="project"
@@ -129,15 +129,15 @@ export default function ContactForm() {
           id="rgpd"
           name="rgpd"
           required
-          className="mt-1 w-4 h-4 flex-shrink-0 accent-[#c8e84e] cursor-pointer"
+          className="mt-1 w-4 h-4 flex-shrink-0 accent-[#1c1c1c] cursor-pointer"
         />
-        <label htmlFor="rgpd" className="text-xs text-[#9a9a9a] leading-relaxed cursor-pointer">
+        <label htmlFor="rgpd" className="text-xs text-[#9a9a9a] leading-relaxed cursor-pointer font-light">
           J&apos;accepte que BenRaff Studio traite mes données personnelles afin de répondre à ma demande.{' '}
-          <Link href="/politique-de-confidentialite" target="_blank" className="text-[#c8e84e] hover:underline">
+          <Link href="/politique-de-confidentialite" target="_blank" className="text-[#1c1c1c] underline underline-offset-2 hover:text-[#6b6b6b]">
             Politique de confidentialité
           </Link>
           {' · '}
-          <Link href="/mentions-legales" target="_blank" className="text-[#c8e84e] hover:underline">
+          <Link href="/mentions-legales" target="_blank" className="text-[#1c1c1c] underline underline-offset-2 hover:text-[#6b6b6b]">
             Mentions légales
           </Link>
         </label>
@@ -146,11 +146,11 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="w-full mt-3 flex items-center justify-center gap-3 text-sm font-semibold
-          tracking-wider uppercase text-[#080808] bg-[#c8e84e] py-5 rounded-lg
-          hover:bg-[#d4f05a] hover:-translate-y-0.5 hover:shadow-[0_6px_24px_rgba(200,232,78,0.3)]
+        className="w-full mt-4 flex items-center justify-center gap-3 text-sm font-medium
+          tracking-[0.1em] uppercase text-[#f7f5f1] bg-[#1c1c1c] py-5 rounded-lg
+          hover:bg-[#333333] hover:-translate-y-0.5
           active:translate-y-0 transition-all duration-200
-          disabled:opacity-60 disabled:cursor-not-allowed disabled:translate-y-0"
+          disabled:opacity-50 disabled:cursor-not-allowed disabled:translate-y-0"
       >
         {status === 'sending' ? 'Envoi en cours…' : 'Envoyer mon brief'}
         {status !== 'sending' && (
@@ -161,7 +161,7 @@ export default function ContactForm() {
       </button>
       <p className="text-center text-xs text-[#9a9a9a] mt-5 leading-relaxed">
         Ou directement sur{' '}
-        <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="text-[#c8e84e] hover:underline">
+        <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="text-[#1c1c1c] underline underline-offset-2 hover:text-[#6b6b6b]">
           WhatsApp
         </a>
         .

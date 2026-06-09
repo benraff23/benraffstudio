@@ -20,21 +20,20 @@ export default function BlogList({ posts }: { posts: PostMeta[] }) {
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE))
   const visible = filtered.slice(0, page * PER_PAGE)
-
   const chips: Array<'Tous' | (typeof BLOG_CATEGORIES)[number]> = ['Tous', ...BLOG_CATEGORIES]
 
   return (
     <>
-      {/* Filtres catégories */}
+      {/* Filtres */}
       <div className="flex flex-wrap gap-2 mb-12">
         {chips.map((c) => (
           <button
             key={c}
             onClick={() => { setCategory(c); setPage(1) }}
-            className={`text-xs font-semibold tracking-wider uppercase px-4 py-2 rounded-full border transition-all duration-200
+            className={`text-xs font-medium tracking-[0.1em] uppercase px-4 py-2 rounded-full border transition-all duration-200
               ${category === c
-                ? 'bg-[#c8e84e] text-[#080808] border-[#c8e84e]'
-                : 'text-[#b8b8b8] border-white/[0.14] hover:border-white/30 hover:text-white'}`}
+                ? 'bg-[#1c1c1c] text-[#f7f5f1] border-[#1c1c1c]'
+                : 'text-[#6b6b6b] border-[rgba(28,28,28,0.15)] hover:border-[rgba(28,28,28,0.4)] hover:text-[#1c1c1c]'}`}
           >
             {c}
           </button>
@@ -49,33 +48,32 @@ export default function BlogList({ posts }: { posts: PostMeta[] }) {
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group flex flex-col rounded-2xl overflow-hidden border border-white/[0.06]
-                         bg-[#111111] hover:border-white/[0.14] transition-all duration-300
-                         focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c8e84e]"
+              className="group flex flex-col rounded-xl overflow-hidden border border-[rgba(28,28,28,0.07)]
+                         bg-white hover:border-[rgba(28,28,28,0.14)] transition-all duration-300
+                         focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1c1c1c]"
             >
-              <div className="relative aspect-[16/10] overflow-hidden bg-[#1a1a1a]">
+              <div className="relative aspect-[16/10] overflow-hidden bg-[#ede9e2]">
                 {post.cover ? (
                   <img
-                    src={post.cover}
-                    alt={post.title}
+                    src={post.cover} alt={post.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
                 ) : (
-                  <div className="w-full h-full bg-gradient-to-br from-[#1a1a1a] to-[#080808]" />
+                  <div className="w-full h-full bg-gradient-to-br from-[#ede9e2] to-[#f7f5f1]" />
                 )}
-                <span className="absolute top-3 left-3 text-[10px] font-semibold tracking-wider uppercase
-                                 bg-black/50 backdrop-blur-sm text-[#c8e84e] px-2.5 py-1 rounded-full">
+                <span className="absolute top-3 left-3 text-[9px] font-medium tracking-widest uppercase
+                                 bg-[rgba(247,245,241,0.9)] text-[#1c1c1c] px-2.5 py-1 rounded-full">
                   {post.category}
                 </span>
               </div>
               <div className="flex flex-col flex-1 p-6">
-                <div className="flex items-center gap-2 text-[11px] text-[#7a7a7a] mb-3">
+                <div className="flex items-center gap-2 text-[11px] text-[#9a9a9a] font-light mb-3">
                   <time dateTime={post.date}>{formatDate(post.date)}</time>
                   <span>·</span>
                   <span>{post.readingTime} min</span>
                 </div>
-                <h2 className="text-lg font-semibold text-white leading-snug mb-2 group-hover:text-[#c8e84e] transition-colors">
+                <h2 className="text-base font-semibold text-[#1c1c1c] leading-snug mb-2 group-hover:text-[#6b6b6b] transition-colors">
                   {post.title}
                 </h2>
                 <p className="text-sm text-[#9a9a9a] font-light leading-relaxed line-clamp-3">
@@ -87,14 +85,13 @@ export default function BlogList({ posts }: { posts: PostMeta[] }) {
         </div>
       )}
 
-      {/* Pagination — "charger plus" */}
       {page < totalPages && (
         <div className="mt-12 flex justify-center">
           <button
             onClick={() => setPage((p) => p + 1)}
-            className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase
-                       text-white border border-white/[0.14] px-8 py-4 rounded-full
-                       hover:border-white/30 hover:-translate-y-0.5 transition-all duration-200"
+            className="inline-flex items-center gap-2 text-xs font-medium tracking-[0.1em] uppercase
+                       text-[#1c1c1c] border border-[rgba(28,28,28,0.2)] px-8 py-4 rounded-full
+                       hover:border-[rgba(28,28,28,0.5)] hover:-translate-y-0.5 transition-all duration-200"
           >
             Charger plus d&apos;articles
           </button>

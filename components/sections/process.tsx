@@ -20,35 +20,33 @@ function ProcessStep({ num, title, text, isActive }: {
     <div className="relative z-10 p-4 lg:p-6 text-center">
       <motion.div
         animate={isActive ? {
-          borderColor: "#c8e84e",
-          color: "#c8e84e",
-          backgroundColor: "rgba(200,232,78,0.10)",
-          boxShadow: "0 0 28px rgba(200,232,78,0.25)",
+          borderColor: "rgba(247,245,241,0.7)",
+          color: "#f7f5f1",
+          backgroundColor: "rgba(247,245,241,0.07)",
         } : {
-          borderColor: "rgba(0,0,0,0.12)",
-          color: "#b0b0b0",
-          backgroundColor: "#1e1e1e",
-          boxShadow: "0 0 0px rgba(200,232,78,0)",
+          borderColor: "rgba(247,245,241,0.1)",
+          color: "rgba(247,245,241,0.25)",
+          backgroundColor: "rgba(247,245,241,0)",
         }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="w-14 h-14 rounded-full border flex items-center justify-center
-                   text-base font-bold mx-auto mb-5"
+        className="w-12 h-12 rounded-full border flex items-center justify-center
+                   text-sm font-light mx-auto mb-5 tracking-widest"
       >
         {num}
       </motion.div>
 
       <motion.h3
-        animate={{ color: isActive ? "#ffffff" : "#b0b0b0" }}
+        animate={{ color: isActive ? "#f7f5f1" : "rgba(247,245,241,0.25)" }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="text-sm font-semibold mb-2"
+        className="text-sm font-medium mb-2 tracking-wide"
       >
         {title}
       </motion.h3>
 
       <motion.p
-        animate={{ opacity: isActive ? 1 : 0.4, color: isActive ? "#9a9a9a" : "#9a9a9a" }}
+        animate={{ opacity: isActive ? 0.55 : 0.15 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="text-xs leading-relaxed max-w-[16ch] mx-auto"
+        className="text-xs text-[#f7f5f1] leading-relaxed max-w-[16ch] mx-auto font-light"
       >
         {text}
       </motion.p>
@@ -70,44 +68,36 @@ export default function Process() {
   })
 
   return (
-    /* 250vh → ~50vh par étape */
     <div ref={containerRef} style={{ height: "250vh" }} id="process">
-      <div className="sticky top-0 bg-[#1e1e1e] py-24 sm:py-32 min-h-screen flex flex-col justify-center">
+      <div className="sticky top-0 bg-[#1c1c1c] py-24 sm:py-32 min-h-screen flex flex-col justify-center">
         <div className="max-w-[1400px] mx-auto px-[var(--gutter)] w-full">
 
           {/* Header */}
           <div className="text-center max-w-[52ch] mx-auto mb-16 sm:mb-20">
-            <span className="label">Process</span>
-            <h2 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-white">
+            <span className="label label-on-dark">Process</span>
+            <h2 className="mt-5 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.08] text-[#f7f5f1]">
               Comment on travaille ensemble.
             </h2>
-            <p className="mt-4 text-base font-light text-[#9a9a9a]">
-              Pas de devis envoyé dans le vide. Pas d&apos;aller-retour sans fin. Un process pensé pour que vous sachiez exactement où on en est à chaque moment.
+            <p className="mt-4 text-base font-light text-[#f7f5f1]/45 leading-relaxed">
+              Pas de devis envoyé dans le vide. Pas d&apos;aller-retour sans fin.
+              Un process pensé pour que vous sachiez exactement où on en est à chaque moment.
             </p>
           </div>
 
           {/* Steps */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-0 relative">
-            {/* Connecting line (desktop) */}
-            <div className="hidden lg:block absolute top-7 left-[calc(100%/10)] right-[calc(100%/10)] h-px
-                            bg-gradient-to-r from-transparent via-[rgba(200,232,78,0.12)] to-transparent" />
-
+            {/* Ligne de connexion desktop */}
+            <div className="hidden lg:block absolute top-6 left-[calc(100%/10)] right-[calc(100%/10)] h-px
+                            bg-gradient-to-r from-transparent via-[rgba(247,245,241,0.08)] to-transparent" />
             {steps.map(([num, title, text], i) => (
-              <ProcessStep
-                key={num}
-                num={num}
-                title={title}
-                text={text}
-                isActive={i < activeCount}
-              />
+              <ProcessStep key={num} num={num} title={title} text={text} isActive={i < activeCount} />
             ))}
           </div>
 
-          {/* Scroll hint */}
           <motion.p
-            animate={{ opacity: activeCount >= TOTAL ? 0 : 0.35 }}
+            animate={{ opacity: activeCount >= TOTAL ? 0 : 0.2 }}
             transition={{ duration: 0.5 }}
-            className="text-center text-xs text-[#9a9a9a] tracking-widest uppercase mt-16 select-none"
+            className="text-center text-[10px] text-[#f7f5f1] tracking-[0.2em] uppercase mt-16 select-none font-light"
           >
             ↓ Continuez à défiler
           </motion.p>
