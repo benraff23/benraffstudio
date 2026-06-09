@@ -11,7 +11,12 @@ export default function Nav({ base = '' }: NavProps) {
     ['/blog', 'Blog'],
   ]
 
+  // NOTE : le mobileMenu est rendu HORS du <nav> pour éviter que
+  // le backdrop-filter du nav.scrolled crée un containing block
+  // et empêche le fixed inset-0 de couvrir tout l'écran.
+
   return (
+    <>
     <nav
       id="nav"
       className="fixed top-0 left-0 right-0 z-[1000] flex items-center justify-between
@@ -67,11 +72,11 @@ export default function Nav({ base = '' }: NavProps) {
         #nav.scrolled .nav__hamburger span { background: #1c1c1c; }
         #nav.menu-open .nav__hamburger span { background: #1c1c1c; }
 
-        /* ── Menu mobile ── */
-        #nav.menu-open .nav__mobile { opacity: 1; pointer-events: all; }
+        /* ── Menu mobile — animation hamburger → X ── */
         #nav.menu-open .nav__hamburger span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
         #nav.menu-open .nav__hamburger span:nth-child(2) { opacity: 0; }
         #nav.menu-open .nav__hamburger span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+        /* Visibilité du mobileMenu gérée via JS (classes opacity-0/opacity-100 sur #mobileMenu) */
       `}</style>
 
       {/* Logo */}
@@ -129,36 +134,41 @@ export default function Nav({ base = '' }: NavProps) {
                          [#nav.scrolled_&]:bg-[#1c1c1c]" />
       </button>
 
-      {/* Menu mobile overlay */}
-      <div
-        id="mobileMenu"
-        className="nav__mobile fixed inset-0 bg-[#f7f5f1] flex flex-col items-center justify-center gap-8
-                   opacity-0 pointer-events-none transition-opacity duration-300 z-[999]"
-      >
-        {/* Bouton fermer */}
-        <button
-          id="mobileClose"
-          aria-label="Fermer le menu"
-          className="absolute top-6 right-5 w-10 h-10 flex items-center justify-center text-[#1c1c1c]
-                     hover:text-[#6b6b6b] transition-colors"
-        >
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <path d="M4 4l12 12M16 4l-12 12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
-          </svg>
-        </button>
-
-        {links.map(([href, label]) => (
-          <a key={href} href={href}
-            className="text-4xl font-light tracking-tight text-[#1c1c1c] hover:text-[#6b6b6b] transition-colors">
-            {label}
-          </a>
-        ))}
-        <a href={`${base}#contact`}
-          className="mt-4 text-sm font-medium tracking-wider uppercase text-[#f7f5f1]
-                     bg-[#1c1c1c] px-10 py-4 rounded-full hover:bg-[#333333] transition-colors">
-          Démarrer mon projet
-        </a>
-      </div>
     </nav>
+
+    {/* ── Menu mobile HORS du <nav> ──────────────────────────────────────────
+        Rendu en dehors du nav pour que fixed inset-0 soit relatif au viewport
+        et non au containing block créé par backdrop-filter du nav.scrolled.
+        Visibilité contrôlée directement par client-effects.tsx (JS).          */}
+    <div
+      id="mobileMenu"
+      className="fixed inset-0 bg-[#f7f5f1] flex flex-col items-center justify-center gap-8
+                 opacity-0 pointer-events-none transition-opacity duration-300 z-[2000]"
+    >
+      {/* Bouton fermer */}
+      <button
+        id="mobileClose"
+        aria-label="Fermer le menu"
+        className="absolute top-6 right-5 w-10 h-10 flex items-center justify-center text-[#1c1c1c]
+                   hover:text-[#6b6b6b] transition-colors"
+      >
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4 4l12 12M16 4l-12 12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+        </svg>
+      </button>
+
+      {links.map(([href, label]) => (
+        <a key={href} href={href}
+          className="text-4xl font-light tracking-tight text-[#1c1c1c] hover:text-[#6b6b6b] transition-colors">
+          {label}
+        </a>
+      ))}
+      <a href={`${base}#contact`}
+        className="mt-4 text-sm font-medium tracking-wider uppercase text-[#f7f5f1]
+                   bg-[#1c1c1c] px-10 py-4 rounded-full hover:bg-[#333333] transition-colors">
+        Démarrer mon projet
+      </a>
+    </div>
+    </>
   )
 }

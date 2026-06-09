@@ -81,15 +81,22 @@ export default function ClientEffects() {
     const mobileMenu = document.getElementById('mobileMenu')
     const mobileClose = document.getElementById('mobileClose')
     if (hamburger && mobileMenu && nav) {
+      const openMenu = () => {
+        nav.classList.add('menu-open')
+        mobileMenu.classList.remove('opacity-0', 'pointer-events-none')
+        mobileMenu.classList.add('opacity-100')
+        hamburger.setAttribute('aria-expanded', 'true')
+        document.body.style.overflow = 'hidden'
+      }
       const closeMenu = () => {
         nav.classList.remove('menu-open')
+        mobileMenu.classList.add('opacity-0', 'pointer-events-none')
+        mobileMenu.classList.remove('opacity-100')
         hamburger.setAttribute('aria-expanded', 'false')
         document.body.style.overflow = ''
       }
       hamburger.addEventListener('click', () => {
-        const open = nav.classList.toggle('menu-open')
-        hamburger.setAttribute('aria-expanded', String(open))
-        document.body.style.overflow = open ? 'hidden' : ''
+        nav.classList.contains('menu-open') ? closeMenu() : openMenu()
       })
       mobileClose?.addEventListener('click', closeMenu)
       mobileMenu.querySelectorAll('a').forEach(link => {
