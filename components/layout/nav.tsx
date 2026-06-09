@@ -6,6 +6,7 @@ export default function Nav({ base = '' }: NavProps) {
   const logoHref = base === '' ? '#accueil' : '/'
   const links: [string, string][] = [
     ['/projets', 'Projets'],
+    ['/secteurs', 'Secteurs'],
     ['/benjamin-raffegeau', 'À propos'],
     ['/blog', 'Blog'],
   ]
