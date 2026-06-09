@@ -23,7 +23,7 @@ export default function Portfolio() {
         <div>
           <span className="label">Portfolio</span>
           <h2 id="portfolio-title" className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.08] text-[#1c1c1c]">
-            Des projets. Pas des rendus.
+            Ce qui n&apos;existe pas encore, rendu réel.
           </h2>
           <p className="mt-3 text-base font-light text-[#6b6b6b] max-w-[44ch]">
             Chaque série raconte l&apos;histoire d&apos;un espace avant qu&apos;il existe.

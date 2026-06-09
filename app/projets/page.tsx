@@ -68,7 +68,7 @@ export default function ProjetsPage() {
         <div className="mb-16">
           <span className="label mb-5">Portfolio</span>
           <h1 className="mt-4 text-4xl sm:text-6xl font-bold tracking-tight leading-[1.05] text-[#1c1c1c] mb-6 max-w-[18ch]">
-            Des projets. Pas des rendus.
+            Ce qui n&apos;existe pas encore, rendu réel.
           </h1>
           <p className="text-lg font-light text-[#6b6b6b] leading-relaxed max-w-[52ch]">
             Chaque série raconte l&apos;histoire d&apos;un espace avant qu&apos;il existe.
