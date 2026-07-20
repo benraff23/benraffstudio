@@ -35,7 +35,27 @@
       "Bash(git remote *)",
       "Bash(git branch *)",
       "Bash(git push *)",
-      "Bash(git rm *)"
+      "Bash(git rm *)",
+      "WebFetch(domain:github.com)",
+      "Bash(uvx --version)",
+      "Bash(winget --version)",
+      "PowerShell(try { uv --version } catch { \"uv: not found\" }; try { uvx --version } catch { \"uvx: not found\" }; \"---\"; \"PATH local bin:\"; Test-Path \"$env:USERPROFILE\\\\.local\\\\bin\\\\uvx.exe\")",
+      "PowerShell(& \"$env:USERPROFILE\\\\.local\\\\bin\\\\uvx.exe\" --version)",
+      "PowerShell(Get-ChildItem \"$env:APPDATA\\\\SketchUp\\\\\" -Directory | ForEach-Object { $p = Join-Path $_.FullName \"SketchUp\\\\Plugins\"; [PSCustomObject]@{ Version=$_.Name; LastWrite=$_.LastWriteTime; HasPluginsDir=\\(Test-Path $p\\); PluginItems= if\\(Test-Path $p\\){ \\(Get-ChildItem $p -ErrorAction SilentlyContinue | Measure-Object\\).Count } else { 0 } } } | Sort-Object LastWrite -Descending | Format-Table -AutoSize)",
+      "PowerShell(claude mcp add sketchup --scope user -e SKETCHUP_MCP_HOST=127.0.0.1 -e SKETCHUP_MCP_PORT=9876 -- \"C:\\\\Users\\\\braff\\\\.local\\\\bin\\\\uvx.exe\" --system-certs sketchup-mcp2)",
+      "PowerShell(claude mcp list)",
+      "PowerShell(\"--- Verification ---\")",
+      "Bash([ -f \"$f\" ])",
+      "Bash(python -c \"import json,os; d=json.load\\(open\\(os.path.expanduser\\('~/.claude.json'\\),encoding='utf-8'\\)\\); print\\('top-level mcpServers:', json.dumps\\(d.get\\('mcpServers',{}\\),indent=2\\)[:800]\\)\")",
+      "PowerShell(try { $r = Invoke-RestMethod -Uri \"https://api.github.com/repos/zinin/sketchup-mcp2/releases/latest\" -Headers @{ \"User-Agent\"=\"claude\" }; \"Tag: $\\($r.tag_name\\)\"; $r.assets | Select-Object name, browser_download_url, size | Format-List } catch { \"API error: $\\($_.Exception.Message\\)\" })",
+      "mcp__sketchup__get_version",
+      "mcp__sketchup__get_model_info",
+      "mcp__sketchup__eval_ruby",
+      "mcp__sketchup__get_viewport_screenshot",
+      "mcp__sketchup__list_components",
+      "Bash(python -)",
+      "Bash(convert -density 150 \"PLAN MAISON.pdf[0]\" -quality 90 \"_test_plan.png\")",
+      "Bash(echo \"exit=$?\")"
     ]
   }
 }

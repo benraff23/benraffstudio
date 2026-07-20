@@ -6,7 +6,7 @@ export default function Vision() {
           {/* Portrait */}
           <div className="reveal-left relative aspect-[4/5] lg:aspect-auto lg:h-[620px] rounded-2xl overflow-hidden bg-[#ede9e2]">
             <img
-              src="/Portrait benjamin Raffegeau.webp"
+              src="/Portrait benjamin Raffegeau.jpeg"
               alt="Benjamin Raffegeau, directeur artistique et perspectiviste, fondateur de BenRaff Studio à Rennes"
               className="w-full h-full object-cover object-center"
               loading="lazy"

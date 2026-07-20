@@ -39,7 +39,7 @@ const jsonLd = {
       url: `${SITE}/benjamin-raffegeau`,
       email: 'contact@benraffstudio.com',
       telephone: '+33624517641',
-      image: `${SITE}/Portrait benjamin Raffegeau.webp`,
+      image: `${SITE}/Portrait benjamin Raffegeau.jpeg`,
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Rennes',
@@ -180,7 +180,7 @@ export default function BenjaminRaffegeau() {
           {/* Photo */}
           <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-[#ede9e2] max-w-sm mx-auto w-full lg:max-w-none">
             <img
-              src="/Portrait benjamin Raffegeau.webp"
+              src="/Portrait benjamin Raffegeau.jpeg"
               alt="Benjamin Raffegeau, perspectiviste 3D et fondateur BenRaff Studio à Rennes"
               className="w-full h-full object-cover object-center"
             />
