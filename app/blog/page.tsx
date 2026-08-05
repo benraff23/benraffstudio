@@ -9,12 +9,13 @@ import { getAllPosts } from '@/lib/blog'
 const SITE = 'https://benraffstudio.com'
 
 export const metadata: Metadata = {
-  title: 'Blog · Visualisation architecturale & image cinématographique · BenRaff Studio',
-  description: 'Articles sur le métier de perspectiviste, le process de création de séries cinématographiques et les marchés de la visualisation architecturale. BenRaff Studio, Rennes.',
+  title: 'Blog · Présenter un projet d\'aménagement extérieur',
+  description: 'Le raisonnement derrière mes choix visuels, pour les concepteurs paysagistes, piscinistes et concepteurs de pool houses.',
   alternates: { canonical: `${SITE}/blog` },
   openGraph: {
+    images: ['/og.jpg'],
     title: 'Blog · BenRaff Studio',
-    description: 'Métier, process et marchés de la visualisation architecturale cinématographique.',
+    description: 'Réflexions sur la présentation de projets paysagers et d\'aménagement extérieur.',
     url: `${SITE}/blog`, siteName: 'BenRaff Studio', locale: 'fr_FR', type: 'website',
   },
 }
@@ -44,12 +45,13 @@ export default function BlogPage() {
       <main className="max-w-[1400px] mx-auto px-[var(--gutter)] pt-40 pb-20">
         <div className="mb-12">
           <span className="label mb-5">Blog</span>
-          <h1 className="mt-4 text-4xl sm:text-6xl font-bold tracking-tight leading-[1.05] text-[#1c1c1c] mb-6 max-w-[20ch]">
-            Le métier, le process, les marchés.
+          <h1 className="mt-4 text-4xl sm:text-6xl font-bold tracking-tight leading-[1.05] text-[#1c1c1c] mb-6 max-w-[22ch]">
+            Réflexions sur la présentation de projets paysagers.
           </h1>
-          <p className="text-lg font-light text-[#6b6b6b] leading-relaxed max-w-[56ch]">
-            Pourquoi une image cinématographique convainc là où un rendu technique laisse froid.
-            Des réflexions sur la visualisation architecturale, son processus et ses usages.
+          <p className="text-lg font-light text-[#6b6b6b] leading-relaxed max-w-[58ch]">
+            Le raisonnement derrière mes choix visuels, pensé pour les concepteurs paysagistes,
+            piscinistes et concepteurs de pool houses qui veulent mieux présenter leurs projets
+            en clientèle.
           </p>
         </div>
 

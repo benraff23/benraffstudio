@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { PortfolioProject } from '@/lib/portfolio-data'
 
 export default function ProjetsGrid({ projects }: { projects: PortfolioProject[] }) {
@@ -11,12 +12,13 @@ export default function ProjetsGrid({ projects }: { projects: PortfolioProject[]
           className="group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1c1c1c] rounded-xl"
         >
           <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-[#ede9e2]">
-            <img
+            <Image
               src={project.image}
               alt={`${project.title} — ${project.category}, ${project.year}`}
-              className="w-full h-full object-cover object-center
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover object-center
                          transition-transform duration-700 ease-out group-hover:scale-105"
-              loading="lazy"
             />
             <div className="absolute inset-0 bg-[rgba(28,28,28,0.25)] opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
             <div className="absolute inset-0 flex items-center justify-center

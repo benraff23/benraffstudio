@@ -5,7 +5,8 @@ import ClientEffects from '@/components/layout/client-effects'
 export const metadata: Metadata = {
   title: 'Mentions légales · BenRaff Studio',
   description: 'Mentions légales du site benraffstudio.com : éditeur, hébergeur, propriété intellectuelle.',
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
+  alternates: { canonical: 'https://benraffstudio.com/mentions-legales' },
 }
 
 export default function MentionsLegales() {
@@ -23,7 +24,7 @@ export default function MentionsLegales() {
       </header>
 
       <main className="max-w-3xl mx-auto px-6 py-20">
-        <p className="text-xs font-medium tracking-[0.15em] uppercase text-[#c8e84e] mb-4">Informations légales</p>
+        <p className="text-xs font-medium tracking-[0.15em] uppercase text-[#f7f5f1] mb-4">Informations légales</p>
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-16">
           Mentions légales
         </h1>
@@ -42,7 +43,7 @@ export default function MentionsLegales() {
               <li><span className="text-[#9a9a9a]">Adresse :</span> Rennes (35000), Ille-et-Vilaine, France</li>
               <li><span className="text-[#9a9a9a]">Téléphone :</span> 06 24 51 76 41</li>
               <li><span className="text-[#9a9a9a]">Email :</span>{' '}
-                <a href="mailto:contact@benraffstudio.com" className="text-[#c8e84e] hover:underline">
+                <a href="mailto:contact@benraffstudio.com" className="text-[#f7f5f1] hover:underline">
                   contact@benraffstudio.com
                 </a>
               </li>
@@ -67,7 +68,7 @@ export default function MentionsLegales() {
               <li><span className="text-[#9a9a9a]">Société :</span> Vercel Inc.</li>
               <li><span className="text-[#9a9a9a]">Adresse :</span> 340 Pine Street, Suite 600, San Francisco, CA 94104, États-Unis</li>
               <li><span className="text-[#9a9a9a]">Site :</span>{' '}
-                <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="text-[#c8e84e] hover:underline">
+                <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="text-[#f7f5f1] hover:underline">
                   vercel.com
                 </a>
               </li>
@@ -117,7 +118,7 @@ export default function MentionsLegales() {
             </h2>
             <p className="text-sm">
               Pour toute information relative au traitement de vos données personnelles, consultez notre{' '}
-              <Link href="/politique-de-confidentialite" className="text-[#c8e84e] hover:underline">
+              <Link href="/politique-de-confidentialite" className="text-[#f7f5f1] hover:underline">
                 Politique de confidentialité
               </Link>.
             </p>

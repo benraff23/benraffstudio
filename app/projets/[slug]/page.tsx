@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!project) return {}
   const url = `${SITE}/projets/${project.slug}`
   return {
-    title: `${project.title} · ${project.category} · BenRaff Studio`,
+    title: `${project.title} · ${project.category}`,
     description: project.intention,
     alternates: { canonical: url },
     openGraph: {
@@ -113,7 +113,7 @@ export default async function ProjetPage({ params }: { params: Promise<{ slug: s
         {/* Contexte */}
         <section className="mt-16 grid lg:grid-cols-[1fr_1.4fr] gap-10 items-start">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#1c1c1c]">
-            Le contexte &amp; les choix artistiques.
+            Le contexte &amp; les choix de composition.
           </h2>
           <div className="flex flex-col gap-5 text-base text-[#6b6b6b] font-light leading-relaxed">
             <p>{project.fullDesc}</p>
@@ -136,7 +136,7 @@ export default async function ProjetPage({ params }: { params: Promise<{ slug: s
         {/* CTA */}
         <div className="mt-20 pt-16 border-t border-[rgba(28,28,28,0.08)] text-center">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#1c1c1c] mb-4">
-            Une série comme celle-ci pour votre projet ?
+            Un Book de Présentation Client pour votre projet ?
           </h2>
           <p className="text-[#6b6b6b] text-lg font-light mb-8 max-w-[44ch] mx-auto">
             Partagez-moi votre projet. Je vous réponds personnellement sous 24h.

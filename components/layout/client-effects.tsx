@@ -40,9 +40,13 @@ export default function ClientEffects() {
     }
 
     // ── Scroll reveal ──
+    const REVEAL_SEL = '.reveal,.reveal-left,.reveal-right'
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    let revealSafetyNet: (() => void) | undefined
+    let revealPoll = 0
+
     if (reduced) {
-      document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => {
+      document.querySelectorAll(REVEAL_SEL).forEach(el => {
         (el as HTMLElement).style.opacity = '1';
         (el as HTMLElement).style.transform = 'none'
       })
@@ -50,7 +54,34 @@ export default function ClientEffects() {
       const obs = new IntersectionObserver(entries => {
         entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target) } })
       }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' })
-      document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => obs.observe(el))
+      document.querySelectorAll(REVEAL_SEL).forEach(el => obs.observe(el))
+
+      // Filet de sécurité : sur un lien profond (/#contact), le navigateur saute
+      // à l'ancre sans que l'observateur ne rapporte l'intersection — les éléments
+      // concernés restaient bloqués à opacity 0, donc invisibles pour de bon.
+      // On les révèle explicitement tant qu'il en reste.
+      let pending = Array.from(document.querySelectorAll(REVEAL_SEL))
+      revealSafetyNet = () => {
+        if (!pending.length) return
+        pending = pending.filter(el => {
+          if (el.classList.contains('is-visible')) return false
+          const r = el.getBoundingClientRect()
+          if (r.top < window.innerHeight && r.bottom > 0) {
+            el.classList.add('is-visible')
+            obs.unobserve(el)
+            return false
+          }
+          return true
+        })
+      }
+      window.addEventListener('scroll', revealSafetyNet, { passive: true })
+      window.addEventListener('hashchange', revealSafetyNet)
+
+      // Le saut vers l'ancre peut survenir après l'hydratation, sans événement
+      // scroll exploitable. On repasse à intervalle court pendant 3 s, puis on
+      // s'arrête : le listener scroll prend le relais pour la navigation normale.
+      revealPoll = window.setInterval(revealSafetyNet, 250)
+      window.setTimeout(() => window.clearInterval(revealPoll), 3000)
     }
 
     // ── Nav scroll state ──
@@ -104,19 +135,6 @@ export default function ClientEffects() {
       })
     }
 
-    // ── Platform progress fill ──
-    const fill = document.getElementById('progressFill') as HTMLElement
-    if (fill) {
-      fill.style.width = '0%'
-      const pObs = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-          if (e.isIntersecting) { setTimeout(() => { fill.style.width = '68%' }, 400); pObs.unobserve(e.target) }
-        })
-      }, { threshold: 0.5 })
-      const mockup = fill.closest('.platform__mockup')
-      if (mockup) pObs.observe(mockup)
-    }
-
     // ── Smooth scroll ──
     document.addEventListener('click', e => {
       const anchor = (e.target as Element)?.closest('a[href^="#"]') as HTMLAnchorElement
@@ -130,6 +148,11 @@ export default function ClientEffects() {
 
     return () => {
       window.removeEventListener('scroll', onScroll)
+      window.clearInterval(revealPoll)
+      if (revealSafetyNet) {
+        window.removeEventListener('scroll', revealSafetyNet)
+        window.removeEventListener('hashchange', revealSafetyNet)
+      }
     }
   }, [])
 

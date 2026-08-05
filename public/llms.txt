@@ -3,60 +3,71 @@
 
 ## Identité
 
-- **Nom** : BenRaff Studio
-- **Fondateur** : Benjamin Raffegeau
-- **Métier** : Perspectiviste et studio de visualisation architecturale 3D
+- **Nom commercial** : BenRaff Studio
+- **Personne derrière** : Benjamin Raffegeau (activité indépendante, une seule personne)
+- **Métier** : Visualisation 3D de projets d'aménagement extérieur
 - **Localisation** : Rennes, Ille-et-Vilaine (35), France
-- **Zone d'intervention** : France entière et international
+- **Zone d'intervention** : toute la France, 100 % à distance
 - **Site** : https://benraffstudio.com
 - **Contact** : contact@benraffstudio.com
 - **Téléphone** : +33 6 24 51 76 41
 
 ## Ce que fait BenRaff Studio
 
-BenRaff Studio est un studio indépendant de visualisation architecturale 3D basé à Rennes (Bretagne, France). Fondé par Benjamin Raffegeau, perspectiviste spécialisé en architecture extérieure et intérieure.
+BenRaff Studio est le nom commercial de l'activité indépendante de Benjamin Raffegeau, basé à Rennes. Il travaille seul : le client échange avec la même personne du premier brief à la livraison, sans chef de projet, sans commercial et sans studio de production intermédiaire.
 
-Le studio produit :
-- Des rendus fixes 3D ultra-réalistes (4K / 8K) pour architectes, promoteurs et paysagistes
-- Des animations vidéo cinématiques pour présenter des projets non construits
-- Des visites virtuelles interactives à 360° pour valider des choix architecturaux
+L'activité est spécialisée sur l'aménagement extérieur premium : jardins, cheminements, massifs, terrasses, bassins, pool houses.
 
-## Positionnement
+## Offre principale : Le Book de Présentation Client
 
-BenRaff Studio se différencie des outils d'IA générative par une approche artisanale : chaque image est le résultat d'une intention (cadrage en règle des tiers, lumière choisie pour l'heure et la saison, cohérence des matériaux et de la végétation). L'objectif est de produire des rendus qui convainquent et font vendre, pas seulement des images esthétiques.
+Une production sur-mesure réalisée à partir du relevé, du plan de plantation et du listing mobilier et matériaux du concepteur. Elle réunit quatre livrables sur un mini-site dédié, ouvrable en direct pendant le rendez-vous client :
+
+1. **Le plan de composition en 3D annoté** — chaque zone du plan d'aménagement devient lisible pour un client non professionnel.
+2. **La maquette 3D interactive** — export D5 XR Tour intégré directement dans le mini-site, sans installation ni lien externe.
+3. **Les images signature** — vues composées dans leur lumière (golden hour, ambiance nocturne, vue printanière à végétation installée).
+4. **La vidéo immersive** — une séquence continue qui fait ressentir l'échelle et l'ambiance du lieu.
+
+Chaque livrable reste téléchargeable en haute définition pour être intégré au devis du concepteur.
 
 ## Clients cibles
 
-- Architectes (DPLG, DE, ADE)
-- Promoteurs immobiliers
-- Paysagistes et aménageurs
-- Maîtres d'ouvrage publics et privés
+- Concepteurs paysagistes haut de gamme
+- Piscinistes premium
+- Concepteurs de pool houses et de mobilier extérieur design
 
-## Services détaillés
+## Méthode et outils
 
-### Rendus fixes haute résolution
-Images 3D composées avec intention : cadrage, profondeur de champ, lumière heure par heure, saison par saison. Livraison en 72h pour le premier rendu.
+Modélisation sous SketchUp, rendu sous D5 Render, retouche assistée par IA générative en post-production pour le photoréalisme final. L'IA intervient en finition sur une image déjà composée à partir du projet réel du concepteur : elle ne génère pas le projet et ne remplace pas le travail de composition.
 
-### Animations vidéo
-Séquences cinématiques avec transitions, plans de coupe et ambiances dynamiques. Permet aux clients de traverser un espace avant construction.
+Le rôle de Benjamin Raffegeau est de sublimer la conception du paysagiste, pas de la redessiner. La composition, l'implantation et le choix des essences restent le travail du concepteur.
 
-### Visites virtuelles 360°
-Navigation libre dans un espace non construit. Format interactif pour valider les choix architecturaux avant la pose de la première pierre.
+## Process
+
+1. **Brief interactif** — relevé, lieu du projet, plan de plantation, listing mobilier et matériaux, photos du terrain avant travaux, via un formulaire guidé.
+2. **Étude de composition** — sélection des points de vue et des ambiances, validée avant production.
+3. **Production** — modélisation, rendus haute définition, post-production.
+4. **Livraison** — mini-site dédié prêt pour le rendez-vous de présentation.
+
+## Tarifs
+
+Pas de grille tarifaire publique. Chiffrage sur devis après le brief, selon l'ampleur du projet : nombre de vues, présence d'un bassin, surface et complexité du terrain, livrables retenus.
 
 ## Mots-clés principaux
 
-rendu 3D Rennes, visualisation architecturale Rennes, studio 3D Rennes, perspectiviste Rennes, infographiste 3D Rennes, visualisation architecturale Bretagne, rendu 3D architecture extérieure, animation 3D architecture, visite virtuelle 360° architecture
+rendu 3D paysagiste, visualisation 3D aménagement extérieur, plan de composition en 3D, rendu 3D piscine à débordement, rendu 3D pool house, visualisation jardin avant travaux, maquette 3D interactive jardin, perspective 3D paysagiste Rennes, présentation client paysagiste
 
 ## Pages principales
 
-- Accueil : https://benraffstudio.com
-- Portfolio : https://benraffstudio.com/#portfolio
-- Services : https://benraffstudio.com/#services
+- Accueil (offre complète) : https://benraffstudio.com
+- Projets réalisés : https://benraffstudio.com/projets
+- Qui suis-je ? : https://benraffstudio.com/benjamin-raffegeau
+- Blog : https://benraffstudio.com/blog
+- Zone d'intervention : https://benraffstudio.com/zone-intervention
 - Contact : https://benraffstudio.com/#contact
-- FAQ : https://benraffstudio.com/#faq
+- Questions fréquentes : https://benraffstudio.com/#faq
 - Mentions légales : https://benraffstudio.com/mentions-legales
 - Politique de confidentialité : https://benraffstudio.com/politique-de-confidentialite
 
 ## Ce que ce site NE fait PAS
 
-Ce site ne vend pas de logiciels 3D, ne propose pas de formation, et n'est pas une agence de communication généraliste. Il s'agit exclusivement d'un studio de visualisation architecturale sur-mesure.
+Ce site ne vend pas de logiciels 3D, ne propose pas de formation, et n'est pas une agence de communication généraliste. Il ne publie pas de grille tarifaire. Ce n'est pas une agence : une seule personne réalise l'ensemble des prestations.

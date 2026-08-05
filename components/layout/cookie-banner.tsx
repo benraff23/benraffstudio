@@ -37,7 +37,7 @@ export default function CookieBanner() {
         <div className="flex items-start gap-4">
           {/* Icône */}
           <div className="w-9 h-9 rounded-xl bg-[rgba(200,232,78,0.1)] flex items-center justify-center flex-shrink-0 mt-0.5">
-            <svg className="w-4 h-4 text-[#c8e84e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <svg className="w-4 h-4 text-[#f7f5f1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-5h2v2h-2zm0-8h2v6h-2z"
                 strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -51,7 +51,7 @@ export default function CookieBanner() {
               Aucun cookie publicitaire ou de suivi sans votre accord.{' '}
               <Link
                 href="/politique-de-confidentialite"
-                className="text-[#c8e84e] hover:underline"
+                className="text-[#f7f5f1] hover:underline"
               >
                 En savoir plus
               </Link>
@@ -64,9 +64,9 @@ export default function CookieBanner() {
           <button
             onClick={accept}
             className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2
-                       text-xs font-semibold tracking-wider uppercase text-[#080808]
-                       bg-[#c8e84e] px-6 py-3 rounded-full
-                       hover:bg-[#d4f05a] hover:-translate-y-px
+                       text-xs font-semibold tracking-wider uppercase text-[#1c1c1c]
+                       bg-[#f7f5f1] px-6 py-3 rounded-full
+                       hover:bg-white hover:-translate-y-px
                        hover:shadow-[0_4px_20px_rgba(200,232,78,0.3)]
                        transition-all duration-200"
           >

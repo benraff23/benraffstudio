@@ -25,8 +25,8 @@ export default function NotFound() {
 
         <div className="-mt-4 mb-8">
           <div className="inline-flex items-center gap-2 mb-5">
-            <div className="w-1.5 h-1.5 rounded-full bg-[#c8e84e]" />
-            <span className="text-xs font-medium tracking-[0.15em] uppercase text-[#c8e84e]">
+            <div className="w-1.5 h-1.5 rounded-full bg-[#f7f5f1]" />
+            <span className="text-xs font-medium tracking-[0.15em] uppercase text-[#f7f5f1]">
               Page introuvable
             </span>
           </div>
@@ -43,8 +43,8 @@ export default function NotFound() {
           <Link
             href="/"
             className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase
-                       text-[#080808] bg-[#c8e84e] px-8 py-4 rounded-full
-                       hover:bg-[#d4f05a] hover:-translate-y-0.5
+                       text-[#1c1c1c] bg-[#f7f5f1] px-8 py-4 rounded-full
+                       hover:bg-white hover:-translate-y-0.5
                        hover:shadow-[0_8px_32px_rgba(200,232,78,0.35)]
                        transition-all duration-200"
           >

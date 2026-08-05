@@ -1,9 +1,12 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRef } from 'react'
-import { portfolioProjects } from '@/lib/portfolio-data'
+import { nicheProjects } from '@/lib/portfolio-data'
 
-const displayedProjects = portfolioProjects.slice(0, 6)
+// Accueil : uniquement l'aménagement extérieur. Les autres secteurs
+// restent accessibles depuis /projets, pas depuis le tunnel.
+const displayedProjects = nicheProjects
 
 export default function Portfolio() {
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -21,12 +24,13 @@ export default function Portfolio() {
       {/* Header */}
       <div className="max-w-[1400px] mx-auto px-[var(--gutter)] mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
         <div>
-          <span className="label">Portfolio</span>
-          <h2 id="portfolio-title" className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.08] text-[#1c1c1c]">
-            Ce qui n&apos;existe pas encore, rendu réel.
+          <span className="label">Projets récents</span>
+          <h2 id="portfolio-title" className="mt-4 font-bold tracking-tight text-[clamp(1.85rem,3.2vw,2.5rem)] leading-tight text-[#1c1c1c]">
+            Du jardin littoral à la piscine à débordement.
           </h2>
-          <p className="mt-3 text-base font-light text-[#6b6b6b] max-w-[44ch]">
-            Chaque série raconte l&apos;histoire d&apos;un espace avant qu&apos;il existe.
+          <p className="mt-3 text-base font-light text-[#6b6b6b] max-w-[46ch]">
+            Une sélection de projets réalisés avec des concepteurs paysagistes, des piscinistes
+            et des concepteurs de pool houses.
           </p>
         </div>
         <div className="flex items-center gap-3 flex-shrink-0">
@@ -81,12 +85,13 @@ export default function Portfolio() {
             className="flex-shrink-0 w-[300px] sm:w-[360px] snap-start group"
           >
             <div className="relative aspect-[3/4] rounded-xl overflow-hidden bg-[#ede9e2]">
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover object-center
+                fill
+                sizes="(max-width: 640px) 300px, 360px"
+                className="object-cover object-center
                            transition-transform duration-700 ease-out group-hover:scale-105"
-                loading="lazy"
               />
               {/* Overlay au hover */}
               <div className="absolute inset-0 bg-[rgba(28,28,28,0.3)] opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
@@ -124,8 +129,8 @@ export default function Portfolio() {
       <div className="mt-16 mx-auto max-w-[1400px] px-[var(--gutter)]">
         <div className="pt-12 border-t border-[rgba(28,28,28,0.08)] flex flex-col sm:flex-row
                         items-start sm:items-center justify-between gap-6">
-          <p className="text-2xl sm:text-3xl font-semibold tracking-tight text-[#1c1c1c]">
-            Une série à imaginer pour votre projet ?
+          <p className="font-bold text-2xl sm:text-3xl tracking-tight text-[#1c1c1c]">
+            Un projet d&apos;aménagement extérieur à faire signer ?
           </p>
           <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
             <Link

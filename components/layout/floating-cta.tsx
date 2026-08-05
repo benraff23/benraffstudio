@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 
 const WA_URL =
-  'https://wa.me/33624517641?text=Bonjour%20Benjamin%2C%20je%20souhaite%20discuter%20d%27un%20projet%20de%20visualisation%20architecturale.'
+  'https://wa.me/33624517641?text=Bonjour%20Benjamin%2C%20je%20souhaite%20discuter%20d%27un%20projet%20d%27am%C3%A9nagement%20ext%C3%A9rieur.'
 
 function IconWA() {
   return (

@@ -28,3 +28,9 @@ Thumbs.db
 
 # Config serveur (contient des clés API — géré directement sur le VPS)
 ecosystem.config.js
+
+# Références internes de travail (contient le calculateur de chiffrage — jamais public)
+_reference/
+
+# Sources images haute definition (converties en WebP dans public/ — jamais deployees)
+_originaux/

@@ -5,20 +5,21 @@ import FloatingCta from '@/components/layout/floating-cta'
 import Nav from '@/components/layout/nav'
 
 export const metadata: Metadata = {
-  title: 'Benjamin Raffegeau · Perspectiviste & Directeur artistique · Rennes',
+  title: 'Qui suis-je ? · Benjamin Raffegeau · BenRaff Studio',
   description:
-    'Benjamin Raffegeau, directeur artistique à l\'œil de photographe et perspectiviste à Rennes. Fondateur de BenRaff Studio, je crée des séries cinématographiques en visualisation architecturale. SketchUp, D5 Render, Photoshop, post-production IA. Toute la France, 100 % à distance.',
+    'Fondateur de BenRaff Studio à Rennes, je conçois seul les visualisations 3D des concepteurs paysagistes, piscinistes et concepteurs de pool houses.',
   keywords: [
-    'perspectiviste Rennes',
-    'rendu 3D Rennes',
-    'visualisation architecturale Bretagne',
     'Benjamin Raffegeau',
     'BenRaff Studio',
-    'directeur artistique 3D',
+    'rendu 3D paysagiste Rennes',
+    'visualisation 3D aménagement extérieur Bretagne',
+    'perspectiviste indépendant Rennes',
+    'SketchUp D5 Render',
   ],
   openGraph: {
-    title: 'Benjamin Raffegeau · Perspectiviste à Rennes',
-    description: 'Directeur artistique à l\'œil de photographe. Je crée des séries cinématographiques pour architectes, promoteurs et paysagistes.',
+    images: ['/og.jpg'],
+    title: 'Qui suis-je ? · Benjamin Raffegeau, BenRaff Studio',
+    description: 'Je conçois seul des visualisations 3D pour les concepteurs paysagistes, piscinistes et concepteurs de pool houses. Basé à Rennes, actif dans toute la France.',
     type: 'profile',
     url: 'https://benraffstudio.com/benjamin-raffegeau',
   },
@@ -27,35 +28,18 @@ export const metadata: Metadata = {
 
 const SITE = 'https://benraffstudio.com'
 
+// L'entité Person complète est déclarée une seule fois, dans app/layout.tsx.
+// La redéclarer ici avec le même @id créait deux nœuds concurrents pour la
+// même entité : on se contente de la référencer.
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Person',
-      '@id': `${SITE}/#person`,
-      name: 'Benjamin Raffegeau',
-      jobTitle: 'Directeur artistique & perspectiviste',
-      worksFor: { '@type': 'Organization', name: 'BenRaff Studio', url: SITE },
+      '@type': 'ProfilePage',
+      '@id': `${SITE}/benjamin-raffegeau#page`,
       url: `${SITE}/benjamin-raffegeau`,
-      email: 'contact@benraffstudio.com',
-      telephone: '+33624517641',
-      image: `${SITE}/Portrait benjamin Raffegeau.jpeg`,
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Rennes',
-        addressRegion: 'Bretagne',
-        addressCountry: 'FR',
-      },
-      alumniOf: { '@type': 'CollegeOrUniversity', name: 'LISAA Rennes' },
-      knowsAbout: [
-        'Visualisation architecturale',
-        'Perspectiviste',
-        'Direction artistique',
-        'Rendu 3D architectural',
-        'D5 Render',
-        'SketchUp',
-        'Photographie d\'architecture',
-      ],
+      name: 'Qui suis-je ? · Benjamin Raffegeau',
+      mainEntity: { '@id': `${SITE}/#person` },
     },
     {
       '@type': 'BreadcrumbList',
@@ -78,7 +62,7 @@ const tools = [
 
 const expertise = [
   { icon: 'M3 3h18v18H3zM3 9h18M9 21V9', label: 'Rendus fixes 4K / 8K' },
-  { icon: 'M5 3l14 9-14 9V3z', label: 'Animation vidéo cinématique' },
+  { icon: 'M5 3l14 9-14 9V3z', label: 'Vidéo immersive de projet extérieur' },
   { icon: 'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM2 12h20', label: 'Visite virtuelle 360°' },
   { icon: 'M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2', label: 'Étude de lumière & ambiance' },
   { icon: 'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8z', label: 'Conseil & brief créatif' },
@@ -92,7 +76,7 @@ const formation = [
     period: 'Avril 2025',
     title: 'Formation spécialisée : Visualisation architecturale & photoréalisme 3D',
     school: 'D5 Render · avec Kevin Leclerc',
-    desc: "Maîtrise du rendu photoréaliste sous D5 Render, composition cinématographique, éclairage naturel et artificiel, post-production et livraison client.",
+    desc: "Maîtrise du rendu photoréaliste sous D5 Render, composition d'image, éclairage naturel et artificiel, post-production et livraison client.",
   },
   {
     period: '2016 / 2017',
@@ -108,30 +92,31 @@ const formation = [
   },
 ]
 
+// Uniquement le projet pool house : le cas de référence de la niche.
 const projects = [
   {
-    title: 'Aménagement extérieur · Bretagne',
-    tags: ['Pool house', 'Terrasse', 'Fire pit', 'Extérieur'],
-    img: '/projets/pool-house/Vue 2_final.png',
-    desc: "Visualisation complète d'un aménagement extérieur haut de gamme en Bretagne. Ambiance fin de journée d'été.",
+    title: 'Bassin à débordement · Bretagne',
+    tags: ['Piscine', 'Pierre sèche', 'Graminées', 'Golden hour'],
+    img: '/projets/pool-house/vie-1.webp',
+    desc: "Bassin à débordement posé sur un mur en pierre sèche, massifs de graminées, lumière rasante de fin de journée.",
   },
   {
-    title: 'Intérieur scandinave',
-    tags: ['Salon', 'Cuisine', 'Lumière naturelle', 'Intérieur'],
-    img: '/projets/Intérieur scandinave/Salon face.jpeg',
-    desc: "Série de 5 vues explorant une maison aux codes scandinaves : matières naturelles, palette neutre, lumière douce.",
+    title: 'Terrasse & foyer extérieur · Bretagne',
+    tags: ['Terrasse bois', 'Foyer', 'Extérieur', '4K'],
+    img: '/projets/pool-house/vue-2_final.webp',
+    desc: "Le foyer extérieur comme point d'ancrage du regard, au moment où la lumière réchauffe le bois de la terrasse.",
   },
   {
-    title: 'Cuisine rose & noire',
-    tags: ['Cuisine', 'Close-up', 'Matières', 'Intérieur'],
-    img: '/projets/cuisine-rose/Close up final 4K.png',
-    desc: "Rendu de cuisine bicolore avec focus sur la matière : terrazzo, carrelage rose, robinetterie design.",
+    title: 'Plage de bassin au crépuscule · Bretagne',
+    tags: ['Piscine', 'Crépuscule', 'Éclairage', 'Extérieur'],
+    img: '/projets/pool-house/vue-4.webp',
+    desc: "Traitement de l'eau et de l'éclairage en fin de journée : reflets, lame débordante, balisage des cheminements.",
   },
   {
-    title: 'Allée paysagée',
-    tags: ['Paysagisme', 'Végétation', 'Extérieur', '4K'],
-    img: '/projets/allee-paysagee/Scène 10 final 4K.jpg',
-    desc: "Allée carrossable entièrement végétalisée. Exercice sur la profondeur de champ et l'intégration paysagère.",
+    title: 'Cuisine extérieure sous pergola · Bretagne',
+    tags: ['Pool house', 'Cuisine extérieure', 'Pergola', 'Extérieur'],
+    img: '/projets/pool-house/vue-3.webp',
+    desc: "L'espace de vie abrité du pool house : cuisine extérieure, bar et assises, ouvert sur la plage de bassin.",
   },
 ]
 
@@ -180,7 +165,7 @@ export default function BenjaminRaffegeau() {
           {/* Photo */}
           <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-[#ede9e2] max-w-sm mx-auto w-full lg:max-w-none">
             <img
-              src="/Portrait benjamin Raffegeau.jpeg"
+              src="/portrait-benjamin-raffegeau.webp"
               alt="Benjamin Raffegeau, perspectiviste 3D et fondateur BenRaff Studio à Rennes"
               className="w-full h-full object-cover object-center"
             />
@@ -199,24 +184,27 @@ export default function BenjaminRaffegeau() {
           <div>
             <span className="inline-flex items-center gap-2 text-[#1c1c1c] text-xs font-medium tracking-[0.15em] uppercase mb-5">
               <span className="block w-4 h-px bg-[#1c1c1c]" />
-              Directeur artistique &amp; perspectiviste · Rennes
+              Qui suis-je ?
             </span>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.02] text-[#1c1c1c] mb-6">
               Benjamin<br />Raffegeau
             </h1>
 
-            <p className="text-xl font-light text-[#6b6b6b] leading-relaxed mb-8 max-w-[48ch]">
-              Fondateur de <strong className="text-[#1c1c1c] font-semibold">BenRaff Studio</strong>, je suis un
-              directeur artistique à l&apos;œil de photographe. Je ne livre pas des fichiers 3D :
-              je crée des <strong className="text-[#1c1c1c] font-semibold">séries cinématographiques</strong> qui font
-              ressentir un projet avant qu&apos;il existe.
+            {/* Paragraphe factuel et déclaratif — lisible par un humain
+                comme par un moteur de réponse. */}
+            <p className="text-xl font-light text-[#6b6b6b] leading-relaxed mb-8 max-w-[50ch]">
+              Je suis le fondateur de <strong className="text-[#1c1c1c] font-semibold">BenRaff Studio</strong>.
+              Je conçois des visualisations 3D pour les concepteurs paysagistes, piscinistes et
+              créateurs de pool houses qui veulent que leurs clients se projettent immédiatement
+              dans le projet fini.
             </p>
 
-            <p className="text-base font-light text-[#9a9a9a] leading-relaxed mb-10 max-w-[46ch]">
-              Lumière, cadrage, atmosphère, émotion : mon approche est celle d&apos;un photographe.
-              J&apos;interviens pour des architectes, promoteurs et paysagistes dans toute la France,
-              100 % à distance, avec un accompagnement humain de bout en bout.
+            <p className="text-base font-light text-[#9a9a9a] leading-relaxed mb-10 max-w-[50ch]">
+              Basé à Rennes, je travaille seul, du premier échange à la livraison finale.
+              C&apos;est un choix : ça garantit une direction cohérente sur chaque projet, sans
+              dilution entre plusieurs intervenants. J&apos;interviens partout en France grâce à
+              un workflow pensé pour ça : brief interactif, échanges en visio, livraison en ligne.
             </p>
 
             {/* Contact chips */}
@@ -259,6 +247,36 @@ export default function BenjaminRaffegeau() {
                 benraffstudio.com
               </a>
             </div>
+          </div>
+        </div>
+
+        {/* ── Ma manière de travailler ── */}
+        <div className="mb-28 bg-white border border-[rgba(28,28,28,0.08)] rounded-3xl p-9 sm:p-12">
+          <span className="inline-flex items-center gap-2 text-[#1c1c1c] text-xs font-medium tracking-[0.15em] uppercase mb-4">
+            <span className="block w-4 h-px bg-[#1c1c1c]" />
+            Ma manière de travailler
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#1c1c1c] mb-6 max-w-[26ch]">
+            Un interlocuteur unique, du brief à la livraison.
+          </h2>
+          <div className="flex flex-col gap-5 text-base font-light text-[#6b6b6b] leading-relaxed max-w-[68ch]">
+            <p>
+              Vous ne passez pas d&apos;un chargé de projet à un modeleur puis à un monteur vidéo.
+              Je suis présent à chaque étape — de la lecture de votre plan de plantation jusqu&apos;à
+              l&apos;ouverture du mini-site en rendez-vous client. Ça simplifie les échanges, et ça
+              garantit une cohérence de regard sur l&apos;ensemble du projet.
+            </p>
+            <p>
+              Mon outil principal : SketchUp et D5 Render pour la modélisation et le rendu,
+              complétés par une retouche assistée par IA générative pour le photoréalisme final.
+              L&apos;IA est un allié en post-production, jamais un raccourci qui remplace le travail
+              de composition.
+            </p>
+            <p>
+              Mon rôle n&apos;est pas de redessiner votre projet : c&apos;est de sublimer votre
+              conception. La composition, l&apos;implantation, le choix des essences restent
+              votre travail.
+            </p>
           </div>
         </div>
 
@@ -305,15 +323,17 @@ export default function BenjaminRaffegeau() {
             <p>
               Cette double compétence (image 3D et création digitale) me permet aujourd&apos;hui
               de proposer des livrables que peu de perspectivistes peuvent offrir : des
-              <strong className="text-[#1c1c1c] font-medium"> mini-sites de présentation immobilière</strong> intégrant directement les rendus,
-              les plans et les éléments de commercialisation pour les promoteurs.
-              Un projet, une plateforme, une expérience de vente cohérente de bout en bout.
+              <strong className="text-[#1c1c1c] font-medium"> mini-sites de présentation</strong> intégrant directement
+              le plan de composition en 3D, la maquette interactive, les images et la vidéo du projet.
+              Un projet, une page, une présentation cohérente de bout en bout.
             </p>
             <p>
               En 2025, je fonde <strong className="text-[#1c1c1c] font-medium">BenRaff Studio</strong> à Rennes pour
-              réunir ces disciplines sous un même toit. Visualisation architecturale ultra-réaliste,
-              animation vidéo, visite virtuelle et supports digitaux : tout ce dont un promoteur
-              ou un architecte a besoin pour présenter, convaincre et vendre, sans multiplier les prestataires.
+              réunir ces disciplines sous un même toit, et je concentre progressivement mon activité
+              sur l&apos;aménagement extérieur premium : jardins, bassins, terrasses et pool houses.
+              C&apos;est là que l&apos;écart entre le plan de composition et l&apos;expérience vécue
+              est le plus grand — et donc là où une visualisation juste change le plus de choses
+              en rendez-vous client.
             </p>
             <p className="text-[#9a9a9a]">
               Ce qui me motive chaque jour, c&apos;est cette tension entre technique et narration.

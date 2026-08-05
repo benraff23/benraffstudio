@@ -97,7 +97,7 @@ export default function ProjectGallery({ images, title }: { images: string[]; ti
             key={src}
             onClick={() => setLightbox(i)}
             className="group relative w-full overflow-hidden rounded-2xl sm:rounded-3xl bg-[#111111]
-                       cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c8e84e]"
+                       cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f7f5f1]"
             aria-label={`Agrandir la vue ${i + 1} de ${title}`}
           >
             <img

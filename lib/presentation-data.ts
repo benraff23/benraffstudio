@@ -1,0 +1,183 @@
+// Mini-sites de présentation client — données.
+//
+// Un projet = un objet PresentationProjet ici + un dossier d'assets dans public/.
+// Les pages sont privées : noindex, absentes du sitemap, aucun lien depuis le site.
+// Elles sont ouvertes en rendez-vous par le paysagiste devant son client final.
+//
+// Aucun texte de commentaire dans ce fichier : titre, localisation et labels courts
+// uniquement. Le template met en scène les livrables, il ne les raconte pas.
+
+export interface Hotspot {
+  /** Position en % (0-100) sur l'image du plan — responsive quelle que soit la taille. */
+  x: number
+  y: number
+  /** Label court, vocabulaire paysagiste : « Bassin miroir », « Terrasse bois ». */
+  label: string
+  /** Index dans imagesSignature : le clic ouvre la vue correspondante en plein écran. */
+  imageIndex?: number
+}
+
+export interface ImageSignature {
+  src: string
+  alt: string
+  /** Libellé de zone, court. Pas de commentaire. */
+  zone?: string
+  downloadHd?: string
+}
+
+export interface PresentationProjet {
+  slug: string
+  titre: string
+  localisation?: string
+  paysagiste?: { nom?: string; logoUrl?: string }
+  /** Image d'ouverture. Par défaut : imagesSignature[0]. */
+  heroImage?: string
+
+  plan3d: {
+    image: string
+    hotspots?: Hotspot[]
+    download: string
+  }
+  imagesSignature: ImageSignature[]
+  /** Maquette D5 XR Tour — toujours intégrée en iframe, jamais en lien externe. */
+  maquetteXR?: { embedUrl: string }
+  video?: { url: string; poster?: string; download?: string }
+
+  /** whiteLabel: true → aucune mention BenRaff. Défaut : signature discrète en pied de page. */
+  branding?: { whiteLabel?: boolean }
+}
+
+const DEMO = '/presentation-demo'
+
+// Vues partagées par les deux projets de démonstration.
+const demoVues: ImageSignature[] = [
+  { src: `${DEMO}/terrasse-bois.svg`,  alt: 'Terrasse bois en surplomb du jardin',        zone: 'Terrasse bois',   downloadHd: `${DEMO}/terrasse-bois.svg` },
+  { src: `${DEMO}/bassin-miroir.svg`,  alt: 'Bassin miroir bordé de pierre sèche',        zone: 'Bassin miroir',   downloadHd: `${DEMO}/bassin-miroir.svg` },
+  { src: `${DEMO}/massif-entree.svg`,  alt: "Massif d'entrée en graminées et vivaces",    zone: "Massif d'entrée", downloadHd: `${DEMO}/massif-entree.svg` },
+  { src: `${DEMO}/allee-acces.svg`,    alt: "Allée d'accès en pas japonais",              zone: "Allée d'accès",   downloadHd: `${DEMO}/allee-acces.svg` },
+  { src: `${DEMO}/pool-house.svg`,     alt: 'Pool house ouvert sur la plage de bassin',   zone: 'Pool house',      downloadHd: `${DEMO}/pool-house.svg` },
+]
+
+const VEILLAIS = '/presentation/veillais-saint-gregoire'
+
+// Masters PNG livrés par le studio — servent de téléchargement HD.
+// Téléchargements HD : on sert les WebP 2560 px du dossier de présentation.
+// Les masters PNG restent hors dépôt (_originaux/), trop lourds pour le déploiement.
+const VEILLAIS_HD = VEILLAIS
+
+export const presentations: PresentationProjet[] = [
+  {
+    slug: 'veillais-saint-gregoire',
+    titre: 'Jardin contemporain avec bassin',
+    localisation: 'Saint-Grégoire (35)',
+    paysagiste: {
+      nom: 'AC Concept Paysage',
+      logoUrl: `${VEILLAIS}/logo-ac-concept-paysage.svg`,
+    },
+    heroImage: `${VEILLAIS}/enrochement.webp`,
+    plan3d: {
+      image: `${VEILLAIS}/plan-3d.webp`,
+      download: `${VEILLAIS_HD}/plan-3d.webp`,
+      hotspots: [
+        { x: 62, y: 28, label: 'Terrasse repas',    imageIndex: 1 },
+        { x: 60, y: 58, label: 'Bassin',            imageIndex: 2 },
+        { x: 72, y: 58, label: 'Plage de bassin',   imageIndex: 0 },
+        { x: 48, y: 55, label: 'Brise-vue fleuri',  imageIndex: 4 },
+        { x: 40, y: 66, label: 'Terrasse minérale', imageIndex: 3 },
+        { x: 74, y: 84, label: 'Enrochement',       imageIndex: 5 },
+      ],
+    },
+    imagesSignature: [
+      {
+        src: `${VEILLAIS}/vue-plongee.webp`,
+        alt: "Vue plongeante sur le bassin, la plage de bassin et la terrasse repas au couchant",
+        zone: 'Vue d’ensemble',
+        downloadHd: `${VEILLAIS_HD}/vue-plongee.webp`,
+      },
+      {
+        src: `${VEILLAIS}/vue-terrasse.webp`,
+        alt: 'Terrasse repas sous parasol, bains de soleil et bassin en arrière-plan',
+        zone: 'Terrasse repas',
+        downloadHd: `${VEILLAIS_HD}/vue-terrasse.webp`,
+      },
+      {
+        src: `${VEILLAIS}/vue-balcon.webp`,
+        alt: 'Bassin et plage minérale vus depuis le balcon de la maison',
+        zone: 'Bassin',
+        downloadHd: `${VEILLAIS_HD}/vue-balcon.webp`,
+      },
+      {
+        src: `${VEILLAIS}/vue-entree.webp`,
+        alt: 'Terrasse minérale et claustras bois plantés de grimpantes devant le bassin',
+        zone: 'Terrasse minérale',
+        downloadHd: `${VEILLAIS_HD}/vue-entree.webp`,
+      },
+      {
+        src: `${VEILLAIS}/brise-vue.webp`,
+        alt: 'Claustras bois habillés de clématites, palmiers et graminées en pied',
+        zone: 'Brise-vue fleuri',
+        downloadHd: `${VEILLAIS_HD}/brise-vue.webp`,
+      },
+      {
+        src: `${VEILLAIS}/enrochement.webp`,
+        alt: "Enrochement, emmarchement en pierre et jardin de graviers devant la maison",
+        zone: 'Enrochement',
+        downloadHd: `${VEILLAIS_HD}/enrochement.webp`,
+      },
+    ],
+  },
+
+  // Projet complet : plan à hotspots + vues + maquette XR + vidéo.
+  {
+    slug: 'jardin-saint-lunaire',
+    titre: 'Jardin littoral',
+    localisation: 'Saint-Lunaire (35)',
+    paysagiste: { nom: 'Atelier Kerlan' },
+    heroImage: `${DEMO}/hero.svg`,
+    plan3d: {
+      image: `${DEMO}/plan-3d.svg`,
+      download: `${DEMO}/plan-3d.svg`,
+      hotspots: [
+        { x: 44, y: 33, label: 'Terrasse bois',   imageIndex: 0 },
+        { x: 74, y: 39, label: 'Bassin miroir',   imageIndex: 1 },
+        { x: 44, y: 72, label: "Massif d'entrée", imageIndex: 2 },
+        { x: 19, y: 71, label: "Allée d'accès",   imageIndex: 3 },
+        { x: 81, y: 68, label: 'Pool house',      imageIndex: 4 },
+        { x: 20, y: 24, label: 'Maison existante' },
+      ],
+    },
+    imagesSignature: demoVues,
+    // Remplacer par l'URL d'embed du D5 XR Tour du projet.
+    maquetteXR: { embedUrl: `${DEMO}/xr-placeholder.html` },
+    // Démo : pointe sur une vidéo déjà présente dans public/. Pour un vrai projet,
+    // déposer le .mp4 dans le dossier d'assets du projet et mettre ce chemin à jour.
+    video: {
+      url: '/projets/interieur/kling_20260516_作品_the_camera_4692_0.mp4',
+      poster: `${DEMO}/hero.svg`,
+      download: '/projets/interieur/kling_20260516_作品_the_camera_4692_0.mp4',
+    },
+  },
+
+  // Version allégée : ni maquette XR ni vidéo — les sections disparaissent.
+  {
+    slug: 'terrasse-dinard',
+    titre: 'Terrasse et plage de bassin',
+    localisation: 'Dinard (35)',
+    paysagiste: { nom: 'Atelier Kerlan' },
+    heroImage: `${DEMO}/bassin-miroir.svg`,
+    plan3d: {
+      image: `${DEMO}/plan-3d.svg`,
+      download: `${DEMO}/plan-3d.svg`,
+      hotspots: [
+        { x: 44, y: 33, label: 'Terrasse bois', imageIndex: 0 },
+        { x: 74, y: 39, label: 'Bassin miroir', imageIndex: 1 },
+        { x: 81, y: 68, label: 'Pool house',    imageIndex: 2 },
+      ],
+    },
+    imagesSignature: [demoVues[0], demoVues[1], demoVues[4]],
+  },
+]
+
+export function getPresentationBySlug(slug: string) {
+  return presentations.find((p) => p.slug === slug)
+}

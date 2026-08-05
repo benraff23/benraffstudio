@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+  <rect width="1600" height="1100" fill="#ede9e2"/>
+
+  <!-- Trame -->
+  <g stroke="#1c1c1c" stroke-width="1" opacity="0.05">
+    <path d="M0 100H1600M0 200H1600M0 300H1600M0 400H1600M0 500H1600M0 600H1600M0 700H1600M0 800H1600M0 900H1600M0 1000H1600"/>
+    <path d="M100 0V1100M200 0V1100M300 0V1100M400 0V1100M500 0V1100M600 0V1100M700 0V1100M800 0V1100M900 0V1100M1000 0V1100M1100 0V1100M1200 0V1100M1300 0V1100M1400 0V1100M1500 0V1100"/>
+  </g>
+
+  <!-- Emprise du terrain -->
+  <rect x="60" y="60" width="1480" height="980" fill="none" stroke="#1c1c1c" stroke-width="2" opacity="0.35"/>
+
+  <!-- Maison existante -->
+  <rect x="120" y="120" width="400" height="280" fill="#1c1c1c" opacity="0.14"/>
+  <rect x="120" y="120" width="400" height="280" fill="none" stroke="#1c1c1c" stroke-width="2" opacity="0.5"/>
+
+  <!-- Terrasse bois -->
+  <rect x="520" y="250" width="380" height="220" fill="#b9ad99" opacity="0.5"/>
+  <g stroke="#1c1c1c" stroke-width="1" opacity="0.22">
+    <path d="M520 275H900M520 300H900M520 325H900M520 350H900M520 375H900M520 400H900M520 425H900M520 450H900"/>
+  </g>
+
+  <!-- Bassin miroir -->
+  <rect x="950" y="300" width="470" height="260" rx="4" fill="#9fb0b2" opacity="0.75"/>
+  <rect x="978" y="328" width="414" height="204" rx="3" fill="#ffffff" opacity="0.28"/>
+
+  <!-- Pool house -->
+  <rect x="1150" y="650" width="300" height="200" fill="#1c1c1c" opacity="0.12"/>
+  <rect x="1150" y="650" width="300" height="200" fill="none" stroke="#1c1c1c" stroke-width="2" opacity="0.45"/>
+
+  <!-- Allée d'accès -->
+  <path d="M240 1040 C 250 900, 280 720, 330 600 C 370 505, 430 440, 520 400"
+        fill="none" stroke="#b3aa97" stroke-width="72" stroke-linecap="round" opacity="0.7"/>
+  <path d="M240 1040 C 250 900, 280 720, 330 600 C 370 505, 430 440, 520 400"
+        fill="none" stroke="#1c1c1c" stroke-width="1.5" stroke-dasharray="10 12" opacity="0.25"/>
+
+  <!-- Massifs -->
+  <g fill="#75855f" opacity="0.6">
+    <circle cx="640" cy="790" r="58"/><circle cx="716" cy="828" r="42"/><circle cx="700" cy="742" r="36"/>
+    <circle cx="574" cy="826" r="34"/><circle cx="782" cy="784" r="30"/>
+    <circle cx="1010" cy="700" r="44"/><circle cx="1070" cy="742" r="32"/>
+    <circle cx="560" cy="180" r="46"/><circle cx="618" cy="228" r="34"/>
+    <circle cx="1300" cy="180" r="52"/><circle cx="1372" cy="222" r="38"/><circle cx="1236" cy="230" r="34"/>
+    <circle cx="300" cy="520" r="40"/><circle cx="228" cy="576" r="30"/>
+  </g>
+
+  <!-- Graminées / prairie -->
+  <g stroke="#75855f" stroke-width="2" opacity="0.35">
+    <path d="M960 900v-60M990 910v-72M1020 898v-56M1050 912v-70M1080 900v-58"/>
+    <path d="M380 880v-58M410 892v-70M440 878v-54M470 894v-66"/>
+  </g>
+
+  <!-- Nord -->
+  <g transform="translate(1440,140)" opacity="0.45">
+    <circle r="34" fill="none" stroke="#1c1c1c" stroke-width="1.5"/>
+    <path d="M0 -24 L8 8 L0 2 L-8 8 Z" fill="#1c1c1c"/>
+    <text x="0" y="-40" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="16"
+          font-weight="600" fill="#1c1c1c" text-anchor="middle" letter-spacing="2">N</text>
+  </g>
+
+  <!-- Échelle -->
+  <g transform="translate(120,980)" opacity="0.45">
+    <path d="M0 0H200" stroke="#1c1c1c" stroke-width="2"/>
+    <path d="M0 -6V6M100 -6V6M200 -6V6" stroke="#1c1c1c" stroke-width="2"/>
+    <text x="0" y="28" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="15"
+          fill="#1c1c1c" letter-spacing="1">0 &#8212; 10 m</text>
+  </g>
+
+  <g font-family="Inter, Helvetica Neue, Arial, sans-serif" fill="#1c1c1c" opacity="0.4">
+    <text x="60" y="1075" font-size="17" letter-spacing="5">PLAN DE COMPOSITION &#8212; PLACEHOLDER</text>
+  </g>
+</svg>

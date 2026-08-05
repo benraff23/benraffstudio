@@ -20,15 +20,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) return {}
   const { meta } = post
   const url = `${SITE}/blog/${meta.slug}`
+  // Les titres d'articles sont déjà longs : pas de suffixe de marque, il
+  // ne ferait que pousser le titre au-delà de la troncature Google.
   return {
-    title: `${meta.title} · BenRaff Studio`,
+    title: meta.title,
     description: meta.description,
     alternates: { canonical: url },
     openGraph: {
       title: meta.title, description: meta.description,
       url, siteName: 'BenRaff Studio', type: 'article', locale: 'fr_FR',
       publishedTime: meta.date,
-      images: meta.cover ? [{ url: meta.cover }] : undefined,
+      images: meta.cover ? [{ url: meta.cover }] : ['/og.jpg'],
     },
   }
 }
