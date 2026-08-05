@@ -114,7 +114,11 @@
       "Bash(rm -f convert-clients.mjs)",
       "Bash(mkdir -p \"_originaux/projets/interieur\")",
       "Bash(mv public/projets/interieur/*.mp4 \"_originaux/projets/interieur/\")",
-      "Bash(awk -F'\\\\t' '{printf \"  %6.2f Mo  %s\\\\n\",$1/1048576,$2}')"
+      "Bash(awk -F'\\\\t' '{printf \"  %6.2f Mo  %s\\\\n\",$1/1048576,$2}')",
+      "Bash(node -e \"const p=require\\('./package.json'\\);console.log\\(Object.entries\\(p.scripts\\).map\\(\\([k,v]\\)=>'  '+k+': '+v\\).join\\('\\\\n'\\)\\)\")",
+      "Bash(curl -sIL --max-time 30 \"https://share.d5render.com/user-hub/showreel/shortLink/oPtyMV\")",
+      "Bash(curl -s -o /dev/null -w \"  statut: %{http_code}\\\\n  redirection: %{redirect_url}\\\\n  type: %{content_type}\\\\n\" --max-time 40 -L \"https://share.d5render.com/user-hub/showreel/shortLink/oPtyMV\")",
+      "Bash(curl -s -D - -o /dev/null --max-time 40 -L \"https://share.d5render.com/user-hub/showreel/shortLink/oPtyMV\")"
     ]
   }
 }

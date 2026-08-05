@@ -1,5 +1,9 @@
 import Image from 'next/image'
 import { Kicker, Visuel, PlayButton, PlanCallout } from '@/components/ui/frame'
+import XrEmbed from '@/components/ui/xr-embed'
+
+// Tour D5 réel servant d'exemple sur l'accueil.
+const XR_TOUR_URL = 'https://share.d5render.com/user-hub/showreel/shortLink/oPtyMV'
 
 export default function Livrables() {
   return (
@@ -42,18 +46,13 @@ export default function Livrables() {
 
       {/* 02 — Maquette interactive intégrée au mini-site */}
       <div className="max-w-[1080px] mx-auto grid lg:grid-cols-2 gap-14 items-center reveal mb-20">
-        {/* PLACEHOLDER — embed réel du D5 XR Tour à brancher dans le mini-site */}
-        <div className="lg:order-2 rounded-md overflow-hidden shadow-[0_20px_45px_rgba(28,28,28,0.14)]">
-          <Visuel
-            src="/projets/pool-house/vue-3.webp"
-            alt="Maquette 3D interactive explorable directement depuis le mini-site de présentation"
-            ratio="aspect-video"
-          >
-            <PlayButton />
-          </Visuel>
-          <p className="bg-white border-t border-[rgba(28,28,28,0.06)] px-5 py-4 text-[0.78rem] text-[#6b6b6b]">
-            Maquette 3D interactive — intégrée à la page, aucune installation, aucun lien externe
-          </p>
+        <div className="lg:order-2">
+          <XrEmbed
+            src={XR_TOUR_URL}
+            poster="/projets/pool-house/vue-3.webp"
+            posterAlt="Maquette 3D interactive du pool house, explorable directement dans la page"
+            caption="Maquette 3D interactive — intégrée à la page, aucune installation, aucun lien externe"
+          />
         </div>
         <div className="lg:order-1">
           <p className="text-xs font-semibold tracking-[0.18em] uppercase text-[#6b6b6b] mb-3">02 — L&apos;exploration libre</p>

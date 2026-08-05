@@ -34,3 +34,6 @@ _reference/
 
 # Sources images haute definition (converties en WebP dans public/ — jamais deployees)
 _originaux/
+
+# Cache incremental TypeScript
+*.tsbuildinfo
