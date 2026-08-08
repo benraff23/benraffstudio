@@ -24,13 +24,14 @@ export default function Portfolio() {
       {/* Header */}
       <div className="max-w-[1400px] mx-auto px-[var(--gutter)] mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
         <div>
-          <span className="label">Projets récents</span>
+          <span className="label">La preuve</span>
           <h2 id="portfolio-title" className="mt-4 font-bold tracking-tight text-[clamp(1.85rem,3.2vw,2.5rem)] leading-tight text-[#1c1c1c]">
-            Du jardin littoral à la piscine à débordement.
+            Mes réalisations.
           </h2>
-          <p className="mt-3 text-base font-light text-[#6b6b6b] max-w-[46ch]">
-            Une sélection de projets réalisés avec des concepteurs paysagistes, des piscinistes
-            et des concepteurs de pool houses.
+          <p className="mt-3 text-base font-light text-[#6b6b6b] max-w-[52ch]">
+            Chaque projet est une réponse à un lieu, une intention, un client. Parcourez les
+            images et voyez le niveau de réalisme et de soin que j&apos;apporte à chaque
+            composition.
           </p>
         </div>
         <div className="flex items-center gap-3 flex-shrink-0">

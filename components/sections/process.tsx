@@ -1,10 +1,9 @@
 import { Kicker } from '@/components/ui/frame'
 
 const steps: [string, string, string][] = [
-  ['01', 'Brief interactif', 'Vous transmettez relevé, lieu du projet, plan de plantation, listing mobilier et matériaux, et photos du terrain avant travaux, via un formulaire guidé. Tout existe déjà dans votre dossier de conception.'],
-  ['02', 'Étude de composition', 'Sélection des points de vue et des ambiances qui serviront le mieux votre projet. Vous validez la direction avant que je produise la moindre image.'],
-  ['03', 'Production', 'Modélisation, rendus haute-définition, post-production assistée par IA générative pour un réalisme maximal.'],
-  ['04', 'Livraison', 'Votre mini-site dédié est prêt, ouvert en direct pendant votre rendez-vous de présentation. Chaque livrable reste téléchargeable pour votre devis.'],
+  ['01', 'Le brief', 'Tout commence par un brief. On fait le point ensemble sur votre projet : le lieu, le relevé, le plan de plantation, les matériaux, le mobilier, les photos de l’existant. Plus votre relevé est précis, plus le métré et l’image le seront — c’est votre matière première.'],
+  ['02', 'L’étude et la production', 'Ensuite, j’étudie la composition et je construis votre projet en 3D, image par image, avec le même soin que vous mettez dans votre conception. Le photoréalisme se travaille en post-production, où j’utilise les outils les plus avancés, l’IA comprise, comme un amplificateur de réalisme au service de votre projet.'],
+  ['03', 'La livraison', 'À la livraison, vous récupérez votre Book complet, prêt pour le rendez-vous. Chaque livrable est aussi téléchargeable individuellement, quand vous en avez besoin.'],
 ]
 
 export default function Process() {
@@ -14,7 +13,7 @@ export default function Process() {
         <div className="mb-10 reveal">
           <Kicker onDark>Comment ça se construit</Kicker>
           <h2 className="font-bold tracking-tight text-[clamp(1.85rem,3.2vw,2.5rem)] leading-tight text-[#f7f5f1] max-w-[640px]">
-            De votre relevé à la présentation client.
+            De votre relevé à votre rendez-vous, sans friction.
           </h2>
         </div>
 
@@ -34,6 +33,12 @@ export default function Process() {
             </div>
           ))}
         </div>
+
+        <p className="reveal mt-10 text-[#f7f5f1]/65 font-light max-w-[640px] leading-relaxed">
+          Et parce que je travaille seul, sous mon nom, vous avez un seul interlocuteur du début
+          à la fin. Pas d&apos;équipe qui se renvoie la balle, pas de brief qui se dilue.
+          Juste un suivi personnel et une exigence constante.
+        </p>
       </div>
     </section>
   )

@@ -103,18 +103,13 @@ export default function Hero() {
         </div>
 
         <h1 className="hero__title text-[clamp(2.6rem,6.2vw,5.6rem)] font-bold leading-[1.05] tracking-tight text-[#f7f5f1] max-w-[19ch] mb-6">
-          Faites vivre votre plan d&apos;aménagement avant le premier coup de pelle.
+          Commandez juste. Livrez à temps. Faites signer.
         </h1>
 
-        <p className="hero__sub text-[clamp(1rem,1.6vw,1.2rem)] font-light text-[#f7f5f1]/70 max-w-[54ch] mb-5 leading-relaxed">
-          Le Book de Présentation Client transforme votre projet paysager en une expérience
-          que votre client ressent dès la présentation — terrasse, bassin, plantations,
-          dans leur ambiance réelle.
-        </p>
-
-        <p className="hero__sub text-sm font-light text-[#f7f5f1]/45 max-w-[50ch] mb-12 leading-relaxed">
-          Pour les concepteurs paysagistes, piscinistes et concepteurs de pool houses :
-          votre client ne signe pas ce qu&apos;il ne voit pas.
+        <p className="hero__sub text-[clamp(1rem,1.6vw,1.2rem)] font-light text-[#f7f5f1]/70 max-w-[54ch] mb-12 leading-relaxed">
+          Je suis Ben. J&apos;accompagne les paysagistes concepteurs qui conçoivent
+          l&apos;exception — du bon dosage de matériaux au rendez-vous qui emporte
+          la décision.
         </p>
 
         <div className="hero__actions flex items-center gap-5 flex-wrap">

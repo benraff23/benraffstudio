@@ -4,13 +4,14 @@ import ClientEffects from '@/components/layout/client-effects'
 import FloatingCta from '@/components/layout/floating-cta'
 import Nav from '@/components/layout/nav'
 import Hero from '@/components/sections/hero'
+import Qualification from '@/components/sections/qualification'
 import Constat from '@/components/sections/constat'
 import Livrables from '@/components/sections/livrables'
 import Process from '@/components/sections/process'
 import Restitution from '@/components/sections/restitution'
 import Portfolio from '@/components/sections/portfolio'
 import Preuve from '@/components/sections/preuve'
-import Roi, { roiObjections } from '@/components/sections/roi'
+import Objections, { objections } from '@/components/sections/objections'
 import Vision from '@/components/sections/vision'
 import Faq, { homeFaq } from '@/components/sections/faq'
 
@@ -18,10 +19,12 @@ const WA_URL =
   'https://wa.me/33624517641?text=Bonjour%20Benjamin%2C%20je%20souhaite%20discuter%20d%27un%20projet%20d%27am%C3%A9nagement%20ext%C3%A9rieur.'
 
 export const metadata: Metadata = {
-  title: 'Rendu 3D pour concepteurs paysagistes · BenRaff Studio',
+  title: 'Plan côté et rendu 3D pour paysagistes concepteurs · BenRaff Studio',
   description:
-    'Plan de composition 3D, maquette interactive, images et vidéo : faites vivre votre projet paysager avant le premier coup de pelle. Rennes, toute la France.',
+    'Plan 2D côté avec métrés, plan 3D annoté, images signature et mini-site dédié : commandez juste, livrez à temps, faites signer. Rennes, toute la France.',
   keywords: [
+    'plan côté avec métrés paysagiste',
+    'métré aménagement extérieur',
     'rendu 3D paysagiste',
     'visualisation 3D jardin avant travaux',
     'plan de composition en 3D',
@@ -37,7 +40,7 @@ export const metadata: Metadata = {
     images: ['/og.jpg'],
     title: 'Le Book de Présentation Client · BenRaff Studio',
     description:
-      'Plan de composition en 3D, maquette interactive, images signature et vidéo immersive : votre projet paysager devient une expérience que votre client ressent dès la présentation.',
+      'Plan 2D côté avec métrés, plan 3D annoté, images signature et mini-site de présentation : la base opérationnelle qui sécurise votre chantier et l’image qui fait signer.',
     type: 'website',
     url: 'https://benraffstudio.com',
     locale: 'fr_FR',
@@ -47,11 +50,11 @@ export const metadata: Metadata = {
 }
 
 // Objections + questions fréquentes exposées aux moteurs de réponse.
-// Toutes ces paires sont réellement présentes sur la page (sections ROI et FAQ).
+// Toutes ces paires sont réellement présentes sur la page (sections Objections et FAQ).
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [...roiObjections, ...homeFaq].map(([question, answer]) => ({
+  mainEntity: [...objections, ...homeFaq].map(([question, answer]) => ({
     '@type': 'Question',
     name: question,
     acceptedAnswer: { '@type': 'Answer', text: answer },
@@ -78,10 +81,12 @@ function Contact() {
         <div className="text-center max-w-[680px] mx-auto mb-14">
           <span className="label reveal justify-center">Votre prochain projet</span>
           <h2 className="reveal delay-1 mt-5 mb-6 font-bold tracking-tight text-[clamp(1.85rem,3.4vw,2.7rem)] leading-tight text-[#1c1c1c]">
-            Parlons du projet que vous devez faire signer.
+            Parlons de votre prochain projet.
           </h2>
           <p className="reveal delay-2 text-lg font-light text-[#6b6b6b] leading-relaxed">
-            Deux points de départ. Dans les deux cas, je vous réponds personnellement sous 24h.
+            Un chantier en préparation, un rendez-vous client important à venir ?
+            Dites-moi ce sur quoi vous travaillez. Je vous réponds personnellement et on
+            regarde ensemble comment votre prochaine présentation peut faire la différence.
           </p>
         </div>
 
@@ -210,17 +215,19 @@ export default function Page() {
       <FloatingCta />
       <Nav />
       <main>
-        {/* Tunnel complet : accroche → qualification → constat → projets récents
-            → offre (4 livrables) → process → restitution → preuve → ROI
-            → mot de Benjamin → questions fréquentes → contact */}
+        {/* Tunnel complet : accroche → qualification → constat → offre (le métré
+            est traité dans le socle) → restitution sur mini-site → process
+            → preuve (portfolio + projet en détail) → objections → mot de Benjamin
+            → questions fréquentes → contact */}
         <Hero />
+        <Qualification />
         <Constat />
-        <Portfolio />
         <Livrables />
-        <Process />
         <Restitution />
+        <Process />
+        <Portfolio />
         <Preuve />
-        <Roi />
+        <Objections />
         <Vision />
         <Faq />
         <Contact />

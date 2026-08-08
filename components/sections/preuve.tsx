@@ -26,7 +26,7 @@ export default function Preuve() {
         </div>
 
         <div>
-          <Kicker>La preuve</Kicker>
+          <Kicker>Un projet en détail</Kicker>
           <h2 className="font-bold tracking-tight text-[1.6rem] leading-snug mb-6">
             Le Book de Présentation Client, en situation.
           </h2>
