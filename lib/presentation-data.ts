@@ -38,6 +38,9 @@ export interface PresentationProjet {
     hotspots?: Hotspot[]
     download: string
   }
+  /** Plan 2D côté avec métrés. Quantitatif uniquement : surfaces, mètres
+   *  linéaires, volumes. Jamais de chiffrage ni de prix. */
+  metre?: { download: string; label?: string }
   imagesSignature: ImageSignature[]
   /** Maquette D5 XR Tour — toujours intégrée en iframe, jamais en lien externe. */
   maquetteXR?: { embedUrl: string }
@@ -60,7 +63,6 @@ const demoVues: ImageSignature[] = [
 
 const VEILLAIS = '/presentation/veillais-saint-gregoire'
 
-// Masters PNG livrés par le studio — servent de téléchargement HD.
 // Téléchargements HD : on sert les WebP 2560 px du dossier de présentation.
 // Les masters PNG restent hors dépôt (_originaux/), trop lourds pour le déploiement.
 const VEILLAIS_HD = VEILLAIS
@@ -79,50 +81,44 @@ export const presentations: PresentationProjet[] = [
       image: `${VEILLAIS}/plan-3d.webp`,
       download: `${VEILLAIS_HD}/plan-3d.webp`,
       hotspots: [
-        { x: 62, y: 28, label: 'Terrasse repas',    imageIndex: 1 },
-        { x: 60, y: 58, label: 'Bassin',            imageIndex: 2 },
-        { x: 72, y: 58, label: 'Plage de bassin',   imageIndex: 0 },
-        { x: 48, y: 55, label: 'Brise-vue fleuri',  imageIndex: 4 },
-        { x: 40, y: 66, label: 'Terrasse minérale', imageIndex: 3 },
-        { x: 74, y: 84, label: 'Enrochement',       imageIndex: 5 },
+        { x: 62, y: 28, label: 'Terrasse repas',   imageIndex: 3 },
+        { x: 60, y: 58, label: 'Bassin',           imageIndex: 0 },
+        { x: 72, y: 58, label: 'Plage de bassin',  imageIndex: 2 },
+        { x: 48, y: 55, label: 'Brise-vue fleuri', imageIndex: 4 },
+        { x: 74, y: 84, label: 'Enrochement',      imageIndex: 1 },
       ],
     },
+    metre: { download: `${VEILLAIS}/metre.pdf` },
     imagesSignature: [
       {
-        src: `${VEILLAIS}/vue-plongee.webp`,
-        alt: "Vue plongeante sur le bassin, la plage de bassin et la terrasse repas au couchant",
+        src: `${VEILLAIS}/vue-ensemble.webp`,
+        alt: "Vue plongeante sur le bassin, la terrasse repas sous parasol et les bains de soleil",
         zone: 'Vue d’ensemble',
-        downloadHd: `${VEILLAIS_HD}/vue-plongee.webp`,
-      },
-      {
-        src: `${VEILLAIS}/vue-terrasse.webp`,
-        alt: 'Terrasse repas sous parasol, bains de soleil et bassin en arrière-plan',
-        zone: 'Terrasse repas',
-        downloadHd: `${VEILLAIS_HD}/vue-terrasse.webp`,
-      },
-      {
-        src: `${VEILLAIS}/vue-balcon.webp`,
-        alt: 'Bassin et plage minérale vus depuis le balcon de la maison',
-        zone: 'Bassin',
-        downloadHd: `${VEILLAIS_HD}/vue-balcon.webp`,
-      },
-      {
-        src: `${VEILLAIS}/vue-entree.webp`,
-        alt: 'Terrasse minérale et claustras bois plantés de grimpantes devant le bassin',
-        zone: 'Terrasse minérale',
-        downloadHd: `${VEILLAIS_HD}/vue-entree.webp`,
-      },
-      {
-        src: `${VEILLAIS}/brise-vue.webp`,
-        alt: 'Claustras bois habillés de clématites, palmiers et graminées en pied',
-        zone: 'Brise-vue fleuri',
-        downloadHd: `${VEILLAIS_HD}/brise-vue.webp`,
+        downloadHd: `${VEILLAIS_HD}/vue-ensemble.webp`,
       },
       {
         src: `${VEILLAIS}/enrochement.webp`,
-        alt: "Enrochement, emmarchement en pierre et jardin de graviers devant la maison",
+        alt: "Enrochement, pas japonais et jardin de graviers devant la maison, bassin en arrière-plan",
         zone: 'Enrochement',
         downloadHd: `${VEILLAIS_HD}/enrochement.webp`,
+      },
+      {
+        src: `${VEILLAIS}/plage-bassin.webp`,
+        alt: 'Plage de bassin, bains de soleil, brise-vue bois et abri de jardin',
+        zone: 'Plage de bassin',
+        downloadHd: `${VEILLAIS_HD}/plage-bassin.webp`,
+      },
+      {
+        src: `${VEILLAIS}/terrasse-repas.webp`,
+        alt: 'Terrasse repas dressée sous parasol, bassin et haie taillée en arrière-plan',
+        zone: 'Terrasse repas',
+        downloadHd: `${VEILLAIS_HD}/terrasse-repas.webp`,
+      },
+      {
+        src: `${VEILLAIS}/brise-vue.webp`,
+        alt: 'Claustras bois habillés de grimpantes, palmiers et vivaces en pied de bassin',
+        zone: 'Brise-vue fleuri',
+        downloadHd: `${VEILLAIS_HD}/brise-vue.webp`,
       },
     ],
   },

@@ -37,6 +37,13 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
   const heroAlt = projet.heroImage ? projet.titre : (premiere?.alt ?? projet.titre)
 
   const livrables: Livrable[] = [
+    ...(projet.metre
+      ? [{
+          href: projet.metre.download,
+          label: projet.metre.label ?? 'Plan 2D côté avec métrés',
+          format: formatOf(projet.metre.download),
+        }]
+      : []),
     { href: projet.plan3d.download, label: 'Plan de composition', format: formatOf(projet.plan3d.download) },
     ...projet.imagesSignature.flatMap((img, i) =>
       img.downloadHd
