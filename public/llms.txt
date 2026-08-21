@@ -20,14 +20,20 @@ L'activité est spécialisée sur l'aménagement extérieur premium : jardins, c
 
 ## Offre principale : Le Book de Présentation Client
 
-Une production sur-mesure réalisée à partir du relevé, du plan de plantation et du listing mobilier et matériaux du concepteur. Elle réunit quatre livrables sur un mini-site dédié, ouvrable en direct pendant le rendez-vous client :
+Une production sur-mesure réalisée à partir du relevé, du plan de plantation et du listing mobilier et matériaux du concepteur. Elle sécurise le chantier autant qu'elle emporte la décision du client final, et se répartit en trois niveaux :
 
-1. **Le plan de composition en 3D annoté** — chaque zone du plan d'aménagement devient lisible pour un client non professionnel.
-2. **La maquette 3D interactive** — export D5 XR Tour intégré directement dans le mini-site, sans installation ni lien externe.
-3. **Les images signature** — vues composées dans leur lumière (golden hour, ambiance nocturne, vue printanière à végétation installée).
-4. **La vidéo immersive** — une séquence continue qui fait ressentir l'échelle et l'ambiance du lieu.
+**Le socle, toujours inclus :**
+1. **Le plan 2D côté avec métrés** — surfaces, mètres linéaires, volumes. Sert à commander juste (matériaux) et de document d'exécution pour les équipes sur le terrain. Jamais un chiffrage, uniquement du quantitatif.
+2. **Le plan 3D annoté** — chaque zone du plan d'aménagement devient lisible pour un client non professionnel.
 
-Chaque livrable reste téléchargeable en haute définition pour être intégré au devis du concepteur.
+**Le cœur de la présentation, inclus :**
+3. **Le pack d'images signature** — vues composées dans leur plus belle lumière (golden hour, ambiance nocturne), cadrées à l'œil du photographe.
+
+**En option, selon l'enjeu du projet :**
+4. **La maquette 3D temps réel ou visite virtuelle** — export D5 XR Tour intégré directement dans le mini-site, sans installation ni lien externe.
+5. **La vidéo immersive** — une séquence continue qui fait ressentir l'échelle et l'ambiance du lieu.
+
+Révisions illimitées sur tous les livrables. Chaque livrable reste téléchargeable en haute définition pour être intégré au devis du concepteur. Le tout est livré sur un mini-site de présentation à l'image de marque du paysagiste (logo, nom) — ouvert en direct pendant le rendez-vous client, consultable ensuite.
 
 ## Clients cibles
 
@@ -43,10 +49,9 @@ Le rôle de Benjamin Raffegeau est de sublimer la conception du paysagiste, pas 
 
 ## Process
 
-1. **Brief interactif** — relevé, lieu du projet, plan de plantation, listing mobilier et matériaux, photos du terrain avant travaux, via un formulaire guidé.
-2. **Étude de composition** — sélection des points de vue et des ambiances, validée avant production.
-3. **Production** — modélisation, rendus haute définition, post-production.
-4. **Livraison** — mini-site dédié prêt pour le rendez-vous de présentation.
+1. **Le brief** — relevé, lieu du projet, plan de plantation, listing mobilier et matériaux, photos du terrain avant travaux, via un formulaire guidé.
+2. **L'étude et la production** — sélection des points de vue et des ambiances, modélisation, rendus haute définition, post-production assistée par IA générative.
+3. **La livraison** — mini-site dédié prêt pour le rendez-vous de présentation, chaque livrable aussi téléchargeable individuellement.
 
 ## Tarifs
 
@@ -54,7 +59,7 @@ Pas de grille tarifaire publique. Chiffrage sur devis après le brief, selon l'a
 
 ## Mots-clés principaux
 
-rendu 3D paysagiste, visualisation 3D aménagement extérieur, plan de composition en 3D, rendu 3D piscine à débordement, rendu 3D pool house, visualisation jardin avant travaux, maquette 3D interactive jardin, perspective 3D paysagiste Rennes, présentation client paysagiste
+rendu 3D paysagiste Rennes, perspectiviste Rennes, rendu 3D paysagiste, plan 2D côté avec métrés, visualisation 3D aménagement extérieur, plan de composition en 3D, rendu 3D piscine à débordement, rendu 3D pool house, visualisation jardin avant travaux, maquette 3D interactive jardin, perspective 3D paysagiste Rennes, présentation client paysagiste
 
 ## Pages principales
 

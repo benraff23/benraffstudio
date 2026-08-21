@@ -19,10 +19,12 @@ const WA_URL =
   'https://wa.me/33624517641?text=Bonjour%20Benjamin%2C%20je%20souhaite%20discuter%20d%27un%20projet%20d%27am%C3%A9nagement%20ext%C3%A9rieur.'
 
 export const metadata: Metadata = {
-  title: 'Plan côté et rendu 3D pour paysagistes concepteurs · BenRaff Studio',
+  title: 'Rendu 3D paysagiste à Rennes · Plan côté & métrés · BenRaff Studio',
   description:
-    'Plan 2D côté avec métrés, plan 3D annoté, images signature et mini-site dédié : commandez juste, livrez à temps, faites signer. Rennes, toute la France.',
+    'Perspectiviste basé à Rennes, actif dans toute la France. Plan 2D côté avec métrés, plan 3D annoté, images signature et mini-site dédié : commandez juste, livrez à temps, faites signer.',
   keywords: [
+    'rendu 3D paysagiste Rennes',
+    'perspectiviste Rennes',
     'plan côté avec métrés paysagiste',
     'métré aménagement extérieur',
     'rendu 3D paysagiste',

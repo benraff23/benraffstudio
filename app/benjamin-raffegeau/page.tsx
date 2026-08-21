@@ -5,9 +5,9 @@ import FloatingCta from '@/components/layout/floating-cta'
 import Nav from '@/components/layout/nav'
 
 export const metadata: Metadata = {
-  title: 'Qui suis-je ? · Benjamin Raffegeau · BenRaff Studio',
+  title: 'Perspectiviste 3D indépendant à Rennes · Benjamin Raffegeau',
   description:
-    'Fondateur de BenRaff Studio à Rennes, je conçois seul les visualisations 3D des concepteurs paysagistes, piscinistes et concepteurs de pool houses.',
+    'Perspectiviste 3D à Rennes, fondateur de BenRaff Studio. Je conçois seul les visualisations 3D des concepteurs paysagistes, piscinistes et concepteurs de pool houses.',
   keywords: [
     'Benjamin Raffegeau',
     'BenRaff Studio',

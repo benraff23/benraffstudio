@@ -19,7 +19,7 @@ export const regions: Region[] = [
   {
     slug: 'bretagne',
     name: 'Bretagne',
-    seoTitle: 'Rendu 3D paysagiste en Bretagne · Jardins littoraux',
+    seoTitle: 'Rendu 3D paysagiste à Rennes · Bretagne, jardins littoraux',
     seoDescription:
       'Images 3D pour paysagistes et piscinistes bretons. Basé à Rennes, je connais les contraintes du littoral : vent, embruns, lumière changeante.',
     intro:
@@ -37,6 +37,8 @@ export const regions: Region[] = [
     ],
     cities: ['Rennes', 'Saint-Malo', 'Vannes', 'Brest', 'Quimper', 'Lorient', 'Dinard'],
     keywords: [
+      'rendu 3D paysagiste Rennes',
+      'perspectiviste Rennes',
       'rendu 3D paysagiste Bretagne',
       'visualisation jardin Rennes',
       'rendu 3D piscine Bretagne',
