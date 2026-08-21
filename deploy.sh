@@ -5,6 +5,7 @@ set -euo pipefail
 
 APP_DIR="/var/www/benraffstudio"
 PM2_APP="benraffstudio"
+PM2_BIN="/root/.nvm/versions/node/v20.20.2/bin/pm2"
 
 cd "$APP_DIR"
 
@@ -22,7 +23,7 @@ cp -r public .next/standalone/public
 cp -r .next/static .next/standalone/.next/static
 
 echo "==> restart pm2"
-pm2 restart "$PM2_APP"
+"$PM2_BIN" restart "$PM2_APP"
 
 echo "==> deploiement termine"
-pm2 logs "$PM2_APP" --lines 20 --nostream
+"$PM2_BIN" logs "$PM2_APP" --lines 20 --nostream
