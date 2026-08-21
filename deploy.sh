@@ -9,8 +9,12 @@ PM2_BIN="/root/.nvm/versions/node/v20.20.2/bin/pm2"
 
 cd "$APP_DIR"
 
-echo "==> git pull"
-git pull origin main
+# reset --hard : ce checkout ne doit jamais porter d'edition locale, il est
+# cense refleter origin/main a l'identique. Ca evite qu'un mode de fichier
+# ou un artefact local ne bloque un futur deploiement.
+echo "==> sync sur origin/main"
+git fetch origin main
+git reset --hard origin/main
 
 echo "==> npm ci"
 npm ci
