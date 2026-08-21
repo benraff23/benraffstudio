@@ -62,12 +62,76 @@ const demoVues: ImageSignature[] = [
 ]
 
 const VEILLAIS = '/presentation/veillais-saint-gregoire'
+const POUPIN = '/presentation/poupin-chateaubourg'
+const LOGO_AC = 'logo-ac-concept-paysage.svg'
 
 // Téléchargements HD : on sert les WebP 2560 px du dossier de présentation.
 // Les masters PNG restent hors dépôt (_originaux/), trop lourds pour le déploiement.
 const VEILLAIS_HD = VEILLAIS
 
 export const presentations: PresentationProjet[] = [
+  {
+    slug: 'poupin-chateaubourg',
+    titre: 'Bassin et terrasse d’été',
+    localisation: 'Châteaubourg (35)',
+    paysagiste: {
+      nom: 'AC Concept Paysage',
+      logoUrl: `${POUPIN}/${LOGO_AC}`,
+    },
+    heroImage: `${POUPIN}/plage-bassin.webp`,
+    plan3d: {
+      image: `${POUPIN}/plan-3d.webp`,
+      download: `${POUPIN}/plan-3d.webp`,
+      hotspots: [
+        { x: 27, y: 47, label: 'Bassin',          imageIndex: 1 },
+        { x: 38, y: 43, label: 'Plage de bassin', imageIndex: 4 },
+        { x: 47, y: 57, label: 'Bains de soleil', imageIndex: 5 },
+        { x: 62, y: 50, label: 'Terrasse repas',  imageIndex: 2 },
+        { x: 24, y: 63, label: 'Mur en pierre',   imageIndex: 0 },
+        { x: 52, y: 84, label: 'Pelouse',         imageIndex: 3 },
+      ],
+    },
+    metre: { download: `${POUPIN}/metre.pdf` },
+    imagesSignature: [
+      {
+        src: `${POUPIN}/vue-ensemble.webp`,
+        alt: 'Vue plongeante sur le bassin, le mur en pierre et la terrasse bois abritée sous les arbres',
+        zone: 'Vue d’ensemble',
+        downloadHd: `${POUPIN}/vue-ensemble.webp`,
+      },
+      {
+        src: `${POUPIN}/bassin.webp`,
+        alt: 'Bassin bordé de bananiers, mur en pierre ajouré en arrière-plan',
+        zone: 'Bassin',
+        downloadHd: `${POUPIN}/bassin.webp`,
+      },
+      {
+        src: `${POUPIN}/terrasse-repas.webp`,
+        alt: 'Table dressée sous l’arbre, cuisine extérieure et plancha en arrière-plan',
+        zone: 'Terrasse repas',
+        downloadHd: `${POUPIN}/terrasse-repas.webp`,
+      },
+      {
+        src: `${POUPIN}/pelouse.webp`,
+        alt: 'Pelouse et mur en pierre de parement, bananiers et enrochement en pied',
+        zone: 'Pelouse',
+        downloadHd: `${POUPIN}/pelouse.webp`,
+      },
+      {
+        src: `${POUPIN}/plage-bassin.webp`,
+        alt: 'Plage de bassin, platelage bois et bains de soleil ouverts sur la cuisine extérieure',
+        zone: 'Plage de bassin',
+        downloadHd: `${POUPIN}/plage-bassin.webp`,
+      },
+      {
+        src: `${POUPIN}/bains-de-soleil.webp`,
+        alt: 'Bains de soleil sur platelage bois au bord du bassin, terrasse repas en arrière-plan',
+        zone: 'Bains de soleil',
+        downloadHd: `${POUPIN}/bains-de-soleil.webp`,
+      },
+    ],
+  },
+
   {
     slug: 'veillais-saint-gregoire',
     titre: 'Jardin contemporain avec bassin',
