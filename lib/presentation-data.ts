@@ -63,6 +63,7 @@ const demoVues: ImageSignature[] = [
 
 const VEILLAIS = '/presentation/veillais-saint-gregoire'
 const POUPIN = '/presentation/poupin-chateaubourg'
+const LANGLAIS = '/presentation/rue-jean-langlais'
 const LOGO_AC = 'logo-ac-concept-paysage.svg'
 
 // Téléchargements HD : on sert les WebP 2560 px du dossier de présentation.
@@ -70,6 +71,42 @@ const LOGO_AC = 'logo-ac-concept-paysage.svg'
 const VEILLAIS_HD = VEILLAIS
 
 export const presentations: PresentationProjet[] = [
+  {
+    slug: 'rue-jean-langlais',
+    titre: 'Terrasse travertin et mini piscine',
+    localisation: 'La Bouëxière (35)',
+    paysagiste: {
+      nom: 'AC Concept Paysage',
+      logoUrl: `${LANGLAIS}/${LOGO_AC}`,
+    },
+    heroImage: `${LANGLAIS}/vue-ensemble.webp`,
+    plan3d: {
+      image: `${LANGLAIS}/plan-3d.webp`,
+      download: `${LANGLAIS}/plan-3d.webp`,
+    },
+    metre: { download: `${LANGLAIS}/metre.pdf` },
+    imagesSignature: [
+      {
+        src: `${LANGLAIS}/vue-ensemble.webp`,
+        alt: 'Vue plongeante sur la mini piscine, la terrasse minérale et le platelage bois le long de la maison',
+        zone: 'Vue d’ensemble',
+        downloadHd: `${LANGLAIS}/vue-ensemble.webp`,
+      },
+      {
+        src: `${LANGLAIS}/bassin.webp`,
+        alt: 'Mini piscine encadrée par la terrasse minérale et le mur en pierre de la maison',
+        zone: 'Bassin',
+        downloadHd: `${LANGLAIS}/bassin.webp`,
+      },
+      {
+        src: `${LANGLAIS}/bains-de-soleil.webp`,
+        alt: 'Bains de soleil au bord de la piscine, clôture grillagée et haie en arrière-plan',
+        zone: 'Bains de soleil',
+        downloadHd: `${LANGLAIS}/bains-de-soleil.webp`,
+      },
+    ],
+  },
+
   {
     slug: 'poupin-chateaubourg',
     titre: 'Bassin et terrasse d’été',
