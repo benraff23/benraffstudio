@@ -27,7 +27,7 @@ export const regions: Region[] = [
     body: [
       'Les projets d\'aménagement extérieur bretons ont une contrainte que peu de régions partagent : l\'exposition. Embruns, vent dominant, sols souvent acides. Les palettes végétales sont spécifiques — persistants résistants au sel, graminées, hortensias, pins maritimes en bord de côte — et une image qui plante des essences méditerranéennes dans un jardin de Saint-Malo se disqualifie immédiatement auprès du client.',
       'La lumière bretonne est le second point. Ciels changeants, lumière diffuse une grande partie de l\'année, mais des fins de journée d\'été exceptionnelles sur le littoral nord. Une image de jardin breton qui utilise une lumière de carte postale méditerranéenne sonne faux pour quelqu\'un qui vit ici. Je travaille les ambiances en cohérence avec ce que votre client connaît de son propre terrain.',
-      'Concrètement, j\'accompagne des paysagistes concepteurs, des piscinistes et des concepteurs de pool houses sur l\'ensemble de la région, en visio et via la plateforme de suivi. Étant à Rennes, un déplacement sur site reste possible quand le projet le justifie.',
+      'Concrètement, j\'accompagne des paysagistes concepteurs, des piscinistes et des concepteurs de pool houses sur l\'ensemble de la région, en visio et 100 % à distance. Étant à Rennes, un déplacement sur site reste possible quand le projet le justifie.',
     ],
     specifics: [
       'Palettes végétales littorales : persistants résistants aux embruns, graminées, hortensias',

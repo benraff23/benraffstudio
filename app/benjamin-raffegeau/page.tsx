@@ -393,7 +393,7 @@ export default function BenjaminRaffegeau() {
                 ['Écoute du brief', "Chaque projet commence par comprendre l'objectif, pas juste les dimensions du terrain."],
                 ['Composition narrative', "Cadrage, point de vue, heure de la journée : chaque choix guide le regard du futur client."],
                 ['Rigueur technique', "Cohérence des matériaux, des échelles et des ombres. Aucun détail incohérent ne passe."],
-                ['Livraison structurée', "Plateforme de suivi, versioning, annotations directes sur les rendus. Zéro email perdu."],
+                ['Livraison structurée', "Tous les livrables réunis sur un mini-site à votre image, consultable en direct pendant votre rendez-vous client. Zéro fichier éparpillé."],
               ].map(([titre, desc]) => (
                 <div key={titre} className="flex gap-4 items-start">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#1c1c1c] mt-2 flex-shrink-0" />

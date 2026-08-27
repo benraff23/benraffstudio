@@ -24,7 +24,7 @@ export const homeFaq: [string, string][] = [
   ],
   [
     'Vous intervenez seulement en Bretagne ?',
-    'Non. Je suis basé à Rennes mais je travaille dans toute la France, en 100 % à distance : brief en ligne, échanges en visio, livraison sur votre espace projet.',
+    'Non. Je suis basé à Rennes mais je travaille dans toute la France, en 100 % à distance : brief en ligne, échanges en visio, livraison sur un mini-site dédié.',
   ],
 ]
 

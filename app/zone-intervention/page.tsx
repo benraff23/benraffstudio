@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const steps: [string, string][] = [
   ['Brief en ligne', 'Vous transmettez relevé, plan de plantation, listing mobilier et photos du terrain via un formulaire guidé. Tout ce dont j\'ai besoin est déjà dans votre dossier de conception.'],
   ['Échanges en visio', 'Un point de cadrage au lancement, un autre à la validation de la direction. Trente minutes suffisent quand le brief est complet.'],
-  ['Suivi sur votre espace projet', 'Vous voyez l\'avancement en temps réel et vous annotez les rendus directement. Pas d\'aller-retour par email, pas de fichiers éparpillés.'],
+  ['Allers-retours cadrés', 'Vous validez les cadrages, puis une version de travail avant le rendu final. Vos retours se font par message ou en visio, regroupés à chaque étape.'],
   ['Livraison en ligne', 'Vos livrables sont réunis sur un mini-site dédié, ouvrable en direct pendant votre rendez-vous client et téléchargeables en haute définition.'],
 ]
 
